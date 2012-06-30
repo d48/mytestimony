@@ -27,3 +27,4 @@ Create Testimony
 * Clickthroughs for mock application
 * Research technologies to use, but leaning to open source for tried and tested frameworks so as to build incrementally
 * Basic CRUD with database
+* Look into build process, developer tooling, client-side stack: [Yeoman](http://yeoman.io/) and [grunt](https://github.com/cowboy/grunt)
