@@ -11,7 +11,7 @@ This is a website to help people share about their tesimony of what God has done
 
 Create Testimony 
 
-[Create Testimony](https://github.com/design48/mytestimony/raw/master/design/wireframes/wireframe-create-v1.png)
+![Create Testimony](https://github.com/design48/mytestimony/raw/master/design/wireframes/wireframe-create-v1.png)
 
 # Roadmap
 
