@@ -25,6 +25,8 @@ Create Testimony
 
 __note:__ Using skip is expensive as it walks through the collection to get the offset. As number for `skip()` increases, this gets more expensive for performance
 
+* Look into saving cursors and iterating through collection from set points after each query
+
 
 ## Roadmap
 
