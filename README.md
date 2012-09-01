@@ -7,13 +7,26 @@ This is a website to help people share about their tesimony of what God has done
 3. Tools to share easily via email and text. Example: short URLs and share utility to social networks.
 4. Can set testimony to be viewed publicly and anonymously so that search engines can pick up on keywords that may help others in their struggles and see how God helped and changed their lives.
 
-# Initial Designs
+## Initial Designs
 
 Create Testimony 
 
 ![Create Testimony](https://github.com/design48/mytestimony/raw/master/design/wireframes/wireframe-create-v1.png)
 
-# Roadmap
+
+## User functions and sample MongoDB command
+
+| Description | Database function |
+|:--|:--|
+| Create testimony with fields for name, testimony test, and tags/keywords | `db.collectionname.insert({k:v, k:v, k:[v,v,v]});` |
+| Search for testimonials based on tags/keywords | `db.collectionname.find({tags: { $all : [value] } });` |
+| Show list of testimonials, using lazy load (limit by first 10) | `db.collectionname.find().limit(10);` |
+| Show list of testimonials, using lazy load (get next 5 after index of 10) | `db.collectionname.find().skip(10).limit(5);` |
+
+__note:__ Using skip is expensive as it walks through the collection to get the offset. As number for `skip()` increases, this gets more expensive for performance
+
+
+## Roadmap
 
 * ~~Overview of who, what, where, how~~
 * Wireframes for main application for creating and list of tesimony view 
