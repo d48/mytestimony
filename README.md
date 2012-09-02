@@ -45,6 +45,12 @@ __note:__ Using skip is expensive as it walks through the collection to get the 
      * Register form
      * Account settings
 * Clickthroughs for mock application
+* Interactivity styling
+	* [wantful](http://www.wantful.com) uses Backbone.js and responsive/fluid layout :sparkles:
+	* [Podio](http://www.podio.com) uses Backbone.js and rails. Review how they do tags
 * Research technologies to use, but leaning to open source for tried and tested frameworks so as to build incrementally
+	* using MongoDB
+	* [brunch.io](http://brunch.io/) 
 * Basic CRUD with database
+	* RESTful API with JSON endpoint
 * Look into build process, developer tooling, client-side stack: [Yeoman](http://yeoman.io/) and [grunt](https://github.com/cowboy/grunt)
