@@ -9,9 +9,13 @@ This is a website to help people share about their tesimony of what God has done
 
 ## Initial Designs
 
-Create Testimony 
+**Create Testimony**
 
 ![Create Testimony](https://github.com/design48/mytestimony/raw/master/design/wireframes/wireframe-create-v1.png)
+
+**Homepage - one page app**
+
+![Homepage](https://github.com/design48/mytestimony/raw/master/design/wireframes/wireframe-home-v1.png)
 
 
 ## User functions and sample MongoDB command
@@ -34,12 +38,12 @@ __note:__ Using skip is expensive as it walks through the collection to get the 
 * ~~Overview of who, what, where, how~~
 * Wireframes for main application for creating and list of tesimony view 
      * ~~Create page~~
+     * ~~List of random testimonials~~
      * Edit page
      * Browse tag results
      * Login modal
      * Register form
      * Account settings
-     * List of random testimonials
 * Clickthroughs for mock application
 * Research technologies to use, but leaning to open source for tried and tested frameworks so as to build incrementally
 * Basic CRUD with database
