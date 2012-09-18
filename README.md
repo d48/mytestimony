@@ -32,6 +32,9 @@ __note:__ Using skip is expensive as it walks through the collection to get the 
 
 * Look into saving cursors and iterating through collection from set points after each query
 
+## RESTful API
+
+View architecture and details here: https://docs.google.com/document/d/1DmooeXBQrIVdDpkACxRuvmMi2VNw3Ht8d2x5o9OHRO0/edit
 
 ## Roadmap
 
