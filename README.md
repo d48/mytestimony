@@ -9,13 +9,13 @@ This is a website to help people share about their tesimony of what God has done
 
 ## Initial Designs
 
-**Create Testimony**
-
-![Create Testimony](https://github.com/design48/mytestimony/raw/master/design/wireframes/wireframe-create-v1.png)
-
 **Homepage - one page app**
 
 ![Homepage](https://github.com/design48/mytestimony/raw/master/design/wireframes/wireframe-home-v1.png)
+
+**Homepage - Share Testimony**
+
+![Create](http://f.cl.ly/items/3V0h0S103d2C2O0o0v0v/home-wf-share.png)
 
 
 ## User functions and sample MongoDB command
