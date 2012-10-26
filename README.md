@@ -32,6 +32,22 @@ __note:__ Using skip is expensive as it walks through the collection to get the 
 
 * Look into saving cursors and iterating through collection from set points after each query
 
+## Sample MongoDB Schema
+
+For testimonies, pretty simple
+
+````
+{
+	"_id": ObjectId("50427d77e4ba90f9269360c1"),
+		"author": "Joe Smith",
+		"date": // native MongoDB date string,
+		"testimony" : // Some long string,
+		"tags": ['God','Holy Spirit','alchohol','freedom'],
+		"shareUrl": 'http://testim.ony/576el43'
+}
+````
+
+
 ## RESTful API
 
 View architecture and details here: https://docs.google.com/document/d/1DmooeXBQrIVdDpkACxRuvmMi2VNw3Ht8d2x5o9OHRO0/edit
