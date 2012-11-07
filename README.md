@@ -70,6 +70,8 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
 * Research technologies to use, but leaning to open source for tried and tested frameworks so as to build incrementally
 	* using MongoDB
 	* [brunch.io](http://brunch.io/) 
+	* using `nodemon` to automatically compile and rerun server app
+		* look into adding livereload so don't have to manually refresh
 * Basic CRUD with database
 	* RESTful API with JSON endpoint: look into [deployd](http://deployd.com/)
 * Look into build process, developer tooling, client-side stack: [Yeoman](http://yeoman.io/), [grunt](https://github.com/cowboy/grunt), [buildify](https://github.com/powmedia/buildify)
