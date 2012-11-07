@@ -3,4 +3,9 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body!= body
+
+  body(class= page) 
+    h1 MyTestimony.com
+    h2.tagline - Sharing How Great God Is
+
+  #content!= body
