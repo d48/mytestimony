@@ -8,4 +8,12 @@ html
     h1 MyTestimony.com
     h2.tagline - Sharing How Great God Is
 
-  #content!= body
+    #content
+        #main
+            block main 
+        #sidebar
+            block sidebar
+
+    #footer
+        block footer
+

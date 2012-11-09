@@ -1,3 +1,11 @@
+* {
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.styl,
 body {
   padding: 20px;
   font: 14px Arial, Helvetica, Arial, sans-serif;
@@ -15,10 +23,36 @@ h2 {
   font-size: 1.75em;
   font-weight: normal;
 }
+h3 {
+  font-size: 1.5em;
+  font-weight: normal;
+}
 .tagline {
   margin-left: 10px;
   padding-top: 6px;
 }
 .latest {
   display: block;
+}
+#testimonies {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#testimonies li h1 {
+  width: 100%;
+}
+#content {
+  clear: both;
+}
+#main {
+  border-right: 1px solid #ccc;
+  float: left;
+  padding-right: 20px;
+  width: 75%;
+}
+#sidebar {
+  float: left;
+  padding-left: 20px;
+  width: 25%;
 }
