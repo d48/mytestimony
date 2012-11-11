@@ -67,9 +67,12 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
 * Interactivity styling
 	* [wantful](http://www.wantful.com) uses Backbone.js and responsive/fluid layout :sparkles:
 	* [Podio](http://www.podio.com) uses Backbone.js and rails. Review how they do tags
+	* [storify](http://www.storify.com) is a node.js web app that displays a wysiwig editor 
+		* inspiration for clean asset and use of expressjs.com
 * Research technologies to use, but leaning to open source for tried and tested frameworks so as to build incrementally
 	* using MongoDB
 	* [brunch.io](http://brunch.io/) 
+	* reviewing twitter bootstrap to tweak base styles and responsive layout
 	* using `nodemon` to automatically compile and rerun server app
 		* look into adding livereload so don't have to manually refresh
 * Basic CRUD with database
