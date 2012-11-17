@@ -7,7 +7,7 @@
 }
 .styl,
 body {
-  padding: 20px;
+  padding: 30px;
   font: 14px Arial, Helvetica, Arial, sans-serif;
 }
 a {
@@ -23,7 +23,16 @@ h2 {
   font-size: 1.75em;
   font-weight: normal;
 }
+h2.latest {
+  clear: both;
+  display: block;
+  margin: 20px 0;
+}
 h3 {
+  font-size: 1.7em;
+  font-weight: normal;
+}
+h4 {
   font-size: 1.5em;
   font-weight: normal;
 }
@@ -31,16 +40,38 @@ h3 {
   margin-left: 10px;
   padding-top: 6px;
 }
-.latest {
-  display: block;
-}
 #testimonies {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
+#testimonies .latest {
+  background-color: #efefef;
+  border: 5px solid #ccc;
+  border-radius: 10px;
+}
+#testimonies .new {
+  float: left;
+  line-height: 1px;
+  margin-left: 5px;
+  margin-top: 22px;
+  font-size: 4em;
+}
+#testimonies li {
+  padding: 30px;
+}
 #testimonies li h1 {
   width: 100%;
+}
+#testimonies li h4 {
+  float: left;
+  margin: 0 0 10px 0;
+}
+#testimonies li p {
+  clear: both;
+  font-size: 1.2em;
+  margin: 10px 0;
+  padding: 0;
 }
 #content {
   clear: both;
@@ -48,11 +79,15 @@ h3 {
 #main {
   border-right: 1px solid #ccc;
   float: left;
-  padding-right: 20px;
+  padding-right: 30px;
   width: 75%;
+}
+#main > h1,
+#main > h2 {
+  margin-top: 0;
 }
 #sidebar {
   float: left;
-  padding-left: 20px;
+  padding-left: 30px;
   width: 25%;
 }
