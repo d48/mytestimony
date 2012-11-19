@@ -23,7 +23,7 @@ h2 {
   font-size: 1.75em;
   font-weight: normal;
 }
-h2.latest {
+.latest {
   clear: both;
   display: block;
   margin: 20px 0;
