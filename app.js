@@ -4,9 +4,11 @@
  */
 
 var express = require('express')
-  , routes = require('./routes');
+  , routes = require('./routes')
+  , routesapi = require('./routes/api')
+  ;
 
-var app = module.exports = express.createServer();
+var app = express();
 
 // Configuration
 app.configure(function(){
@@ -33,6 +35,9 @@ app.get('/', routes.index);
 app.get('/about', routes.about);
 app.get('/contact', routes.contact);
 
+// API routes
+app.get('/api/v1/testimonies', routesapi.testimonies);
+
 
 app.listen(3000);
-console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
+console.log("Express server listening in %s mode", app.settings.env);
