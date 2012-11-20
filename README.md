@@ -79,6 +79,9 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
 	* ~~use of SASS instead of Stylus for for css preprocessing for debugging via browser~~
 		* SASS middleware not supported in expressjs framework. 
 	* use of [OOCSS](https://github.com/stubbornella/oocss/wiki)
+	* use [SMACCS](http://smacss.com/) - scalable and modular architecture for css. 
+		* Inspired by this talk to clean up and reuse code [Youtube vid](http://www.youtube.com/watch?v=hou2wJCh3XE)
+		
 * Basic CRUD with database
 	* RESTful API with JSON endpoint: look into [deployd](http://deployd.com/)
 * Look into build process, developer tooling, client-side stack: [Yeoman](http://yeoman.io/), [grunt](https://github.com/cowboy/grunt), [buildify](https://github.com/powmedia/buildify)
