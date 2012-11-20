@@ -4,18 +4,19 @@ block main
     h3.latest Latest Testimonies
 
     ul#testimonies
-        li.latest
-            h4 Wonderful Jesus 
+        each testimony, index in testimonies
+            if index === 0
+                li.latest
+                    h4= testimony.title
+                    span.new *
+                    p= testimony.description
+                    button.view View
+            else
+                li
+                    h4= testimony.title
+                    p= testimony.description
+                    button.view View
 
-            span.new *
-
-            p In 1972, it seemed that all the doors were closing on us where we lived. A new job opportunity opened up for my husband in Laredo, Texas. I didn’t want to move there, because we were very active in our church where we lived. We were part of the church board, church committees, and were involved in virtually every church related activity. But because of my husband’s job situation, we went ahead and moved our family anyway.
-            button.view View
-
-        li
-            h4 Testimony of God's grace
-            p It was 2:30 am when the police woke our family to let us know that my older brother had been killed in an automobile accident. My life has never been the same since.
-            button.view View
 
 block sidebar
     h4#start Ready to share yours?

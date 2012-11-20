@@ -3,18 +3,21 @@
  * Module dependencies.
  */
 
-var express = require('express')
-  , routes = require('./routes')
+var express   = require('express')
+  , http      = require('http')
+  , routes    = require('./routes')
   , routesapi = require('./routes/api')
   ;
 
 var app = express();
+var server = http.createServer(app);
 
 // Configuration
 app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
-  app.set('view options', {pretty: true, layout: false});
+  app.set('view options', {layout: false});
+  app.locals.pretty = true;
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(require('stylus').middleware({ src: __dirname + '/public' }));
@@ -39,5 +42,5 @@ app.get('/contact', routes.contact);
 app.get('/api/v1/testimonies', routesapi.testimonies);
 
 
-app.listen(3000);
-console.log("Express server listening in %s mode", app.settings.env);
+server.listen(3000);
+console.log("Express server listening on port %d in %s mode", server.address().port, app.settings.env);
