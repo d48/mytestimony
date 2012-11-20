@@ -7,14 +7,14 @@ block main
         each testimony, index in testimonies
             if index === 0
                 li.latest
-                    h4= testimony.title
+                    h4.subhead= testimony.title
                     span.new *
-                    p= testimony.description
+                    p.description= testimony.description
                     button.view View
             else
                 li
-                    h4= testimony.title
-                    p= testimony.description
+                    h4.subhead= testimony.title
+                    p.description= testimony.description
                     button.view View
 
 

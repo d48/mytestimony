@@ -60,14 +60,11 @@ h4 {
 #testimonies li {
   padding: 30px;
 }
-#testimonies li h1 {
-  width: 100%;
-}
-#testimonies li h4 {
+#testimonies li .subhead {
   float: left;
   margin: 0 0 10px 0;
 }
-#testimonies li p {
+#testimonies li .description {
   clear: both;
   font-size: 1.2em;
   margin: 10px 0;
