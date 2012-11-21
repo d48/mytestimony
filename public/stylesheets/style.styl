@@ -5,12 +5,14 @@
   -moz-box-sizing: border-box
   -webkit-box-sizing: border-box
 
-@import variables.styl
+@import 'mixins.styl'
+@import 'variables.styl'
+@import 'buttons.styl'
 
 // @todo: move into base.styl
 body
-  padding: gutter
-  font: 14px Arial, Helvetica, Arial, sans-serif
+  padding: $gutter
+  font: $font
 a
   color: #00B7FF
 
@@ -24,12 +26,6 @@ h2
   font-size: 1.75em
   font-weight: normal
 
-.latest
-  clear: both
-  display: block
-  margin: 20px 0
-
-
 h3 
   font-size: 1.7em
   font-weight: normal
@@ -38,6 +34,10 @@ h4
   font-size: 1.5em
   font-weight: normal
 
+.content-title
+  clear: both
+  display: block
+  margin: 20px 0
 
 .tagline
   margin-left: 10px
@@ -61,7 +61,7 @@ h4
     font-size: 4.0em
 
   li 
-    padding: gutter
+    padding: $gutter
 
     .subhead
       float: left
@@ -77,9 +77,9 @@ h4
   clear: both
 
 #main
-  border-right: 1px solid mainBorderColor
+  border-right: 1px solid $mainBorderColor
   float: left
-  padding-right: gutter
+  padding-right: $gutter
   width: 75%
 
   & > h1, > h2
@@ -87,6 +87,6 @@ h4
 
 #sidebar
   float: left
-  padding-left: gutter
+  padding-left: $gutter
   width: 25%
 

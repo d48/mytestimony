@@ -1,27 +1,27 @@
 extends layout
 
 block main 
-    h3.latest Latest Testimonies
+    h3.content-title Latest Testimonies
 
     ul#testimonies
+        // update so uses template to reduce repeated code
         each testimony, index in testimonies
             if index === 0
                 li.latest
                     h4.subhead= testimony.title
                     span.new *
                     p.description= testimony.description
-                    button.view View
+                    button.view(type="button") View
             else
                 li
                     h4.subhead= testimony.title
                     p.description= testimony.description
-                    button.view View
-
+                    button.view(type="button") View
 
 block sidebar
     h4#start Ready to share yours?
 
-    button.start Start >
+    button.btn-large Start >
 
     h4#or Or
 

@@ -5,10 +5,27 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
-.styl,
+button {
+  background-color: #fef;
+  border: 3px solid #555;
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.5);
+  -moz-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.5);
+  -ms-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.5);
+  -o-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.5);
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.5);
+  cursor: pointer;
+  font-size: 1em;
+  padding: 5px 30px;
+}
+button:hover {
+  background-color: #ccc;
+}
+.btn-large {
+  padding: 10px 60px;
+}
 body {
   padding: 30px;
-  font: 14px Arial, Helvetica, Arial, sans-serif;
+  font: 14px Arial, Helvetica, san-serif;
 }
 a {
   color: #00b7ff;
@@ -23,11 +40,6 @@ h2 {
   font-size: 1.75em;
   font-weight: normal;
 }
-.latest {
-  clear: both;
-  display: block;
-  margin: 20px 0;
-}
 h3 {
   font-size: 1.7em;
   font-weight: normal;
@@ -35,6 +47,11 @@ h3 {
 h4 {
   font-size: 1.5em;
   font-weight: normal;
+}
+.content-title {
+  clear: both;
+  display: block;
+  margin: 20px 0;
 }
 .tagline {
   margin-left: 10px;
@@ -48,6 +65,10 @@ h4 {
 #testimonies .latest {
   background-color: #efefef;
   border: 5px solid #ccc;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   border-radius: 10px;
 }
 #testimonies .new {
