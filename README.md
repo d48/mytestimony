@@ -34,19 +34,33 @@ __note:__ Using skip is expensive as it walks through the collection to get the 
 
 ## Sample MongoDB Schema
 
-For testimonies, pretty simple
+_For testimonies, pretty simple_
 
-````
+```javascript
+// mytestimony.testimonies
 {
 	"_id": ObjectId("50427d77e4ba90f9269360c1"),
-		"author": "Joe Smith",
+		// from _id in users document
+		"author_id": ObjectId("99927d77e4ba90f9269360c1"),
 		"date": // native MongoDB date string,
 		"testimony" : // Some long string,
 		"tags": ['God','Holy Spirit','alchohol','freedom'],
 		"shareUrl": 'http://testim.ony/576el43'
 }
-````
+```
 
+_For users_
+  
+```javascript
+// mytestimony.users
+{
+	"_id": ObjectId("99927d77e4ba90f9269360c1"),
+		"author": "Joe Smith",
+		"email": "joe.smith@email.com",
+		"password": // md5 hash that's salted
+}
+```
+  
 
 ## RESTful API
 
