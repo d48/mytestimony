@@ -61,6 +61,7 @@ h4
     font-size: 4.0em
 
   li 
+    overflow: hidden
     padding: $gutter
 
     .subhead
@@ -68,10 +69,17 @@ h4
       margin: 0 0 10px 0
 
     .description 
-      clear: both
+      clear: left
+      float: left
       font-size: 1.2em
       margin: 10px 0
       padding: 0
+      width: 80%
+
+    button 
+      float: left
+      margin-left: 50px
+      margin-top: 15px 
 
 #content
   clear: both

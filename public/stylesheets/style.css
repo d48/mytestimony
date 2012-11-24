@@ -79,6 +79,7 @@ h4 {
   font-size: 4em;
 }
 #testimonies li {
+  overflow: hidden;
   padding: 30px;
 }
 #testimonies li .subhead {
@@ -86,10 +87,17 @@ h4 {
   margin: 0 0 10px 0;
 }
 #testimonies li .description {
-  clear: both;
+  clear: left;
+  float: left;
   font-size: 1.2em;
   margin: 10px 0;
   padding: 0;
+  width: 80%;
+}
+#testimonies li button {
+  float: left;
+  margin-left: 50px;
+  margin-top: 15px;
 }
 #content {
   clear: both;
