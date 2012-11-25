@@ -41,10 +41,5 @@ app.get('/contact', routes.contact);
 // API routes
 app.get('/api/v1/testimonies', routesapi.testimonies);
 
-var port = process.env.PORT || 3000;
-app.listen(port, function() {
-  console.log("Listening on " + port);
-});
-
-// server.listen(3000);
-// console.log("Express server listening on port %d in %s mode", server.address().port, app.settings.env);
+server.listen(3000);
+console.log("Express server listening on port %d in %s mode", server.address().port, app.settings.env);

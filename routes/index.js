@@ -4,6 +4,9 @@
 var request = require('request');
 
 module.exports = {
+  /**
+   * Home page 
+   */
   index: function(req,res) {
     var host    = req.headers.host
       , url     = 'http://' + host + '/api/v1/testimonies'

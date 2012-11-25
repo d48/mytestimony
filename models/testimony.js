@@ -3,6 +3,7 @@ var dbstr = process.env.MONGOHQ_URL || 'mongodb://localhost/mytestimony';
 var connect = require('connect')
   , mongo = require('mongodb')
   , database = null
+  , testimonyCollection = 'testimonies'
   ;
 
 // init to connect to db
@@ -20,10 +21,11 @@ TestimonyModel = function() {
 
 /**
  * return collection from mongodb 
+ * @todo: abstract into db methods so can reuse
  */
-TestimonyModel.prototype.getCollection = function(cb) {
+TestimonyModel.prototype.getCollection = function(collName, cb) {
   // 'testimonies' is the name of the collection from the database
-  database.collection('testimonies', function(err, testim_collection) {
+  database.collection(collName, function(err, testim_collection) {
     if (err) cb(err);
     else cb(null, testim_collection);
   });
@@ -31,9 +33,10 @@ TestimonyModel.prototype.getCollection = function(cb) {
 
 /**
  * return all documents from mongodb 
+ * @todo: abstract into db methods so can reuse
  */
 TestimonyModel.prototype.findAll = function(cb) {
-  this.getCollection(function(err, testim_collection) {
+  this.getCollection(testimonyCollection, function(err, testim_collection) {
     if (err) cb(err);
     else {
       testim_collection.find().toArray(function(err, results) {
