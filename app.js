@@ -7,6 +7,7 @@ var express   = require('express')
   , http      = require('http')
   , routes    = require('./routes')
   , routesapi = require('./routes/api')
+  , TestimonyModel = require('./testimony-mongodb.js').TestimonyModel
   ;
 
 var app = express();
@@ -33,6 +34,10 @@ app.configure('production', function(){
   app.use(express.errorHandler());
 });
 
+// instantiate db
+var testimonyModel = new TestimonyModel('localhost', 27017);
+console.log('wootie');
+
 // Routes
 app.get('/', routes.index);
 app.get('/about', routes.about);
@@ -41,6 +46,10 @@ app.get('/contact', routes.contact);
 // API routes
 app.get('/api/v1/testimonies', routesapi.testimonies);
 
+var port = process.env.PORT || 3000;
+app.listen(port, function() {
+  console.log("Listening on " + port);
+});
 
-server.listen(3000);
-console.log("Express server listening on port %d in %s mode", server.address().port, app.settings.env);
+// server.listen(3000);
+// console.log("Express server listening on port %d in %s mode", server.address().port, app.settings.env);
