@@ -7,7 +7,6 @@ var express   = require('express')
   , http      = require('http')
   , routes    = require('./routes')
   , routesapi = require('./routes/api')
-  , TestimonyModel = require('./testimony-mongodb.js').TestimonyModel
   ;
 
 var app = express();
@@ -33,10 +32,6 @@ app.configure('development', function(){
 app.configure('production', function(){
   app.use(express.errorHandler());
 });
-
-// instantiate db
-var testimonyModel = new TestimonyModel('localhost', 27017);
-console.log('wootie');
 
 // Routes
 app.get('/', routes.index);

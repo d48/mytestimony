@@ -1,7 +1,7 @@
 extends layout
 
 block main 
-    h3.content-title Latest Testimonies
+    h3.content Latest Testimonies
 
     ul#testimonies
         // update so uses template to reduce repeated code
@@ -10,12 +10,12 @@ block main
                 li.latest
                     h4.subhead= testimony.title
                     span.new *
-                    p.description= testimony.description
+                    p.description= testimony.testimony
                     button.view(type="button") View
             else
                 li
                     h4.subhead= testimony.title
-                    p.description= testimony.description
+                    p.description= testimony.testimony
                     button.view(type="button") View
 
 block sidebar
