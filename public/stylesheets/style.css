@@ -23,6 +23,20 @@ button:hover {
 .btn-large {
   padding: 10px 60px;
 }
+select {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0;
+  padding: 4px 20px;
+}
 body {
   padding: 30px;
   font: 14px Arial, Helvetica, san-serif;
