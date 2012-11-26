@@ -1,7 +1,8 @@
 /**
  * Route object passed to app  
  */
-var request = require('request');
+var request = require('request')
+  , appHelper = require('./../app/utils/helpers.js');
 
 module.exports = {
   /**
@@ -16,24 +17,12 @@ module.exports = {
       , tags = []
       ;
 
-    tags = ['God','Holy Spirit','Jesus','Texas','job','accident','blue'];
-
-
-    // custom sort ignoring case
-    tags.sort(function(a,b) {
-      if(a.toLowerCase() < b.toLowerCase())
-        return -1
-      if(a.toLowerCase() > b.toLowerCase())
-        return 1
-      return 0;
-    });
-
     // ajax request to get tags
     // @todo: instead of having route do ajax request, let's just render template
     //        and have client do mulitple ajax requests and do dom updating
     request.get(options2, function(error, response, body) {
       if (!error && response.statusCode === 200) {
-        var tags = body;
+        var tags = body.sort(appHelper.compare);
 
         // ajax request to get testimonies
         request.get(options, function(error, response, body) {
