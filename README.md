@@ -103,3 +103,7 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
 ## Todo
 
 1. Abstract api for db methods so can reuse for other collections in mytestimony db
+2. Begin ton integrate some design/styling and page interaction
+	* buttons
+	* UI shading and highlights
+	* rollover and button events/animations
