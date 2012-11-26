@@ -5,9 +5,7 @@ var request = require('request')
   , appHelper = require('./../app/utils/helpers.js');
 
 module.exports = {
-  /**
-   * Home page 
-   */
+  // home page
   index: function(req,res) {
     var host    = req.headers.host
       , url     = 'http://' + host + '/api/v1/testimonies'
@@ -28,7 +26,9 @@ module.exports = {
         request.get(options, function(error, response, body) {
           if (!error && response.statusCode === 200) {
             res.locals.tags = tags;
-            res.render('index', {title: 'MyTestimony.com', page: 'home', testimonies: body});
+            res.render('index', {
+              title: 'MyTestimony.com', page: 'home', testimonies: body
+            });
           }
         });
       }
@@ -36,10 +36,14 @@ module.exports = {
   }
 
   , about: function(req,res) {
-    res.render('about', {title: 'MyTestimony.com - About', page: 'about'})
+      res.render('about', {
+        title: 'MyTestimony.com - About', page: 'about'
+      });
   }
 
   , contact: function(req,res) {
-    res.render('contact', {title: 'MyTestimony.com - Contact', page: 'contact'})
+      res.render('contact', {
+        title: 'MyTestimony.com - Contact', page: 'contact'
+      });
   }
 }; 
