@@ -39,7 +39,9 @@ app.get('/about', routes.about);
 app.get('/contact', routes.contact);
 
 // API routes
+// @todo: have client use instead of application
 app.get('/api/v1/testimonies', routesapi.testimonies);
+app.get('/api/v1/tags', routesapi.tags);
 
 server.listen(3000);
 console.log("Express server listening on port %d in %s mode", server.address().port, app.settings.env);

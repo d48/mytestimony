@@ -25,9 +25,9 @@ TestimonyModel = function() {
  */
 TestimonyModel.prototype.getCollection = function(collName, cb) {
   // 'testimonies' is the name of the collection from the database
-  database.collection(collName, function(err, testim_collection) {
+  database.collection(collName, function(err, results) {
     if (err) cb(err);
-    else cb(null, testim_collection);
+    else cb(null, results);
   });
 };
 
@@ -35,16 +35,31 @@ TestimonyModel.prototype.getCollection = function(collName, cb) {
  * return all documents from mongodb 
  * @todo: abstract into db methods so can reuse
  */
-TestimonyModel.prototype.findAll = function(cb) {
-  this.getCollection(testimonyCollection, function(err, testim_collection) {
+TestimonyModel.prototype.findAll = function(collName, cb) {
+  this.getCollection(collName, function(err, collection) {
     if (err) cb(err);
     else {
-      testim_collection.find().toArray(function(err, results) {
+      collection.find().toArray(function(err, results) {
         if (err) cb(err);
         else cb(null, results);
       });
     }
   });
+};
+
+/**
+ * Gets array of all distinct keys within collection 
+ */
+TestimonyModel.prototype.getDistinct = function(collName, key, cb) {
+  this.getCollection(collName, function(err, coll) {
+    if (err) cb(err);
+    else {
+      coll.distinct(key, function(err, results) {
+        if (err) cb(err);
+        else cb(null, results);
+      });
+    }
+  });  
 };
 
 exports.TestimonyModel = TestimonyModel;

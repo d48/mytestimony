@@ -29,9 +29,6 @@ block sidebar
 
     select#tag-category
         option(value='0') Select a tag/category
-        option(value='Jesus') Jesus
-        option(value='Holy Spirit') Holy Spirit
-        option(value='drugs') drugs
-        option(value='alcohol') alcohol 
+        each tag in tags
+            option(value=tag)= tag
 
-    
