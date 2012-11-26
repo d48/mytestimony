@@ -1,10 +1,17 @@
 button
-  background-color: $buttonColor
-  border: 3px solid $buttonBorderColor
-  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.5) 
+  -webkit-linear-gradient(top, white 1px, whiteSmoke 1px, #EAEAEA 100%)
+  -moz-linear-gradient(top, white 1px, whiteSmoke 1px, #EAEAEA 100%)
+  border: 1px solid $buttonBorderColor
+  border-radius: 5px
+  display: inline-block
   cursor: pointer
   font-size: 1em
+  margin-bottom: 4px
   padding: 5px 30px
+  text-align: center
+  text-decoration: none;
+  text-shadow: none
+  white-space: nowrap
 
   &:hover
     background-color: $buttonColorAlt

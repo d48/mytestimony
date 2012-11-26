@@ -8,20 +8,15 @@ block main
         each testimony, index in testimonies
             if index === 0
                 li.latest
-                    h4.subhead= testimony.title
-                    span.new *
-                    p.description= testimony.testimony
-                    button.view(type="button") View
+                    include includes/index-testimonies.jade
             else
                 li
-                    h4.subhead= testimony.title
-                    p.description= testimony.testimony
-                    button.view(type="button") View
+                    include includes/index-testimonies.jade
 
 block sidebar
     h4#start Ready to share yours?
 
-    button.btn-large Start >
+    button(class="btn btn-default btn-large") Start >
 
     h4#or Or
 
