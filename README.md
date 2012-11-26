@@ -107,3 +107,4 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
 	* buttons
 	* UI shading and highlights
 	* rollover and button events/animations
+3. Use var constant for PATHs or items that are reused throughout app <https://github.com/wprl/baucis/blob/master/index.js#L5>
