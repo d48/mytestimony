@@ -97,8 +97,9 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
 		* Inspired by this talk to clean up and reuse code [Youtube vid](http://www.youtube.com/watch?v=hou2wJCh3XE)
 		
 * Basic CRUD with database
-	* RESTful API with JSON endpoint: look into [deployd](http://deployd.com/)
-* Look into build process, developer tooling, client-side stack: [Yeoman](http://yeoman.io/), [grunt](https://github.com/cowboy/grunt), [buildify](https://github.com/powmedia/buildify)
+	* ~~RESTful API with JSON endpoint: look into [deployd](http://deployd.com/)~~ building custom
+* ~~Look into build process, developer tooling, client-side stack: [Yeoman](http://yeoman.io/), [grunt](https://github.com/cowboy/grunt), [buildify](https://github.com/powmedia/buildify)~~
+	* Yeoman.io uses grunt and has some cool configurations for compressing html, css, and js, providing version number and deploying based on dev or production setting
 
 ## Todo
 
@@ -108,3 +109,4 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
 	* UI shading and highlights
 	* rollover and button events/animations
 3. Use var constant for PATHs or items that are reused throughout app <https://github.com/wprl/baucis/blob/master/index.js#L5>
+4. Set up Travis CI tests and continous integration for the site. Look into just running Jasmine test suite
