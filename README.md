@@ -110,3 +110,8 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
 	* rollover and button events/animations
 3. Use var constant for PATHs or items that are reused throughout app <https://github.com/wprl/baucis/blob/master/index.js#L5>
 4. Set up Travis CI tests and continous integration for the site. Look into just running Jasmine test suite
+
+
+## Bugs
+
+* issue with multiple db connections on each request. connect once per client and share connection across application. place in bootstrap
