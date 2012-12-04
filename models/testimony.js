@@ -9,7 +9,7 @@ var connect = require('connect')
 // init to connect to db
 TestimonyModel = function() {
   mongo.connect(dbstr, {}, function(err, db) {
-    console.log("connected, db: " + db);
+    console.log("connected with" + dbstr + " , to db: " + db);
 
     database = db;
 
