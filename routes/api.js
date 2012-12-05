@@ -1,7 +1,4 @@
-var TestimonyModel = require('./../models/testimony.js').TestimonyModel
-
-// instantiate db
-var tm = new TestimonyModel('localhost', 27017);
+var tm = require('./../models/testimony.js')
 
 module.exports = {
   testimonies: function(req, res) {
