@@ -115,4 +115,4 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
 ## Bugs
 
 * ~~issue with multiple db connections on each request. connect once per client and share connection across application. place in bootstrap~~
-	* fixed by updating how conneciton is instantiated and used in api routes. Pattern from here <https://github.com/ccoenraets/nodecellar/blob/master/routes/wines.js>
+	* fixed by updating how conneciton is instantiated and used in api routes. Pattern from here <https://github.com/ccoenraets/nodecellar/blob/master/routes/wines.js#L10-L30>
