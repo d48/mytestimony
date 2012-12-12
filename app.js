@@ -37,10 +37,12 @@ app.configure('production', function(){
 app.get('/', routes.index);
 app.get('/about', routes.about);
 app.get('/contact', routes.contact);
+app.get('/testimonies/:id', routes.testimonies);
 
 // API routes
 // @todo: have client use instead of application
 app.get('/api/v1/testimonies', routesapi.testimonies);
+app.get('/api/v1/testimonies/:id', routesapi.testimoniesId);
 app.get('/api/v1/tags', routesapi.tags);
 
 server.listen(3000);
