@@ -20,13 +20,14 @@ This is a website to help people share about their tesimony of what God has done
 
 ## User functions and sample MongoDB command
 
-|Description                                                              |Database function                                     |
-|:--                                                                      |:--                                                   |
-|Create testimony with fields for name, testimony test, and tags/keywords |`db.collectionname.insert({k:v, k:v, k:[v,v,v]});`    |
-|Search for testimonials based on tags/keywords                           |`db.collectionname.find({tags: { $all : [value] } });`|
-|Show list of testimonials, using lazy load (limit by first 10)           |`db.collectionname.find().limit(10);`                 |
-|Show list of testimonials, using lazy load (get next 5 after index of 10)|`db.collectionname.find().skip(10).limit(5);`         |
-|Search in a field using regular expression (case insensitive)            |`db.collectionname.find(testimony: /keyword*/i);`     |
+|Description                                                              |Database function                                                              |
+|:--                                                                      |:--                                                                            |
+|Create testimony with fields for name, testimony test, and tags/keywords |`db.collectionname.insert({k:v, k:v, k:[v,v,v]});`                             |
+|Search for testimonials based on tags/keywords                           |`db.collectionname.find({tags: { $all : [value] } });`                         |
+|Show list of testimonials, using lazy load (limit by first 10)           |`db.collectionname.find().limit(10);`                                          |
+|Show list of testimonials, using lazy load (get next 5 after index of 10)|`db.collectionname.find().skip(10).limit(5);`                                  |
+|Search in a field using regular expression (case insensitive)            |`db.collectionname.find(testimony: /keyword*/i);`                              |
+|Search for testimony with _id                                            |`db.collectionname.findOne({_id: new ObjectID('generatedstring')}, calback());`|
 
 __note:__ Using skip is expensive as it walks through the collection to get the offset. As number for `skip()` increases, this gets more expensive for performance
 
