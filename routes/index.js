@@ -7,13 +7,12 @@ var request = require('request')
 module.exports = {
   // home page
   index: function(req,res) {
-    var host    = req.headers.host
-      , url     = 'http://' + host + '/api/v1/testimonies'
-      , url2    = 'http://' + host + '/api/v1/tags'
-      , options = {url: url, json: true}
-      , options2 = {url: url2, json: true}
-      , tags = []
-      ;
+    var host   = req.headers.host
+    , url      = 'http://' + host + '/api/v1/testimonies'
+    , url2     = 'http://' + host + '/api/v1/tags'
+    , options  = {url: url, json: true}
+    , options2 = {url: url2, json: true}
+    , tags     = [];
 
     // ajax request to get tags
     // @todo: instead of having route do ajax request, let's just render template
@@ -25,6 +24,7 @@ module.exports = {
         // ajax request to get testimonies
         request.get(options, function(error, response, body) {
           if (!error && response.statusCode === 200) {
+            console.log(body);
             res.locals.tags = tags;
             res.render('index', {
               title: 'MyTestimony.com', page: 'home', testimonies: body
@@ -45,5 +45,21 @@ module.exports = {
       res.render('contact', {
         title: 'MyTestimony.com - Contact', page: 'contact'
       });
+  }
+
+  , testimonies: function(req, res) {
+    var id    = req.params.id
+    , host    = req.headers.host
+    , url     = 'http://' + host + '/api/v1/testimonies/' + id
+    , options = {url: url, json: true};
+
+    request.get(options, function(error, response, body) {
+      if (!error && response.statusCode === 200) {
+        res.render('testimonies', {
+          title: 'MyTestimony.com - Testimony', page: 'testimony', testimony: body
+        });
+      }
+    });
+
   }
 }; 

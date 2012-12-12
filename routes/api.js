@@ -7,6 +7,15 @@ module.exports = {
       res.json(testimonies);
     });
   }
+
+  , testimoniesId: function(req, res) {
+    var id = req.params.id;
+    // get all testimonies
+    tm.findOne('testimonies', id, function(error, testimony) {
+      res.json(testimony);
+    });
+  }
+
   , tags: function(req, res) {
     // get all unique tags from all documents
     tm.getDistinct('testimonies', 'tags', function(error, tags) {
