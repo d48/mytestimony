@@ -14,18 +14,7 @@ block main
                     include includes/index-testimonies.jade
 
 block sidebar
-    h4#start Ready to share yours?
-
-    button(class="btn btn-default btn-large") Start >
-
-    h4#or Or
-
-    h4#read Read some Testimonies
-
-    select#tag-category.dropdown
-        option(value='0') Select a tag/category
-        each tag in tags
-            option(value=tag)= tag
+    include includes/sidebar-share.jade
 
 block footer
     include includes/footer.jade
