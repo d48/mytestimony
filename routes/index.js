@@ -25,6 +25,8 @@ var getTags = function(webRoot, cb) {
     if (!error && response.statusCode === 200) {
       var tags = body.sort(appHelper.compare);
       if (cb) cb(tags);
+    } else {
+      throw new Error(error); 
     }
   });
 };
@@ -37,17 +39,18 @@ module.exports = {
     , url      = webRoot + urls['testimonies']
     , options  = {url: url, json: true};
 
+    // get tags
     getTags(webRoot, function(tags) {
       res.locals.tags = tags;
-    });
 
-    // ajax request to get testimonies
-    request.get(options, function(error, response, body) {
-      if (!error && response.statusCode === 200) {
-        res.render('index', {
-          title: 'MyTestimony.com', page: 'home', testimonies: body
-        });
-      }
+      // ajax request to get testimonies
+      request.get(options, function(error, response, body) {
+        if (!error && response.statusCode === 200) {
+          res.render('index', {
+            title: 'MyTestimony.com', page: 'home', testimonies: body
+          });
+        }
+      });
     });
   }
 
@@ -66,23 +69,25 @@ module.exports = {
 
   , testimonies: function(req, res) {
       var id     = req.params.id
-      , host     = req.headers.host
-      , webRoot  = 'http://' + host
-      , url      = webRoot + urls['testimonies'] + id
-      , options  = {url: url, json: true};
+      ,   host  = req.headers.host
+      , webRoot = 'http://' + host
+      , url     = webRoot + urls['testimonies'] + id
+      , options = {url: url, json: true};
 
-    
-    getTags(webRoot, function(tags) {
-      res.locals.tags = tags;
-    });
+      // get tags
+      getTags(webRoot, function(tags) {
+        res.locals.tags = tags;
 
-    request.get(options, function(error, response, body) {
-      if (!error && response.statusCode === 200) {
-        res.render('testimonies', {
-          title: 'MyTestimony.com - Testimony', page: 'testimony', testimony: body
+        // on success, get testimony
+        // @todo: Have each partial requests it's own data? Would have to do client side
+        request.get(options, function(error, response, body) {
+          if (!error && response.statusCode === 200) {
+            res.render('testimonies', {
+              title: 'MyTestimony.com - Testimony', page: 'testimony', testimony: body
+            });
+          }
         });
-      }
-    });
+      });
 
   }
 
