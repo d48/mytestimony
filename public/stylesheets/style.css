@@ -5,7 +5,9 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
-select {
+input,
+select,
+textarea {
   background-color: #fff;
   border: 1px solid #ccc;
   -webkit-border-radius: 4px;
@@ -13,11 +15,47 @@ select {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
+  display: block;
   font-size: 14px;
-  height: 30px;
-  line-height: 30px;
+  line-height: 18px;
   margin: 0;
-  padding: 4px 20px;
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  min-width: 300px;
+}
+label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.btn-group button {
+  float: left;
+  margin-right: 10px;
+}
+#testimony-form {
+  background: rgba(225,225,225,0.95);
+/* display: none */
+  height: 100%;
+  width: 700px;
+  padding: 0 40px;
+  border-left: 1px solid #ccc;
+  -webkit-box-shadow: 5px 5px 5px 10px rgba(0,0,0,0.1);
+  -moz-box-shadow: 5px 5px 5px 10px rgba(0,0,0,0.1);
+  -ms-box-shadow: 5px 5px 5px 10px rgba(0,0,0,0.1);
+  -o-box-shadow: 5px 5px 5px 10px rgba(0,0,0,0.1);
+  box-shadow: 5px 5px 5px 10px rgba(0,0,0,0.1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+#testimony-form input,
+#testimony-form textarea {
+  width: 100%;
+}
+#testimony-form .btn-group {
+  float: right;
 }
 body {
   padding: 0 30px;

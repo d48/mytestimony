@@ -1,0 +1,17 @@
+#testimony-form
+    h2 Create Your Testimony
+
+    label(for="name") Enter your name. (*optional)
+    input#name(name="name", type="textbox")
+
+    label(for="testimony") Enter your testimony below.
+    textarea#testimony(name="testimony", cols="40", rows="10")
+
+    label(for="tags") Enter some tags to categorize your testimony.
+    input#tags(name="tags", type="textbox")
+
+    div.btn-group
+        button#preview(class="btn btn-default btn-large") Preview
+        button#submit(class="btn btn-default btn-large") Submit
+
+
