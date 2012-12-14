@@ -4,32 +4,48 @@
 var request = require('request')
   , appHelper = require('./../app/utils/helpers.js');
 
+// url mappings
+var urls = {
+    tags: "/api/v1/tags/"
+  , testimonies: "/api/v1/testimonies/"
+};
+
+/**
+ * Returns all tags formatted alphabetically
+ *
+ * @param {webRoot} url format for host
+ * @param {cb} Callback function to return data to
+ * @return {Array} List of tags 
+ */
+var getTags = function(webRoot, cb) {
+  var url   = webRoot + urls['tags']
+  , options = {url: url, json: true};
+
+  request.get(options, function(error, response, body) {
+    if (!error && response.statusCode === 200) {
+      var tags = body.sort(appHelper.compare);
+      if (cb) cb(tags);
+    }
+  });
+};
+
 module.exports = {
   // home page
   index: function(req,res) {
     var host   = req.headers.host
-    , url      = 'http://' + host + '/api/v1/testimonies'
-    , url2     = 'http://' + host + '/api/v1/tags'
-    , options  = {url: url, json: true}
-    , options2 = {url: url2, json: true}
-    , tags     = [];
+    , webRoot  = 'http://' + host
+    , url      = webRoot + urls['testimonies']
+    , options  = {url: url, json: true};
 
-    // ajax request to get tags
-    // @todo: instead of having route do ajax request, let's just render template
-    //        and have client do mulitple ajax requests and do dom updating
-    request.get(options2, function(error, response, body) {
+    getTags(webRoot, function(tags) {
+      res.locals.tags = tags;
+    });
+
+    // ajax request to get testimonies
+    request.get(options, function(error, response, body) {
       if (!error && response.statusCode === 200) {
-        var tags = body.sort(appHelper.compare);
-
-        // ajax request to get testimonies
-        request.get(options, function(error, response, body) {
-          if (!error && response.statusCode === 200) {
-            console.log(body);
-            res.locals.tags = tags;
-            res.render('index', {
-              title: 'MyTestimony.com', page: 'home', testimonies: body
-            });
-          }
+        res.render('index', {
+          title: 'MyTestimony.com', page: 'home', testimonies: body
         });
       }
     });
@@ -47,11 +63,18 @@ module.exports = {
       });
   }
 
+
   , testimonies: function(req, res) {
-    var id    = req.params.id
-    , host    = req.headers.host
-    , url     = 'http://' + host + '/api/v1/testimonies/' + id
-    , options = {url: url, json: true};
+      var id     = req.params.id
+      , host     = req.headers.host
+      , webRoot  = 'http://' + host
+      , url      = webRoot + urls['testimonies'] + id
+      , options  = {url: url, json: true};
+
+    
+    getTags(webRoot, function(tags) {
+      res.locals.tags = tags;
+    });
 
     request.get(options, function(error, response, body) {
       if (!error && response.statusCode === 200) {
@@ -62,4 +85,5 @@ module.exports = {
     });
 
   }
+
 }; 
