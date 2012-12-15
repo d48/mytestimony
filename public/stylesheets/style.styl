@@ -5,6 +5,7 @@
   -moz-box-sizing: border-box
   -webkit-box-sizing: border-box
 
+@import 'nib'
 @import 'variables.styl'
 @import 'mixins.styl'
 @import 'forms.styl'
@@ -12,6 +13,8 @@
 
 // @todo: move into base.styl
 body
+  background-color: $backgroundColor
+  overflow: hidden
   padding: 0 $gutter
   font: $font
 a

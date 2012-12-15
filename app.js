@@ -7,10 +7,19 @@ var express   = require('express')
   , http      = require('http')
   , routes    = require('./routes')
   , routesapi = require('./routes/api')
+  , stylus    = require('stylus')
+  , nib       = require('nib')
   ;
 
 var app = express();
 var server = http.createServer(app);
+
+function compile(str, path) {
+  return stylus(str)
+    .set('filename', path)
+    .set('compress', true)
+    .use(nib());
+}
 
 // Configuration
 app.configure(function(){
@@ -20,7 +29,7 @@ app.configure(function(){
   app.locals.pretty = true;
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-  app.use(require('stylus').middleware({ src: __dirname + '/public' }));
+  app.use(stylus.middleware({ src: __dirname + '/public', compile: compile }));
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
 });
