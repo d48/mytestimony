@@ -1,6 +1,10 @@
 extends layout
+
 block testimony-form
     include includes/testimony-form.jade
+
+block sidebar
+    include includes/sidebar-share.jade
 
 block main 
     h3.content Latest Testimonies
@@ -15,8 +19,3 @@ block main
                 li
                     include includes/index-testimonies.jade
 
-block sidebar
-    include includes/sidebar-share.jade
-
-block footer
-    include includes/footer.jade

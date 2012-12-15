@@ -8,6 +8,9 @@ html
   body(class= page) 
     block testimony-form
 
+    #sidebar
+        block sidebar
+
     h1 MyTestimony.com
     h2.tagline - Sharing How Great God Is
 
@@ -15,9 +18,7 @@ html
         #main
             block main 
 
-    #sidebar
-        block sidebar
 
     #footer
         block footer
-
+            include includes/footer.jade
