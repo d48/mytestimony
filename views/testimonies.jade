@@ -6,7 +6,7 @@ block testimony-form
 block main 
     a(href="/") Return
     h3.content= testimony.title
-    p= testimony.testimony
+    p!= testimony.testimony
 
 block sidebar
     include includes/sidebar-share.jade

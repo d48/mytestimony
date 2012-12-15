@@ -15,6 +15,7 @@ h1{float:left;font-size:2.25em;font-weight:normal}
 h2{display:inline-block;font-size:1.75em;font-weight:normal}
 h3{font-size:1.7em;font-weight:normal}
 h4{font-size:1.5em;font-weight:normal}
+p{font-size:1.2em;line-height:24px;margin-bottom:30px}
 .content-title{clear:both;display:block;margin:20px 0}
 .tagline{margin-left:10px;padding-top:6px}
 #testimonies{list-style-type:none;padding:0;margin:0;}
@@ -22,7 +23,7 @@ h4{font-size:1.5em;font-weight:normal}
 #testimonies .new{float:left;line-height:1px;margin-left:5px;margin-top:22px;font-size:4em}
 #testimonies li{overflow:hidden;padding:30px;}
 #testimonies li .subhead{float:left;margin:0 0 10px 0}
-#testimonies li .description{clear:left;float:left;font-size:1.2em;margin:10px 0;padding:0;width:80%}
+#testimonies li .description{clear:left;float:left;padding:0;width:80%}
 #testimonies li button{float:left;margin-left:50px;margin-top:15px}
 #content{clear:both}
 #main{float:left;padding-right:30px;width:75%;}
