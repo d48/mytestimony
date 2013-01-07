@@ -6,7 +6,27 @@ block testimony-form
 block main 
     a(href="/") Return
     h3.content= testimony.title
+    p.author Posted by: Jeremy S.
     p!= testimony.testimony
+
+    div#testimony-footer
+
+        div.tags
+            h4 Tags
+            p This testimony has been tagged with these keywords
+            ul
+                li Hello
+                li Woot 
+                li Jesus
+
+        div.share
+            h4 Share
+            p Share your testimony using a tool below
+            ul
+                li Email
+                li Facebook
+                li Twitter
+                li SMS Mobile Text
 
 block sidebar
     include includes/sidebar-share.jade

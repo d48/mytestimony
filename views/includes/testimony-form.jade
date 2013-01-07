@@ -3,13 +3,17 @@
 
     h2 Create Your Testimony
 
-    label(for="name") Enter your name. (*optional)
+    label(for="name") Enter your name (*optional)
     input#name(name="name", type="textbox")
 
-    label(for="testimony") Enter your testimony below.
+    label(for="testimony") Enter your testimony below
     textarea#testimony(name="testimony", cols="40", rows="10")
 
-    label(for="tags") Enter some tags to categorize your testimony.
+    label(for="title") Enter a title for your testimony
+    input#title(name="title", type="textbox")
+
+    label(for="tags") Enter some tags to categorize your testimony
+    span.hint Separate by comma or hit 'Enter' after each
     input#tags(name="tags", type="textbox")
 
     div.btn-group

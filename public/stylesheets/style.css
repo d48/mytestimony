@@ -1,5 +1,5 @@
 *{box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
-input,select,textarea{background-color:#fff;border:1px solid #ccc;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;border-radius:4px;display:block;font-size:14px;line-height:18px;margin:0;margin-bottom:30px;padding:10px 20px;min-width:300px}
+input,select,textarea{background-color:#fff;border:1px solid #ccc;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;border-radius:4px;display:block;font-size:14px;line-height:18px;margin:0;margin-bottom:30px;padding:10px;min-width:300px}
 label{display:block;font-size:16px;font-weight:bold;margin-bottom:10px}
 .btn-group button{float:left;margin-right:10px}
 #testimony-form{background:rgba(225,225,225,0.95);height:100%;width:700px;padding:0 40px;border-left:1px solid #ccc;-webkit-box-shadow:5px 5px 5px 10px rgba(0,0,0,0.1);-moz-box-shadow:5px 5px 5px 10px rgba(0,0,0,0.1);-ms-box-shadow:5px 5px 5px 10px rgba(0,0,0,0.1);-o-box-shadow:5px 5px 5px 10px rgba(0,0,0,0.1);box-shadow:5px 5px 5px 10px rgba(0,0,0,0.1);overflow:hidden;position:absolute;top:0;right:-700px;z-index:10;}
@@ -8,7 +8,16 @@ label{display:block;font-size:16px;font-weight:bold;margin-bottom:10px}
 #testimony-form.open{right:0;visibility:visible}
 #testimony-form input,#testimony-form textarea{width:100%}
 #testimony-form .btn-group{float:right}
+#testimony-form .hint{display:block;margin:-5px 0 10px 0}
 #close{cursor:pointer;display:inline;float:right;margin-top:20px;text-decoration:underline}
+.author{font-weight:bold;margin-top:-20px}
+#testimony-footer{border-top:1px solid #ccc}
+.tags{border-right:1px solid #ccc;float:left;width:50%;}
+.tags li{background-color:#f8f8f8;border:1px solid #ccc;-webkit-border-radius:10px;-moz-border-radius:10px;-ms-border-radius:10px;-o-border-radius:10px;border-radius:10px;display:inline-block;font-size:.9em;padding:2px 5px;margin-right:5px;}
+.tags li:hover{background-color:#ccc;color:#777;cursor:pointer}
+.share{float:left;padding-left:30px;width:50%;}
+.share li{display:inline-block;margin-right:5px;padding:2px 5px}
+.testimony ul{list-style-type:none;margin:0;padding:0;margin-top:-10px}
 body{background-color:#fff;overflow:hidden;padding:0 30px;font:14px Arial,Helvetica,sans-serif}
 a{color:#00b7ff}
 h1{float:left;font-size:2.25em;font-weight:normal}
