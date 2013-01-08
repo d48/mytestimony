@@ -72,6 +72,7 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
 * ~~Overview of who, what, where, how~~
 * Wireframes for main application for creating and list of tesimony view 
      * ~~Create page~~
+	  * Design testimony detail page
      * ~~List of random testimonials~~
      * Edit page
      * Browse tag results
