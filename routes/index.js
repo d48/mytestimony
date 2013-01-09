@@ -10,6 +10,7 @@ var urls = {
   , testimonies: "/api/v1/testimonies/"
 };
 
+
 /**
  * Returns all tags formatted alphabetically
  *
@@ -30,6 +31,7 @@ var getTags = function(webRoot, cb) {
     }
   });
 };
+
 
 module.exports = {
   // home page
@@ -82,8 +84,14 @@ module.exports = {
         // @todo: Have each partial requests it's own data? Would have to do client side
         request.get(options, function(error, response, body) {
           if (!error && response.statusCode === 200) {
+            var testimonyTags = body.tags;
+            testimonyTags = testimonyTags.sort(appHelper.compare);
+
             res.render('testimonies', {
-              title: 'MyTestimony.com - Testimony', page: 'testimony', testimony: body
+              title: 'MyTestimony.com - Testimony'
+              , page: 'testimony'
+              , testimony: body
+              , testimonyTags: testimonyTags
             });
           }
         });

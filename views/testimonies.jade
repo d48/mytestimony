@@ -15,9 +15,8 @@ block main
             h4 Tags
             p This testimony has been tagged with these keywords
             ul
-                li Hello
-                li Woot 
-                li Jesus
+                each tag in testimonyTags
+                    li= tag
 
         div.share
             h4 Share
