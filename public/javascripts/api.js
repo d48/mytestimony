@@ -1,34 +1,50 @@
 // @todo: use require.js to pull in library and module dependencies
-$(document).ready(function() {
+document.onready = function() {
 
-  function btnViewTestimony(e) {
-    e.preventDefault();
+  var MYT = {};
 
-    var btnId  = e.currentTarget.getAttribute('id')
-    , location = window.location
-    , origin = location.origin
-    ;
-      
-    // @todo: create namespace of utility/url helper
-    window.location.href = origin + '/testimonies/' + btnId;
-  }
+  (function(){
 
-  function btnCloseForm(e) {
-    e.preventDefault();
+    function viewTestimony(e) {
+      e.preventDefault();
+
+      var btnId  = e.currentTarget.getAttribute('id')
+      , location = window.location
+      , origin = location.origin
+      ;
+        
+      // @todo: create namespace of utility/url helper
+      window.location.href = origin + '/testimonies/' + btnId;
+    }
+
+    function closeForm(e) {
+      e.preventDefault();
+      $('#testimony-form').addClass('close');
+      $('#testimony-form').removeClass('open');
+    }
+
+    function showForm(e) {
+      e.preventDefault();
+      $('#testimony-form').removeClass('close');
+      $('#testimony-form').addClass('open');
+    }
+
+    // api
+    MYT = {
+      btnViewTestimony: viewTestimony
+      , btnCloseForm: closeForm
+      , btnShowForm: showForm
+    };
+
     
-    $('#testimony-form').addClass('close');
-    $('#testimony-form').removeClass('open');
-  }
+  }());
 
-  function btnShowForm(e) {
-    e.preventDefault();
-    
-    $('#testimony-form').removeClass('close');
-    $('#testimony-form').addClass('open');
-  }
-  
   // click handler
-  $('.view-testimony').on('click', btnViewTestimony);
-  $('#close').on('click', btnCloseForm);
-  $('#start').on('click', btnShowForm);
-});
+  // -----------------------------------------------
+  $('.view-testimony').on('click', MYT.btnViewTestimony);
+  $('#close').on('click', MYT.btnCloseForm);
+  $('#start').on('click', MYT.btnShowForm);
+
+
+};
+

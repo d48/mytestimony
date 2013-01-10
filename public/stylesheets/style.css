@@ -9,6 +9,8 @@ label{display:block;font-size:16px;font-weight:bold;margin-bottom:10px}
 #testimony-form input,#testimony-form textarea{width:100%}
 #testimony-form .btn-group{float:right}
 #testimony-form .hint{display:block;margin:-5px 0 10px 0}
+#enter-testimony{float:left}
+#word-count{float:right}
 #close{cursor:pointer;display:inline;float:right;margin-top:20px;text-decoration:underline}
 .author{font-weight:bold;margin-top:-20px}
 #testimony-footer{border-top:1px solid #ccc}

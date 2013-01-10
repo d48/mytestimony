@@ -4,9 +4,12 @@
     h2 Create Your Testimony
 
     label(for="name") Enter your name (*optional)
+    span.hint If blank, it will show from "Anonymous"
     input#name(name="name", type="textbox")
 
-    label(for="testimony") Enter your testimony below
+    label(for="testimony", id="enter-testimony") Enter your testimony below
+    div#word-count Word count: 
+        span#words 10
     textarea#testimony(name="testimony", cols="40", rows="10")
 
     label(for="title") Enter a title for your testimony
