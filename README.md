@@ -11,7 +11,7 @@ This is a website to help people share about their tesimony of what God has done
 
 **Homepage - one page app**
 
-![Homepage](https://github.com/design48/mytestimony/raw/master/design/wireframes/wireframe-home-v1.png)
+![Homepage](https://github.com/d48/mytestimony/raw/master/design/wireframes/wireframe-home-v1.png)
 
 **Homepage - Share Testimony**
 
