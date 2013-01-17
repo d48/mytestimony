@@ -7,19 +7,17 @@ block main
     a(href="/") Return
 
     div#heading
-      h3.content= testimony.title
-      p.author Posted by: Jeremy S.
+        div.title
+            h3.content= testimony.title
+            p.author Posted by: Jeremy S.
 
-    div.share
-        h4 Share
-        p Share your testimony using a tool below
-        ul
-            li Email
-            li Facebook
-            li Twitter
-            li SMS Mobile Text
-
-
+        div.share
+            h4 Share your testimony using a tool below
+            ul
+                li Email
+                li Facebook
+                li Twitter
+                li SMS Mobile Text
 
     p!= testimony.testimony
 

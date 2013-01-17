@@ -19,9 +19,12 @@ label{display:block;font-size:16px;font-weight:bold;margin-bottom:10px}
 .tags li:hover{background-color:#ccc;color:#777;cursor:pointer}
 .flag{float:left;padding-left:30px;width:50%;}
 .flag li{display:inline-block;margin-right:5px;padding:2px 5px}
-#heading{display:inline}
-.share{float:right;padding-left:30px;width:50%;}
-.share li{display:inline-block;margin-right:5px;padding:2px 5px}
+#heading{float:left;width:100%;}
+#heading .title{float:left;min-width:200px;width:50%}
+#heading .share{float:right;padding-left:30px;width:50%;}
+#heading .share h5{margin-bottom:20px}
+#heading .share p{margin-top:0}
+#heading .share li{display:inline-block;margin-right:5px;padding:2px 5px}
 .testimony ul{list-style-type:none;margin:0;padding:0;margin-top:-10px}
 body{background-color:#fff;overflow:hidden;padding:0 30px;font:14px Arial,Helvetica,sans-serif}
 a{color:#00b7ff}
