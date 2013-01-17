@@ -5,8 +5,22 @@ block testimony-form
 
 block main 
     a(href="/") Return
-    h3.content= testimony.title
-    p.author Posted by: Jeremy S.
+
+    div#heading
+      h3.content= testimony.title
+      p.author Posted by: Jeremy S.
+
+    div.share
+        h4 Share
+        p Share your testimony using a tool below
+        ul
+            li Email
+            li Facebook
+            li Twitter
+            li SMS Mobile Text
+
+
+
     p!= testimony.testimony
 
     div#testimony-footer
@@ -18,14 +32,11 @@ block main
                 each tag in testimonyTags
                     li= tag
 
-        div.share
-            h4 Share
-            p Share your testimony using a tool below
+        div.flag
+            h4 Flag
+            p Is this post inappropriate?
             ul
-                li Email
-                li Facebook
-                li Twitter
-                li SMS Mobile Text
+                li Flag it
 
 block sidebar
     include includes/sidebar-share.jade

@@ -17,7 +17,10 @@ label{display:block;font-size:16px;font-weight:bold;margin-bottom:10px}
 .tags{border-right:1px solid #ccc;float:left;width:50%;}
 .tags li{background-color:#f8f8f8;border:1px solid #ccc;-webkit-border-radius:10px;-moz-border-radius:10px;-ms-border-radius:10px;-o-border-radius:10px;border-radius:10px;display:inline-block;font-size:.9em;padding:2px 10px;margin-right:5px;}
 .tags li:hover{background-color:#ccc;color:#777;cursor:pointer}
-.share{float:left;padding-left:30px;width:50%;}
+.flag{float:left;padding-left:30px;width:50%;}
+.flag li{display:inline-block;margin-right:5px;padding:2px 5px}
+#heading{display:inline}
+.share{float:right;padding-left:30px;width:50%;}
 .share li{display:inline-block;margin-right:5px;padding:2px 5px}
 .testimony ul{list-style-type:none;margin:0;padding:0;margin-top:-10px}
 body{background-color:#fff;overflow:hidden;padding:0 30px;font:14px Arial,Helvetica,sans-serif}
