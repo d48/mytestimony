@@ -105,14 +105,12 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
 
 ## Todo
 
-- [  ] Begin to integrate some design/styling and page interaction
-	* buttons
-	* UI shading and highlights
-	* rollover and button events/animations
-- [  ] Use var constant for PATHs or items that are reused throughout app <https://github.com/wprl/baucis/blob/master/index.js#L5>
-- [  ] Set up Travis CI tests and continous integration for the site. Look into just running Jasmine test suite
+- Use var constant for PATHs or items that are reused throughout app <https://github.com/wprl/baucis/blob/master/index.js#L5>
+- Read the Manual! for all included libs for specific method signatures
+	* was having trouble with `request.post` for a while...just needed to follow usage
+- Set up Travis CI tests and continous integration for the site. Look into just running Jasmine test suite
 	* begin implementing tests for each method now, start off with one file for now
-- [  ] replace templating engine to use doT.js <http://olado.github.com/doT/>
+- replace templating engine to use doT.js <http://olado.github.com/doT/>
 	* integration with express found here <http://stackoverflow.com/questions/9207078/how-to-render-dot-js-templating-in-nodejs>
 
 
