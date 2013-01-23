@@ -3,24 +3,25 @@
 
     h2 Create Your Testimony
 
-    label(for="name") Enter your name (*optional)
-    span.hint If blank, it will show from "Anonymous"
-    input#name(name="name", type="textbox")
+    form( method="post", action="/testimonies" )
+        label(for="name") Enter your name (*optional)
+        span.hint If blank, it will show from "Anonymous"
+        input#name(name="name", type="textbox")
 
-    label(for="testimony", id="enter-testimony") Enter your testimony below
-    div#word-count Word count: 
-        span#words 10
-    textarea#testimony(name="testimony", cols="40", rows="10")
+        label(for="testimony", id="enter-testimony") Enter your testimony below
+        div#word-count Word count: 
+            span#words 10
+        textarea#testimony(name="testimony", cols="40", rows="10")
 
-    label(for="title") Enter a title for your testimony
-    input#title(name="title", type="textbox")
+        label(for="title") Enter a title for your testimony
+        input#title(name="title", type="textbox")
 
-    label(for="tags") Enter some tags to categorize your testimony
-    span.hint Separate by comma or hit 'Enter' after each
-    input#tags(name="tags", type="textbox")
+        label(for="tags") Enter some tags to categorize your testimony
+        span.hint Separate by comma or hit 'Enter' after each
+        input#tags(name="tags", type="textbox")
 
-    div.btn-group
-        button#preview(class="btn btn-default btn-large") Preview
-        button#submit(class="btn btn-default btn-large") Submit
+        div.btn-group
+            button#preview(class="btn btn-default btn-large") Preview
+            button#submit(class="btn btn-default btn-large") Submit
 
 

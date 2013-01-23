@@ -2,4 +2,6 @@ node_modules/
 data/
 db/
 data/db/
+data/db/mongod.lock
 .DS_Store
+.idea/

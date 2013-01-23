@@ -99,4 +99,30 @@ module.exports = {
 
   }
 
+  , testimoniesAdd: function(req, res) {
+
+
+    var host    = req.headers.host
+      , webRoot = 'http://' + host
+      , url     = webRoot + urls['testimonies']
+      , formKeys = {}
+      ;
+
+    formKeys = {
+      form:{
+        name: req.body.name
+        , tags: req.body.tags
+        , testimony: req.body.testimony
+        , title: req.body.title
+      }
+    };
+
+    request.post(url, formKeys, function(error, response, body) {
+      if (!error && response.statusCode === 200) {
+          res.redirect('/');
+      }      
+    });
+ 
+  }
+
 }; 

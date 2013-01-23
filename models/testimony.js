@@ -52,7 +52,7 @@ module.exports = {
     this.getCollection(collName, function(err, collection) {
       if (err) cb(err);
       else {
-        collection.find().toArray(function(err, results) {
+        collection.find().sort([['date', -1]]).toArray(function(err, results) {
           if (err) cb(err);
           else cb(null, results);
         });
@@ -60,6 +60,17 @@ module.exports = {
     });
   }
 
+    /**
+     * Finds a single item in the collection based on id
+     * 
+     * @name findOne
+     * @param {String} collName - 
+     * @param {String} id - BSON ObjectID
+     * @param {Function} cb - callback used for error or response process 
+     * @returns {Function} - callback 
+     * @method 
+     * @author Ryan Regalado 
+     */
   , findOne: function(collName, id, cb) {
     var obID = new ObjectID(id);
 
@@ -73,6 +84,32 @@ module.exports = {
       }
     });
   }
+
+    /**
+     * Inserts document into mongodb
+     * 
+     * @name insert
+     * @param {type} collName - collection name
+     * @param {Object} obj - Dcoument to insert
+     * @returns void - 
+     * @author Ryan Regalado 
+     */
+  , insert: function(collName, obj, cb) {
+    this.getCollection(collName, function(err, collection) {
+      if (err) cb(err);
+      else {
+         var objID = new ObjectID();
+         obj._id = objID;
+         obj.date = new Date();
+
+         collection.insert(obj, function(err, results) {
+           if (err) cb(err);
+           else cb(null, results);
+         });
+      }
+    });
+  }
+
 
 };
 
