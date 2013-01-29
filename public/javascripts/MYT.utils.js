@@ -37,7 +37,7 @@ var MYT = MYT || {};
 
     // api
     MYT.utils = {
-        addClass: addClass
+          addClass: addClass
         , removeClass: removeClass
     };
 

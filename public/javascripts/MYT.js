@@ -79,6 +79,7 @@ var MYT = MYT || {};  // defines MYT namespace
       }
       d.getElementById(closeId).addEventListener('click', closeForm, false);
       d.getElementById(openId).addEventListener('click', showForm, false);
+
     }
 
     // API
