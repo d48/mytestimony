@@ -54,11 +54,36 @@ var MYT = MYT || {};  // defines MYT namespace
         MYT.utils.removeClass(document.getElementById(formId), 'close');
     }
 
+    /**
+     * Kick of the app's lifecycle
+     * 
+     * @name init
+     * @returns void - Sets up event listeners
+     * @method 
+     * @author Ryan Regalado 
+     */
+    function init() {
+      // var setup
+      var d              = window.document
+        , closeId      = 'close'
+        , openId       = 'start'
+        , viewTesClass = 'view-testimony'
+        , viewTesButtons = d.getElementsByClassName(viewTesClass)
+        , viewLen = viewTesButtons.length
+        , i = 0
+        ;
+
+      // Set up click handlers
+      for(i;i < viewLen; i++) {
+        viewTesButtons[i].addEventListener('click', viewTestimony, false);    
+      }
+      d.getElementById(closeId).addEventListener('click', closeForm, false);
+      d.getElementById(openId).addEventListener('click', showForm, false);
+    }
+
     // API
     MYT = {
-        btnViewTestimony: viewTestimony
-        , btnCloseForm: closeForm
-        , btnShowForm: showForm
+        init: init
     };
 
     return MYT;
