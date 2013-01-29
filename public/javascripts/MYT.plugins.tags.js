@@ -17,11 +17,23 @@ MYT.plugins = MYT.plugins || {};
     var val = document.getElementById(elementId).value  // get element
       , pattern = /(\s+)*,(\s+)*/g  // strip white space around commas
       , tags = val.replace(pattern, ',')
+      , tags = tags.split(',')
       ;
 
-    // update div below field, iterating through array and displaying
-
     console.log('creating tags', tags);
+
+    // update div below field, iterating through array to build output
+    var templateId = 'tags-template'
+      , tagTemplate = document.getElementById(templateId).innerHTML
+      , template = doT.template(tagTemplate)
+      , output = template({"tags": tags})
+      ;
+
+    console.log('tags created', output);
+
+    // insert into DOM
+    var tagsId = 'tagbox';
+    document.getElementById(tagsId).innerHTML = output;
   }
 
   // api
