@@ -12,13 +12,24 @@ MYT.plugins = MYT.plugins || {};
    * @returns void - Creates tags
    * @method 
    * @author Ryan Regalado 
+   * @todo Don't allow user to enter multiple commas. Think of how to just check
+   *       for last entered value and if , or '' then don't do anything
    */
   function create(elementId) {
-    var val = document.getElementById(elementId).value  // get element
+    var el = document.getElementById(elementId)  // get element
+      , val = el.value  // get element
       , pattern = /(\s+)*,(\s+)*/g  // strip white space around commas
       , tags = val.replace(pattern, ',')
       , tags = tags.split(',')
       ;
+
+    el.value = val + ',';
+
+    function isEmpty(el, index, array) {
+      return (el !== '');
+    }
+
+    tags = tags.filter(isEmpty);
 
     console.log('creating tags', tags);
 
@@ -28,8 +39,6 @@ MYT.plugins = MYT.plugins || {};
       , template = doT.template(tagTemplate)
       , output = template({"tags": tags})
       ;
-
-    console.log('tags created', output);
 
     // insert into DOM
     var tagsId = 'tagbox';

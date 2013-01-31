@@ -1,2 +1,16 @@
 // @todo create listener for older browsers
-document.addEventListener('DOMContentLoaded', MYT.init, false);
+(function(){
+  var startApp = function() {
+    var options = {};
+
+    options.closeId      = 'close';
+    options.openId       = 'start';
+    options.submitId     = 'submit';
+    options.tagsBoxId    = 'tags';
+    options.viewTesClass = 'view-testimony';
+
+    MYT.init(options);
+  };
+
+  document.addEventListener('DOMContentLoaded', startApp, false);
+}());

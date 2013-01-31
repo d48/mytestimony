@@ -54,6 +54,27 @@ var MYT = MYT || {};  // defines MYT namespace
         MYT.utils.removeClass(document.getElementById(formId), 'close');
     }
 
+
+    /**
+     * Triggers tag function based specific keys entered
+     * 
+     * @name tagKeyChecker
+     * @param {Object} e - Event object
+     * @returns void - Triggers create tags method
+     * @method 
+     * @author Ryan Regalado 
+     */
+    function tagKeyChecker(e) {
+      var key = e.keyCode;
+      // comma character or enter key
+      if(key === 188 || key === 13) {
+        e.preventDefault();
+        console.log('fire func');
+        MYT.plugins.tags.create(MYT.tagsBoxId);
+      }
+    }
+
+
     /**
      * Kick of the app's lifecycle
      * 
@@ -62,16 +83,19 @@ var MYT = MYT || {};  // defines MYT namespace
      * @method 
      * @author Ryan Regalado 
      */
-    function init() {
-      // var setup
+    function init(options) {
       var d              = window.document
-        , closeId      = 'close'
-        , openId       = 'start'
-        , viewTesClass = 'view-testimony'
+        , closeId        = options.closeId      || ''
+        , openId         = options.openId       || ''
+        , submitId       = options.submitId     || ''
+        , viewTesClass   = options.viewTesClass || ''
         , viewTesButtons = d.getElementsByClassName(viewTesClass)
         , viewLen = viewTesButtons.length
         , i = 0
         ;
+
+
+      this.tagsBoxId      = options.tagsBoxId    || '';
 
       // Set up click handlers
       for(i;i < viewLen; i++) {
@@ -79,7 +103,7 @@ var MYT = MYT || {};  // defines MYT namespace
       }
       d.getElementById(closeId).addEventListener('click', closeForm, false);
       d.getElementById(openId).addEventListener('click', showForm, false);
-
+      d.getElementById(this.tagsBoxId).addEventListener('keydown', tagKeyChecker, false);
     }
 
     // API
