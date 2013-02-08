@@ -20,10 +20,11 @@ MYT.plugins = MYT.plugins || {};
       , val = el.value  // get element
       , pattern = /(\s+)*,(\s+)*/g  // strip white space around commas
       , tags = val.replace(pattern, ',')
-      , tags = tags.split(',')
       ;
 
-    el.value = val + ',';
+    tags = tags.split(',')
+    el.value = tags;
+    // el.value = val + ',';
 
     function isEmpty(el, index, array) {
       return (el !== '');
@@ -31,7 +32,7 @@ MYT.plugins = MYT.plugins || {};
 
     tags = tags.filter(isEmpty);
 
-    console.log('creating tags', tags);
+    console.log('creating tags dude', tags);
 
     // update div below field, iterating through array to build output
     var templateId = 'tags-template'

@@ -14,14 +14,15 @@ var MYT = MYT || {};  // defines MYT namespace
      * @author Ryan Regalado 
      */
     function viewTestimony(e) {
-        e.preventDefault();
+      e = e || window.event; // IE doesn't pass in the event object
+      e.preventDefault();
 
-        var btnId  = e.currentTarget.getAttribute('id')
-            , location = window.location
-            , origin = location.origin
-            ;
+      var btnId  = e.currentTarget.getAttribute('id')
+        , location = window.location
+        , origin = location.origin
+        ;
 
-        window.location.href = origin + '/testimonies/' + btnId;
+      window.location.href = origin + '/testimonies/' + btnId;
     }
 
     /**
@@ -34,9 +35,10 @@ var MYT = MYT || {};  // defines MYT namespace
      * @author Ryan Regalado 
      */
     function closeForm(e) {
-        e.preventDefault();
-        MYT.utils.addClass(document.getElementById(formId), 'close');
-        MYT.utils.removeClass(document.getElementById(formId), 'open');
+      e = e || window.event; // IE doesn't pass in the event object
+      e.preventDefault();
+      MYT.utils.addClass(document.getElementById(formId), 'close');
+      MYT.utils.removeClass(document.getElementById(formId), 'open');
     }
 
     /**
@@ -49,9 +51,49 @@ var MYT = MYT || {};  // defines MYT namespace
      * @author Ryan Regalado 
      */
     function showForm(e) {
-        e.preventDefault();
-        MYT.utils.addClass(document.getElementById(formId), 'open');
-        MYT.utils.removeClass(document.getElementById(formId), 'close');
+      e = e || window.event; // IE doesn't pass in the event object
+      e.preventDefault();
+      MYT.utils.addClass(document.getElementById(formId), 'open');
+      e.preventDefault();
+
+      var btnId  = e.currentTarget.getAttribute('id')
+        , location = window.location
+        , origin = location.origin
+        ;
+
+      window.location.href = origin + '/testimonies/' + btnId;
+    }
+
+    /**
+     * Close testimony form that opens from 'Start' button
+     * 
+     * @name closeForm
+     * @param {Object} e - Event object
+     * @returns void - Hides the testimony form
+     * @method 
+     * @author Ryan Regalado 
+     */
+    function closeForm(e) {
+      e = e || window.event; // IE doesn't pass in the event object
+      e.preventDefault();
+      MYT.utils.addClass(document.getElementById(formId), 'close');
+      MYT.utils.removeClass(document.getElementById(formId), 'open');
+    }
+
+    /**
+     * Displays testimony form
+     * 
+     * @name showForm
+     * @param {Object} e - Event object
+     * @returns void - Shows form 
+     * @method 
+     * @author Ryan Regalado 
+     */
+    function showForm(e) {
+      e = e || window.event; // IE doesn't pass in the event object
+      e.preventDefault();
+      MYT.utils.addClass(document.getElementById(formId), 'open');
+      MYT.utils.removeClass(document.getElementById(formId), 'close');
     }
 
 
@@ -65,12 +107,16 @@ var MYT = MYT || {};  // defines MYT namespace
      * @author Ryan Regalado 
      */
     function tagKeyChecker(e) {
+      e = e || window.event; // IE doesn't pass in the event object
       var key = e.keyCode;
-      // comma character or enter key
-      if(key === 188 || key === 13) {
-        e.preventDefault();
-        console.log('fire func');
-        MYT.plugins.tags.create(MYT.tagsBoxId);
+
+      switch(key) {
+        case 13: // enter key
+          e.preventDefault();
+        case 188: // comma
+          MYT.plugins.tags.create(MYT.tagsBoxId);
+        default:
+          break;
       }
     }
 
@@ -94,8 +140,7 @@ var MYT = MYT || {};  // defines MYT namespace
         , i = 0
         ;
 
-
-      this.tagsBoxId      = options.tagsBoxId    || '';
+      this.tagsBoxId     = options.tagsBoxId    || '';
 
       // Set up click handlers
       for(i;i < viewLen; i++) {
