@@ -4,6 +4,7 @@
     var options = {};
 
     options.closeId      = 'close';
+    options.formId       = 'testimony-form';
     options.openId       = 'start';
     options.submitId     = 'submit';
     options.tagsBoxId    = 'tags';

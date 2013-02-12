@@ -50,7 +50,8 @@ app.get('/testimonies/:id', routes.testimonies);
 app.post('/testimonies', routes.testimoniesAdd);
 
 // API routes
-// @todo: have client use instead of application
+// @todo have client use instead of application.
+//       But add auth
 app.get('/api/v1/testimonies', routesapi.testimonies);
 app.get('/api/v1/testimonies/:id', routesapi.testimoniesId);
 app.get('/api/v1/tags', routesapi.tags);

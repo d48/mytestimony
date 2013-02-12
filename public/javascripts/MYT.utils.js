@@ -16,7 +16,8 @@ var MYT = MYT || {};
      * @author Ryan Regalado 
      */
     function addClass(elem, name) {
-        elem.className = elem.className + ' ' + name;
+      var cName = elem.className + ' ' + name;
+      elem.className = cName.trim(); // remove whitespace
     }
 
     /**
@@ -31,7 +32,8 @@ var MYT = MYT || {};
      */
     function removeClass(elem, name) {
         var className = elem.className;
-        className = className.replace(name, '');
+        var reg = new RegExp(name, 'g');
+        className = className.replace(reg, '');
         elem.className = className.trim(); // remove whitespace
     }
 
