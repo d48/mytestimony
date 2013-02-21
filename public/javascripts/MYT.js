@@ -8,9 +8,7 @@ var MYT = MYT || {};  // defines MYT namespace
     e.preventDefault();
 
     // validate form
-    var testimony   = document.getElementById('testimony')
-      , title       = document.getElementById('title')
-      , checkFields = {}
+    var checkFields = {}
       , errors = []
       , fields = ['testimony', 'title']
       , i = 0
