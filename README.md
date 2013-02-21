@@ -110,6 +110,8 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
 - Integrate `jsdoc3` lib and throw in `doc` directory. To build on every post-commit or set up watch on changes to .js file
   * Start looking into grunt for build/deploy scripts
 - Throw up instance on aws (Amazon Web Services)
+- Look into postmark.js and wrapper for api https://github.com/voodootikigod/postmark.js
+  * look into general smtp service via node
 
 ## Bugs
 
