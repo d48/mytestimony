@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/d48/mytestimony.png)](https://travis-ci.org/d48/mytestimony)
+
 # Overview
 
 This is a website to help people share about their tesimony of what God has done in their life. This is specifically for people that follow Jesus Christ and would like others to know of how Jesus has changed their lives. Online tools will be provided to:
