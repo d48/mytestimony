@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/d48/mytestimony.png)](https://travis-ci.org/d48/mytestimony)
+[![Build Status](https://travis-ci.org/d48/mytestimony.png?branch=master)](https://travis-ci.org/d48/mytestimony)
 
 # Overview
 
