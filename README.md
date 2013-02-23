@@ -85,46 +85,22 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
      * ~~Create page~~
 	  * Design testimony detail page
      * ~~List of random testimonials~~
-     * Edit page
+     * Edit page (in progress)
      * Browse tag results
      * Login modal
      * Register form
      * Account settings
 * Clickthroughs for mock application
-* Interactivity styling
-	* [wantful](http://www.wantful.com) uses Backbone.js and responsive/fluid layout :sparkles:
-	* [Podio](http://www.podio.com) uses Backbone.js and rails. Review how they do tags
-	* [storify](http://www.storify.com) is a node.js web app that displays a wysiwig editor 
-		* inspiration for clean asset and use of expressjs.com
 * Research technologies to use, but leaning to open source for tried and tested frameworks so as to build incrementally
-	* using MongoDB
-	* [brunch.io](http://brunch.io/) 
-	* reviewing twitter bootstrap to tweak base styles and responsive layout
-	* using `nodemon` to automatically compile and rerun server app
-		* look into adding livereload so don't have to manually refresh
-	* reviewing different mvc approaches and build tools to organize code and increase workflow performance
-	* ~~use of SASS instead of Stylus for for css preprocessing for debugging via browser~~
-		* SASS middleware not supported in expressjs framework. 
 	* use of [OOCSS](https://github.com/stubbornella/oocss/wiki)
 	* use [SMACCS](http://smacss.com/) - scalable and modular architecture for css. 
 		* Inspired by this talk to clean up and reuse code [Youtube vid](http://www.youtube.com/watch?v=hou2wJCh3XE)
 		
-* Basic CRUD with database
-	* ~~RESTful API with JSON endpoint: look into [deployd](http://deployd.com/)~~ building custom
-* ~~Look into build process, developer tooling, client-side stack: [Yeoman](http://yeoman.io/), [grunt](https://github.com/cowboy/grunt), [buildify](https://github.com/powmedia/buildify)~~
-	* Yeoman.io uses grunt and has some cool configurations for compressing html, css, and js, providing version number and deploying based on dev or production setting
 
 ## Todo
-
-- Set up Travis CI tests and continous integration for the site. Look into just running Jasmine test suite
-	* begin implementing tests for each method now, start off with one file for now
+- Start rolling out mocha tests
 - Integrate `jsdoc3` lib and throw in `doc` directory. To build on every post-commit or set up watch on changes to .js file
   * Start looking into grunt for build/deploy scripts
 - Throw up instance on aws (Amazon Web Services)
 - Look into postmark.js and wrapper for api https://github.com/voodootikigod/postmark.js
   * look into general smtp service via node
-
-## Bugs
-
-* ~~issue with multiple db connections on each request. connect once per client and share connection across application. place in bootstrap~~
-	* fixed by updating how conneciton is instantiated and used in api routes. Pattern from here <https://github.com/ccoenraets/nodecellar/blob/master/routes/wines.js#L10-L30>
