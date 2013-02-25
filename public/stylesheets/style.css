@@ -18,8 +18,8 @@ label{display:block;font-size:16px;font-weight:bold;margin-bottom:10px}
 #tagbox ul li .x{color:#ccc;cursor:pointer;display:inline;float:right;margin-left:5px;}
 #tagbox ul li .x:hover{color:#000}
 #tagbox ul li p{float:left;margin:0;padding:0}
-input.error,textarea.error{border:2px solid #f00}
-label.error{color:#f00}
+.error input,.error textarea{border:2px solid #f00}
+.error label{color:#f00}
 .author{font-weight:bold;margin-top:-20px}
 #testimony-footer{border-top:1px solid #ccc}
 .tags{border-right:1px solid #ccc;float:left;width:50%;}

@@ -3,6 +3,15 @@ var MYT = MYT || {};  // defines MYT namespace
 
 (function(){
 
+  /**
+   * Checks form for validation and submits if valid
+   * 
+   * @name submitTestimony
+   * @param {Object} e - Event object
+   * @returns {type} MYT - 
+   * @method 
+   * @author Ryan Regalado 
+   */
   function submitTestimony(e) {
     e = e || window.event; // IE doesn't pass in the event object
     e.preventDefault();
@@ -21,11 +30,15 @@ var MYT = MYT || {};  // defines MYT namespace
         , el = document.getElementById(field)
         ;
 
+      // @todo specify field validation type
+      // example: notEmpty, noSpecialChars, onlyDigits, onlyLetters
       if(el.value === '') {
-        utils.addClass(el, 'error'); 
+        // record which fields have errors and display to user
+        utils.addClass(el.parentElement, 'error'); 
         errors.push(field);
       } else {
-        utils.removeClass(el, 'error'); 
+        utils.removeClass(el.parentElement, 'error'); 
+        // remove field from error object
         if(errors.indexOf(field) !== -1){
           errors.splice(errors.indexOf(field),1);
         }
