@@ -115,6 +115,7 @@ var MYT = MYT || {};  // defines MYT namespace
    * @returns void - Triggers create tags method
    * @method 
    * @author Ryan Regalado 
+   * @todo move all tag related items to plugin
    */
   function tagKeyChecker(e) {
     e = e || window.event; // IE doesn't pass in the event object
@@ -123,12 +124,41 @@ var MYT = MYT || {};  // defines MYT namespace
     switch(key) {
       case 13: // enter key
         e.preventDefault();
+        e.target.value += ','; // adds comma if press enter
       case 188: // comma
-        MYT.plugins.tags.create(MYT.attributes.tagsBoxId);
+        MYT.plugins.tags.create(MYT.attributes.tagsInputId);
       default:
         break;
     }
   }
+
+
+  /**
+   * event handler for removing tag from tag box
+   * 
+   * @param {Object} e - event object
+   * @returns void - removes element from tags box
+   * @author Ryan Regalado 
+   * @todo move all tag related items to plugin
+   */
+  function tagRemover(e) {
+      e = e || window.event; // IE doesn't pass in the event object
+
+      var target = e.target || e.srcElement // IE targeting
+          , tag
+          ; 
+
+      switch(target.className) {
+          case 'x':
+              tag = target.parentNode.children[1].innerHTML; 
+              MYT.plugins.tags.remove(MYT.attributes.tagsInputId, MYT.attributes.tagsBoxId, tag);
+              break;
+          default:
+              break;
+      }
+
+  }
+
 
 
   /**
@@ -151,8 +181,10 @@ var MYT = MYT || {};  // defines MYT namespace
       ;
 
     // set up obj attributes
+    // @todo figure out why I set up an attributes object
     this.attributes = {};
     this.attributes.formId    = options.formId    || '';
+    this.attributes.tagsInputId = options.tagsInputId || '';
     this.attributes.tagsBoxId = options.tagsBoxId || '';
 
     // Set up click handlers
@@ -162,7 +194,8 @@ var MYT = MYT || {};  // defines MYT namespace
     d.getElementById(closeId).addEventListener('click', closeForm, false);
     d.getElementById(openId).addEventListener('click', showForm, false);
     d.getElementById(submitId).addEventListener('click', submitTestimony, false);
-    d.getElementById(this.attributes.tagsBoxId).addEventListener('keydown', tagKeyChecker, false);
+    d.getElementById(this.attributes.tagsInputId).addEventListener('keydown', tagKeyChecker, false);
+    d.getElementById(this.attributes.tagsBoxId).addEventListener('click', tagRemover, false);
   }
 
   // API
