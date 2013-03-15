@@ -104,3 +104,4 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
 - Throw up instance on aws (Amazon Web Services)
 - Look into postmark.js and wrapper for api https://github.com/voodootikigod/postmark.js
   * look into general smtp service via node
+- sanitization on client side and server side form submission
