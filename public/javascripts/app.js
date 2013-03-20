@@ -6,8 +6,10 @@
         , formId       : 'testimony-form'
         , openId       : 'start'
         , submitId     : 'submit'
+        , tagSingleId  : 'tag-single'
         , tagsInputId  : 'tags'
         , tagsBoxId    : 'tagbox'
+        , tagsTemplate : 'tags-template'
         , viewTesClass : 'view-testimony'
     }
 

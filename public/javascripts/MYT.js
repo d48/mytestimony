@@ -107,58 +107,6 @@ var MYT = MYT || {};  // defines MYT namespace
   }
 
 
-  /**
-   * Triggers tag function based specific keys entered
-   * 
-   * @name tagKeyChecker
-   * @param {Object} e - Event object
-   * @returns void - Triggers create tags method
-   * @method 
-   * @author Ryan Regalado 
-   * @todo move all tag related items to plugin
-   */
-  function tagKeyChecker(e) {
-    e = e || window.event; // IE doesn't pass in the event object
-    var key = e.keyCode;
-
-    switch(key) {
-      case 13: // enter key
-        e.preventDefault();
-        e.target.value += ','; // adds comma if press enter
-      case 188: // comma
-        MYT.plugins.tags.create(MYT.attributes.tagsInputId);
-      default:
-        break;
-    }
-  }
-
-
-  /**
-   * event handler for removing tag from tag box
-   * 
-   * @param {Object} e - event object
-   * @returns void - removes element from tags box
-   * @author Ryan Regalado 
-   * @todo move all tag related items to plugin
-   */
-  function tagRemover(e) {
-      e = e || window.event; // IE doesn't pass in the event object
-
-      var target = e.target || e.srcElement // IE targeting
-          , tag
-          ; 
-
-      switch(target.className) {
-          case 'x':
-              tag = target.parentNode.children[1].innerHTML; 
-              MYT.plugins.tags.remove(MYT.attributes.tagsInputId, MYT.attributes.tagsBoxId, tag);
-              break;
-          default:
-              break;
-      }
-
-  }
-
 
 
   /**
@@ -174,6 +122,7 @@ var MYT = MYT || {};  // defines MYT namespace
       , closeId        = options.closeId      || ''
       , openId         = options.openId       || ''
       , submitId       = options.submitId     || ''
+      , tagsTemplate   = options.tagsTemplate || ''
       , viewTesClass   = options.viewTesClass || ''
       , viewTesButtons = d.getElementsByClassName(viewTesClass)
       , viewLen        = viewTesButtons.length
@@ -181,21 +130,25 @@ var MYT = MYT || {};  // defines MYT namespace
       ;
 
     // set up obj attributes
-    // @todo figure out why I set up an attributes object
+    // @todo why did I set up an attributes object again?
     this.attributes = {};
-    this.attributes.formId    = options.formId    || '';
-    this.attributes.tagsInputId = options.tagsInputId || '';
-    this.attributes.tagsBoxId = options.tagsBoxId || '';
+    this.attributes.formId       = options.formId       || '';
+    this.attributes.tagSingleId  = options.tagSingleId  || '';
+    this.attributes.tagsInputId  = options.tagsInputId  || '';
+    this.attributes.tagsBoxId    = options.tagsBoxId    || '';
+    this.attributes.tagsTemplate = options.tagsTemplate || '';
 
     // Set up click handlers
     for(i;i < viewLen; i++) {
       viewTesButtons[i].addEventListener('click', viewTestimony, false);    
     }
+
+    // @todo separate into its own module
     d.getElementById(closeId).addEventListener('click', closeForm, false);
     d.getElementById(openId).addEventListener('click', showForm, false);
     d.getElementById(submitId).addEventListener('click', submitTestimony, false);
-    d.getElementById(this.attributes.tagsInputId).addEventListener('keydown', tagKeyChecker, false);
-    d.getElementById(this.attributes.tagsBoxId).addEventListener('click', tagRemover, false);
+
+    MYT.plugins.tags.init();
   }
 
   // API

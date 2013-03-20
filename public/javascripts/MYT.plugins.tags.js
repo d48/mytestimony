@@ -4,6 +4,66 @@ MYT.plugins = MYT.plugins || {};
 
 (function() {
 
+
+    /**
+     * Triggers tag function based specific keys entered
+     * 
+     * @name tagKeyChecker
+     * @param {Object} e - Event object
+     * @returns void - Triggers create tags method
+     * @method 
+     * @author Ryan Regalado 
+     * @todo move all tag related items to plugin
+     */
+    function addHandler(e) {
+        e = e || window.event; // IE doesn't pass in the event object
+
+        var val = e.target.value
+            , key = e.keyCode
+            ;
+
+        switch(key) {
+            case 13: // enter key
+                e.preventDefault();
+            case 188: // comma
+                // @todo instead of create, this should just add and append instead of completely recreating
+                MYT.plugins.tags.add(val);
+            default:
+                break;
+        }
+    }
+
+
+    /**
+     * event handler for removing tag from tag box
+     * 
+     * @param {Object} e - event object
+     * @returns void - removes element from tags box
+     * @author Ryan Regalado 
+     * @todo move all tag related items to plugin
+     */
+    function removeHandler(e) {
+        e = e || window.event; // IE doesn't pass in the event object
+
+        var target = e.target || e.srcElement // IE targeting
+            , tag
+            ; 
+
+        switch(target.className) {
+            case 'x':
+                tag = target.parentNode.children[1].innerHTML; 
+                MYT.plugins.tags.remove(MYT.attributes.tagsInputId, MYT.attributes.tagsBoxId, tag);
+                break;
+            default:
+                break;
+        }
+
+    }
+
+
+
+
+
     /**
      * Used for array filtering. Provides condition statment to check against
      * 
@@ -14,7 +74,7 @@ MYT.plugins = MYT.plugins || {};
      * @returns {Boolean} true|false - condition for filter to check against
      */
     function isEmpty(el, index, array) {
-      return (el !== '');
+        return (el !== '');
     }
 
 
@@ -41,11 +101,7 @@ MYT.plugins = MYT.plugins || {};
         tags = tags.filter(isEmpty);
 
         // update div below field, iterating through array to build output
-        var templateId = 'tags-template'
-            , tagTemplate = document.getElementById(templateId).innerHTML
-            , template = doT.template(tagTemplate)
-            , output = template({"tags": tags})
-            ;
+        // @todo create output from tagbox template
 
         // insert into DOM
         var tagsId = 'tagbox';
@@ -74,15 +130,42 @@ MYT.plugins = MYT.plugins || {};
 
         indexToRemove = tags.indexOf(tag);
         tags.splice(indexToRemove, 1); // remove 1 item at position
-        
+
         el.value = tags;
         this.create(inputId);
     }
 
+    // adds tag to tagbox
+    function add(kw) {
+      console.log('adding ' + kw);
+
+      // add to tagbox using tags.template
+
+      // append to hidden input with appropriate commas
+    }
+
+    // sets up tagbox and event listeners
+    function init() {
+        // set up event listeners
+        var d = window.document;
+        d.getElementById(MYT.attributes.tagSingleId).addEventListener('keydown', addHandler, false);
+        d.getElementById(MYT.attributes.tagsBoxId).addEventListener('click', removeHandler, false);
+
+        // cache tagbox template
+        var templateId = MYT.attributes.tagsTemplate
+            , tagTemplate = document.getElementById(templateId).innerHTML
+            , template = doT.template(tagTemplate)
+            ;
+
+        MYT.plugins.tags.template = template;
+    }
+
+
 
     // api
     MYT.plugins.tags = {
-          create: create 
+          add: add
+        , init: init
         , remove: remove    
     }
 

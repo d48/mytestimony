@@ -22,19 +22,21 @@
         div#tags-container
             label(for="tags") Enter some tags to categorize your testimony
             span.hint Separate by comma or hit 'Enter' after each
-            input#tags(name="tags", type="textbox", id="tags")
+            input#tags(name="tags", type="hidden")
 
             div#tagbox
+                ul
+                    li
+                        input#tag-single(name="tag-single", type="textbox")
 
         div.btn-group
             button#preview(class="btn btn-default btn-large") Preview
             button#submit(class="btn btn-default btn-large") Submit
 
     script( id="tags-template", type="text/doT-template" )
-        ul
-            {{~it.tags:value:index}}
-            li
-                span.x x
-                p {{=value}}
-            {{~}}
+        {{~it.tags:value:index}}
+        li
+            span.x x
+            p {{=value}}
+        {{~}}
 
