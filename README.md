@@ -80,6 +80,9 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
 
 ## Roadmap
 
+* paste youtube link to pull up video thumbnail
+  * or ability to upload their own testimonial video
+* ability to post up their own audio testimony
 * ~~Overview of who, what, where, how~~
 * Wireframes for main application for creating and list of tesimony view 
      * ~~Create page~~
@@ -90,12 +93,7 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
      * Login modal
      * Register form
      * Account settings
-* Clickthroughs for mock application
-* Research technologies to use, but leaning to open source for tried and tested frameworks so as to build incrementally
-	* use of [OOCSS](https://github.com/stubbornella/oocss/wiki)
-	* use [SMACCS](http://smacss.com/) - scalable and modular architecture for css. 
-		* Inspired by this talk to clean up and reuse code [Youtube vid](http://www.youtube.com/watch?v=hou2wJCh3XE)
-		
+	
 
 ## Todo
 - Start rolling out mocha tests
