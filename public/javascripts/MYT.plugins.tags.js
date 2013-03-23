@@ -13,7 +13,6 @@ MYT.plugins = MYT.plugins || {};
      * @returns void - Triggers create tags method
      * @method 
      * @author Ryan Regalado 
-     * @todo move all tag related items to plugin
      */
     function addHandler(e) {
         e = e || window.event; // IE doesn't pass in the event object
@@ -26,7 +25,7 @@ MYT.plugins = MYT.plugins || {};
             case 13: // enter key
                 e.preventDefault();
             case 188: // comma
-                // @todo instead of create, this should just add and append instead of completely recreating
+                e.preventDefault();
                 MYT.plugins.tags.add(val);
             default:
                 break;
@@ -40,7 +39,6 @@ MYT.plugins = MYT.plugins || {};
      * @param {Object} e - event object
      * @returns void - removes element from tags box
      * @author Ryan Regalado 
-     * @todo move all tag related items to plugin
      */
     function removeHandler(e) {
         e = e || window.event; // IE doesn't pass in the event object
@@ -96,17 +94,7 @@ MYT.plugins = MYT.plugins || {};
 
         tags = tags.split(',');
         el.value = tags;
-
-        // @todo prevent user from entering blank input
-        tags = tags.filter(isEmpty);
-
-        // update div below field, iterating through array to build output
-        // @todo create output from tagbox template
-
-        // insert into DOM
-        var tagsId = 'tagbox';
-        document.getElementById(tagsId).innerHTML = output;
-    }
+     }
 
     /**
      * Removes tag from output box by modifying input box
@@ -139,9 +127,24 @@ MYT.plugins = MYT.plugins || {};
     function add(kw) {
       console.log('adding ' + kw);
 
-      // add to tagbox using tags.template
-
       // append to hidden input with appropriate commas
+      var tags = document.getElementById(MYT.attributes.tagsInputId)
+        , tagsVal = tags.value;
+
+      tags.value = (tagsVal === '') ? kw : tagsVal + ',' + kw;
+
+      // add to tagbox using tags.template
+      // @todo create utility for getting DOM element via id/class selector
+      var tag = MYT.plugins.tags.template({tags: [kw]})
+          , tagBox = document.getElementById(MYT.attributes.tagsBoxId)
+          , tagBoxUl = tagBox.firstElementChild
+          , newLi = document.createElement('li')
+          , tagSingle = document.getElementById(MYT.attributes.tagSingleId)
+          ;
+
+      newLi.innerHTML = tag;
+      tagBoxUl.appendChild(newLi);
+      tagSingle.value = ''; // clear out value for next 
     }
 
     // sets up tagbox and event listeners

@@ -26,7 +26,7 @@
 
             div#tagbox
                 ul
-                    li
+                    li#tag-single-container
                         input#tag-single(name="tag-single", type="textbox")
 
         div.btn-group
@@ -35,8 +35,7 @@
 
     script( id="tags-template", type="text/doT-template" )
         {{~it.tags:value:index}}
-        li
-            span.x x
-            p {{=value}}
+        span.x x
+        p {{=value}}
         {{~}}
 
