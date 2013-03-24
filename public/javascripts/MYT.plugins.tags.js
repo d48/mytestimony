@@ -106,7 +106,15 @@ MYT.plugins = MYT.plugins || {};
         this.create(inputId);
     }
 
-    // adds tag to tagbox
+    /**
+     * adds tag to tagbox styled with x for close. 
+     * Also adds to hidden input field that will be passed to server
+     * 
+     * @name add
+     * @param {String} kw - keyword from input field
+     * @returns void - adds tag to bog styled with x button. 
+     * @author Ryan Regalado 
+     */
     function add(kw) {
       console.log('adding ' + kw);
 
@@ -136,6 +144,8 @@ MYT.plugins = MYT.plugins || {};
         var d = window.document;
         d.getElementById(MYT.attributes.tagSingleId).addEventListener('keydown', addHandler, false);
         d.getElementById(MYT.attributes.tagsBoxId).addEventListener('click', removeHandler, false);
+        // debug. remove default until ready to work on
+        d.getElementById('preview').onclick = function() {return false;};
 
         // cache tagbox template
         var templateId = MYT.attributes.tagsTemplate
