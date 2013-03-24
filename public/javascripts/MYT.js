@@ -132,11 +132,12 @@ var MYT = MYT || {};  // defines MYT namespace
     // set up obj attributes
     // @todo why did I set up an attributes object again?
     this.attributes = {};
-    this.attributes.formId       = options.formId       || '';
-    this.attributes.tagSingleId  = options.tagSingleId  || '';
-    this.attributes.tagsInputId  = options.tagsInputId  || '';
-    this.attributes.tagsBoxId    = options.tagsBoxId    || '';
-    this.attributes.tagsTemplate = options.tagsTemplate || '';
+    this.attributes.formId               = options.formId               || '';
+    this.attributes.tagSingleContainerId = options.tagSingleContainerId || '';
+    this.attributes.tagSingleId          = options.tagSingleId          || '';
+    this.attributes.tagsInputId          = options.tagsInputId          || '';
+    this.attributes.tagsBoxId            = options.tagsBoxId            || '';
+    this.attributes.tagsTemplate         = options.tagsTemplate         || '';
 
     // Set up click handlers
     for(i;i < viewLen; i++) {

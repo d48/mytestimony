@@ -41,11 +41,16 @@ MYT.plugins = MYT.plugins || {};
      * @author Ryan Regalado 
      */
     function removeHandler(e) {
+
         e = e || window.event; // IE doesn't pass in the event object
 
         var target = e.target || e.srcElement // IE targeting
             , tag
             ; 
+
+        console.log(target);
+
+        document.getElementById('tag-single').focus();
 
         switch(target.className) {
             case 'x':
@@ -57,8 +62,6 @@ MYT.plugins = MYT.plugins || {};
         }
 
     }
-
-
 
 
 
@@ -75,26 +78,6 @@ MYT.plugins = MYT.plugins || {};
         return (el !== '');
     }
 
-
-    /**
-     * Create tags from input field
-     * 
-     * @name create
-     * @param {String} elementId - String for input element
-     * @returns void - Creates tags
-     * @method 
-     * @author Ryan Regalado 
-     */
-    function create(elementId) {
-        var el = document.getElementById(elementId)  // get element
-            , val = el.value  // get element
-            , pattern = /(\s+)*,(\s+)*/g  // strip white space around commas
-            , tags = val.replace(pattern, ',')
-            ;
-
-        tags = tags.split(',');
-        el.value = tags;
-     }
 
     /**
      * Removes tag from output box by modifying input box
@@ -135,16 +118,16 @@ MYT.plugins = MYT.plugins || {};
 
       // add to tagbox using tags.template
       // @todo create utility for getting DOM element via id/class selector
-      var tag = MYT.plugins.tags.template({tags: [kw]})
-          , tagBox = document.getElementById(MYT.attributes.tagsBoxId)
-          , tagBoxUl = tagBox.firstElementChild
-          , newLi = document.createElement('li')
-          , tagSingle = document.getElementById(MYT.attributes.tagSingleId)
+      var tag         = MYT.plugins.tags.template({tags: [kw]})
+          , tagBox    = document.getElementById(MYT.attributes.tagsBoxId)
+          , tagBoxUl  = tagBox.firstElementChild
+          , newLi     = document.createElement('li')
+          , tagSingle = document.getElementById(MYT.attributes.tagSingleContainerId)
           ;
 
       newLi.innerHTML = tag;
-      tagBoxUl.appendChild(newLi);
-      tagSingle.value = ''; // clear out value for next 
+      tagBoxUl.insertBefore(newLi,tagSingle);
+      tagSingle.firstElementChild.value = ''; // clear out value for next 
     }
 
     // sets up tagbox and event listeners
@@ -162,7 +145,6 @@ MYT.plugins = MYT.plugins || {};
 
         MYT.plugins.tags.template = template;
     }
-
 
 
     // api

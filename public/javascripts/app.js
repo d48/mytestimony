@@ -2,15 +2,16 @@
 (function(){
   var startApp = function() {
     var options = {
-          closeId      : 'close'
-        , formId       : 'testimony-form'
-        , openId       : 'start'
-        , submitId     : 'submit'
-        , tagSingleId  : 'tag-single'
-        , tagsInputId  : 'tags'
-        , tagsBoxId    : 'tagbox'
-        , tagsTemplate : 'tags-template'
-        , viewTesClass : 'view-testimony'
+          closeId                : 'close'
+          , formId               : 'testimony-form'
+          , openId               : 'start'
+          , submitId             : 'submit'
+          , tagSingleContainerId : 'tag-single-container'
+          , tagSingleId          : 'tag-single'
+          , tagsInputId          : 'tags'
+          , tagsBoxId            : 'tagbox'
+          , tagsTemplate         : 'tags-template'
+          , viewTesClass         : 'view-testimony'
     }
 
     MYT.init(options);
