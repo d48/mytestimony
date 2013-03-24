@@ -70,20 +70,21 @@ MYT.plugins = MYT.plugins || {};
      * @author Ryan Regalado 
      */
     function remove(inputId, tag) {
-        var el = document.getElementById(inputId)  // get element
-            , val = el.value
-            , pattern = /(\s+)*,(\s+)*/g  // strip white space around commas
-            , tags = val.replace(pattern, ',')
+        var hiddenTags = document.getElementById(inputId)  // get element
+            , val = hiddenTags.value
             , indexToRemove 
+            , tags
             ;
 
-        tags = tags.split(',');
-        tags = tags.filter(isEmpty); // remove empty slots
+        tags = val.split(','); // split into array
+        indexToRemove = tags.indexOf(tag); // search for index of tag to remove if exists
 
-        indexToRemove = tags.indexOf(tag);
-        tags.splice(indexToRemove, 1); // remove 1 item at position
+        // remove if found
+        if(indexToRemove > -1) {
+          tags.splice(indexToRemove, 1);
+          hiddenTags.value = tags.length !== 0 ? tags : ''; // removes from hidden input
+        }
 
-        el.value = tags; // removes from hidden input
         // remove from output tag box
     }
 
@@ -116,6 +117,17 @@ MYT.plugins = MYT.plugins || {};
     function add(kw) {
       if (kw.trim() === '') {
         return;
+      }
+      
+      // check for valid input, alphanumeric with spaces only
+      // @todo uni tests needed to thoroughly check throught this
+      var valid = /^[a-zA-Z0-9\s]+$/;
+
+      // @todo throw red error and/or show hint that invalid and can not add
+      // @todo setup plugin architecture to pull in from 3rd party lib
+      //    https://github.com/chinchang/hint.css
+      if(!valid.test(kw)) {
+        return false;
       }
 
       // append to hidden input with appropriate commas
