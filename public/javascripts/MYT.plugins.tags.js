@@ -41,26 +41,50 @@ MYT.plugins = MYT.plugins || {};
      * @author Ryan Regalado 
      */
     function removeHandler(e) {
-
         e = e || window.event; // IE doesn't pass in the event object
 
         var target = e.target || e.srcElement // IE targeting
             , tag
             ; 
 
-        console.log(target);
-
         document.getElementById('tag-single').focus();
 
         switch(target.className) {
             case 'x':
                 tag = target.parentNode.children[1].innerHTML; 
-                MYT.plugins.tags.remove(MYT.attributes.tagsInputId, MYT.attributes.tagsBoxId, tag);
+                MYT.plugins.tags.remove(MYT.attributes.tagsInputId, tag);
                 break;
             default:
                 break;
         }
 
+    }
+
+    /**
+     * Removes tag from output box and hidden field
+     * 
+     * @param {String} inputId - tag input
+     * @param {String} boxId - tag output box
+     * @param {String} tag - actual tag to remove
+     * @return void - updates both tag input and output box
+     * @author Ryan Regalado 
+     */
+    function remove(inputId, tag) {
+        var el = document.getElementById(inputId)  // get element
+            , val = el.value
+            , pattern = /(\s+)*,(\s+)*/g  // strip white space around commas
+            , tags = val.replace(pattern, ',')
+            , indexToRemove 
+            ;
+
+        tags = tags.split(',');
+        tags = tags.filter(isEmpty); // remove empty slots
+
+        indexToRemove = tags.indexOf(tag);
+        tags.splice(indexToRemove, 1); // remove 1 item at position
+
+        el.value = tags; // removes from hidden input
+        // remove from output tag box
     }
 
 
@@ -80,33 +104,6 @@ MYT.plugins = MYT.plugins || {};
 
 
     /**
-     * Removes tag from output box by modifying input box
-     * 
-     * @param {String} inputId - tag input
-     * @param {String} boxId - tag output box
-     * @param {String} tag - actual tag to remove
-     * @return void - updates both tag input and output box
-     * @author Ryan Regalado 
-     */
-    function remove(inputId, boxId, tag) {
-        var el = document.getElementById(inputId)  // get element
-            , val = el.value
-            , pattern = /(\s+)*,(\s+)*/g  // strip white space around commas
-            , tags = val.replace(pattern, ',')
-            , indexToRemove 
-            ;
-
-        tags = tags.split(',');
-        tags = tags.filter(isEmpty); // remove empty slots
-
-        indexToRemove = tags.indexOf(tag);
-        tags.splice(indexToRemove, 1); // remove 1 item at position
-
-        el.value = tags;
-        this.create(inputId);
-    }
-
-    /**
      * adds tag to tagbox styled with x for close. 
      * Also adds to hidden input field that will be passed to server
      * 
@@ -114,9 +111,12 @@ MYT.plugins = MYT.plugins || {};
      * @param {String} kw - keyword from input field
      * @returns void - adds tag to bog styled with x button. 
      * @author Ryan Regalado 
+     * @todo check for only alpha characters
      */
     function add(kw) {
-      console.log('adding ' + kw);
+      if (kw.trim() === '') {
+        return;
+      }
 
       // append to hidden input with appropriate commas
       var tags = document.getElementById(MYT.attributes.tagsInputId)
