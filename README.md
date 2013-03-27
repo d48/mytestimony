@@ -103,3 +103,4 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
 - Look into postmark.js and wrapper for api https://github.com/voodootikigod/postmark.js
   * look into general smtp service via node
 - sanitization on client side and server side form submission
+  * HTML escaping from user supplied input (especially formatted testimony)
