@@ -44,15 +44,19 @@ MYT.plugins = MYT.plugins || {};
         e = e || window.event; // IE doesn't pass in the event object
 
         var target = e.target || e.srcElement // IE targeting
+            , attribs = MYT.attributes
             , tag
+            , node
             ; 
 
         document.getElementById('tag-single').focus();
 
         switch(target.className) {
             case 'x':
-                tag = target.parentNode.children[1].innerHTML; 
-                MYT.plugins.tags.remove(MYT.attributes.tagsInputId, tag);
+                // @todo create DOM traversal lib
+                node = target.parentNode
+                tag = node.children[1].innerHTML; 
+                MYT.plugins.tags.remove( attribs.tagsInputId, node, tag );
                 break;
             default:
                 break;
@@ -64,12 +68,12 @@ MYT.plugins = MYT.plugins || {};
      * Removes tag from output box and hidden field
      * 
      * @param {String} inputId - tag input
-     * @param {String} boxId - tag output box
+     * @param {String} node - element to remove from DOM
      * @param {String} tag - actual tag to remove
      * @return void - updates both tag input and output box
      * @author Ryan Regalado 
      */
-    function remove(inputId, tag) {
+    function remove(inputId, node, tag) {
         var hiddenTags = document.getElementById(inputId)  // get element
             , val = hiddenTags.value
             , indexToRemove 
@@ -81,11 +85,10 @@ MYT.plugins = MYT.plugins || {};
 
         // remove if found
         if(indexToRemove > -1) {
-          tags.splice(indexToRemove, 1);
+          var el = tags.splice(indexToRemove, 1);
           hiddenTags.value = tags.length !== 0 ? tags : ''; // removes from hidden input
+          if ( el ) node.remove(); // remove from output box
         }
-
-        // remove from output tag box
     }
 
 
