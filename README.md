@@ -18,6 +18,10 @@ This is a website to help people share about their tesimony of what God has done
 3. Tools to share easily via email and text. Example: short URLs and share utility to social networks.
 4. Can set testimony to be viewed publicly and anonymously so that search engines can pick up on keywords that may help others in their struggles and see how God helped and changed their lives.
 
+## How to configure/install and run locally
+
+Will be posting soon, noted on 04/09/2013
+
 ## Initial Designs
 
 **Homepage - one page app**
