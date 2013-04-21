@@ -26,7 +26,7 @@ This website is designed to be ran on a server running Node.js and to use a NoSQ
 * Express - web server
 * doT.js - fast JavaScript template rendering
 * Guard - Automate programs like LiveReload
-  * __note:__ to use Guard and LiveReload, you must manually install the Guard  and LiveReload ruby gems
+  * __note:__ to use Guard and LiveReload, you must manually install the [https://github.com/guard/guard](Guard) and [https://github.com/guard/guard-livereload](LiveReload) ruby gems
 * LiveReload - refreshes browser automatically for any css/js changes
   * __note:__ used if you have Guard installed and run `make startappdev`
 * Jade - server front-end templates
