@@ -12,3 +12,6 @@ echo "kill -TERM -$THIS_PID"
 echo ""
 
 echo "kill -TERM -$THIS_PID" | pbcopy
+
+# init guard file for livereload
+guard

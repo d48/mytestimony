@@ -18,6 +18,25 @@ This is a website to help people share about their tesimony of what God has done
 3. Tools to share easily via email and text. Example: short URLs and share utility to social networks.
 4. Can set testimony to be viewed publicly and anonymously so that search engines can pick up on keywords that may help others in their struggles and see how God helped and changed their lives.
 
+
+## Technology
+
+This website is designed to be ran on a server running Node.js and to use a NoSQL database called MongoDB. Performance and scalability are the main driving factors for the architecture, as well as ease in development for coders so there are several Node.js libraries that are used. Below is a list of a few:
+
+* Express - web server
+* doT.js - fast JavaScript template rendering
+* Guard - Automate programs like LiveReload
+  * __note:__ to use Guard and LiveReload, you must manually install the Guard  and LiveReload ruby gems
+* LiveReload - refreshes browser automatically for any css/js changes
+  * __note:__ used if you have Guard installed and run `make startappdev`
+* Jade - server front-end templates
+* Mocha - JavaScript unit testing
+* Request - asynch http requests
+* Stylus - css preprocessor
+* MongoDB native driver - node.js api for MongoDB
+* Nib - complements Stylus for cross-browser css3 mixins
+* Supervisor - restart node app when .js file changes
+
 ## How to configure/install and run locally
 
 * Requirements

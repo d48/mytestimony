@@ -1,34 +1,34 @@
 {
-    "name": "MyTestimony.com"
-  , "version": "0.0.1"
-  , "private": true
-  , "dependencies": {
-    "express": "3.0.1"
-    , "connect": "1.8.5"
-    , "dot": "1.0.0"
-    , "stylus": "0.30.1"
-    , "jade": "0.27.6"
-    , "request": "2.12.0"
-    , "mocha": "1.8.1"
-    , "mongodb": "1.2.0"
-    , "nib": "0.9.0"
-    , "supervisor": "0.5.2"
-  }
-  , "engine": "0.8.14"
-  , "scripts": {
+  "name": "MyTestimony.com",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.0.1",
+    "connect": "1.8.5",
+    "dot": "1.0.0",
+    "stylus": "0.30.1",
+    "jade": "0.27.6",
+    "request": "2.12.0",
+    "mocha": "1.8.1",
+    "mongodb": "1.2.0",
+    "nib": "0.9.0",
+    "supervisor": "0.5.2"
+  },
+  "engine": "0.8.14",
+  "scripts": {
     "test": "mocha -R spec test/*.js"
-  }
-  , "repository": {
-    "type": "git"
-    , "url": "https://github.com/d48/mytestimony.git"
-  }
-  , "keywords": [
-    "testimony"
-    , "God"
-    , "Jesus"
-    , "Holy"
-    , "Spirit"
-  ]
-  , "author": "Ryan Regalado"
-  , "license": "MIT"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/d48/mytestimony.git"
+  },
+  "keywords": [
+    "testimony",
+    "God",
+    "Jesus",
+    "Holy",
+    "Spirit"
+  ],
+  "author": "Ryan Regalado",
+  "license": "MIT"
 }
