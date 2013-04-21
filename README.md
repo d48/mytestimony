@@ -20,7 +20,28 @@ This is a website to help people share about their tesimony of what God has done
 
 ## How to configure/install and run locally
 
-Will be posting soon, noted on 04/09/2013
+* Requirements
+  * Node.js version 0.8.14 - [http://blog.nodejs.org/2012/10/25/node-v0.8.14/](Download and install)
+  * MongoDB - [http://docs.mongodb.org/manual/installation/](Download and install)
+
+Once the above is installed, clone this repo and run `npm install` to donwload and install node library dependencies
+
+```
+$ git clone git@github.com:d48/mytestimony.git && cd mytestimony
+$ npm install
+```
+
+* To start app, run the following and open web browser at `http://localhost:3000`
+
+```
+$ make startapp
+```
+
+* To stop app
+```
+$ make stopapp 
+```
+
 
 ## Initial Designs
 
