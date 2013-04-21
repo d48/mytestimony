@@ -31,13 +31,14 @@ $ git clone git@github.com:d48/mytestimony.git && cd mytestimony
 $ npm install
 ```
 
-* To start app, run the following and open web browser at `http://localhost:3000`
+**To start app**, run the following and open web browser at `http://localhost:3000`
 
 ```
 $ make startapp
 ```
 
-* To stop app
+**To stop app**
+
 ```
 $ make stopapp 
 ```
