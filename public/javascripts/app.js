@@ -12,6 +12,7 @@
           , tagsBoxId            : 'tagbox'
           , tagsTemplate         : 'tags-template'
           , viewTesClass         : 'view-testimony'
+          , testimoniesId        : 'testimonies'
     }
 
     MYT.init(options);

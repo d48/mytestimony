@@ -123,12 +123,9 @@ MYT.plugins = MYT.plugins || {};
       }
       
       // check for valid input, alphanumeric with spaces only
-      // @todo uni tests needed to thoroughly check throught this
+      // @todo unit tests needed to thoroughly check throught this
       var valid = /^[a-zA-Z0-9\s]+$/;
 
-      // @todo throw red error and/or show hint that invalid and can not add
-      // @todo setup plugin architecture to pull in from 3rd party lib
-      //    https://github.com/chinchang/hint.css
       if(!valid.test(kw)) {
         return false;
       }

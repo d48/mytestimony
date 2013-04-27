@@ -52,20 +52,25 @@ var MYT = MYT || {};  // defines MYT namespace
     
   }
 
+
   /**
-   * Click handler for viewing testimony page
+   * Delegate event handler to process button clicks
    * 
-   * @name viewTestimony
-   * @param {Object} e - Event object 
-   * @returns void - Call route
+   * @name testimoniesClick
+   * @param {Object} e - event object
+   * @returns void - opens testimony detail page
    * @method 
    * @author Ryan Regalado 
    */
-  function viewTestimony(e) {
+  function testimoniesClick(e) {
     e = e || window.event; // IE doesn't pass in the event object
     e.preventDefault();
 
-    var btnId    = e.currentTarget.getAttribute('id')
+    if (e.target.nodeName !== "BUTTON") {
+      return false;
+    }
+
+    var btnId    = e.target.getAttribute('id')
       , location = window.location
       , origin   = location.origin
       ;
@@ -119,11 +124,13 @@ var MYT = MYT || {};  // defines MYT namespace
    */
   function init(options) {
     var d              = window.document
-      , closeId        = options.closeId      || ''
-      , openId         = options.openId       || ''
-      , submitId       = options.submitId     || ''
-      , tagsTemplate   = options.tagsTemplate || ''
-      , viewTesClass   = options.viewTesClass || ''
+      , closeId        = options.closeId       || ''
+      , openId         = options.openId        || ''
+      , submitId       = options.submitId      || ''
+      , tagsTemplate   = options.tagsTemplate  || ''
+      , viewTesClass   = options.viewTesClass  || ''
+      , testimoniesId  = options.testimoniesId || ''
+      , testimonies    = d.getElementById(testimoniesId)
       , viewTesButtons = d.getElementsByClassName(viewTesClass)
       , viewLen        = viewTesButtons.length
       , i              = 0
@@ -140,9 +147,7 @@ var MYT = MYT || {};  // defines MYT namespace
     this.attributes.tagsTemplate         = options.tagsTemplate         || '';
 
     // Set up click handlers
-    for(i;i < viewLen; i++) {
-      viewTesButtons[i].addEventListener('click', viewTestimony, false);    
-    }
+    testimonies.addEventListener('click', testimoniesClick, false);
 
     // @todo separate into its own module
     d.getElementById(closeId).addEventListener('click', closeForm, false);

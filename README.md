@@ -135,6 +135,7 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
      * ~~List of random testimonials~~
      * Edit page (in progress)
        * insert testimony into db upon passing validation
+       * Preview button
      * Browse tag results
      * Login modal
      * Register form
