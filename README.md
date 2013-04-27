@@ -21,21 +21,7 @@ This is a website to help people share about their tesimony of what God has done
 
 ## Technology
 
-This website is designed to be ran on a server running Node.js and to use a NoSQL database called MongoDB. Performance and scalability are the main driving factors for the architecture, as well as ease in development for coders so there are several Node.js libraries that are used. Below is a list of a few:
-
-* Express - web server
-* doT.js - fast JavaScript template rendering
-* Guard - Automate programs like LiveReload
-  * __note:__ to use Guard and LiveReload, you must manually install the [https://github.com/guard/guard](Guard) and [https://github.com/guard/guard-livereload](LiveReload) ruby gems
-* LiveReload - refreshes browser automatically for any css/js changes
-  * __note:__ used if you have Guard installed and run `make startappdev`
-* Jade - server front-end templates
-* Mocha - JavaScript unit testing
-* Request - asynch http requests
-* Stylus - css preprocessor
-* MongoDB native driver - node.js api for MongoDB
-* Nib - complements Stylus for cross-browser css3 mixins
-* Supervisor - restart node app when .js file changes
+[From Wiki](https://github.com/d48/mytestimony/wiki/Technology)
 
 ## How to configure/install and run locally
 
@@ -73,51 +59,10 @@ $ make stopapp
 
 ![Create](http://f.cl.ly/items/3V0h0S103d2C2O0o0v0v/home-wf-share.png)
 
+## Database setup
 
-## User functions and sample MongoDB command
+[From Wiki](https://github.com/d48/mytestimony/wiki/Database)
 
-|Description                                                              |Database function                                                              |
-|:--                                                                      |:--                                                                            |
-|Create testimony with fields for name, testimony test, and tags/keywords |`db.collectionname.insert({k:v, k:v, k:[v,v,v]});`                             |
-|Search for testimonials based on tags/keywords                           |`db.collectionname.find({tags: { $all : [value] } });`                         |
-|Show list of testimonials, using lazy load (limit by first 10)           |`db.collectionname.find().limit(10);`                                          |
-|Show list of testimonials, using lazy load (get next 5 after index of 10)|`db.collectionname.find().skip(10).limit(5);`                                  |
-|Search in a field using regular expression (case insensitive)            |`db.collectionname.find(testimony: /keyword*/i);`                              |
-|Search for testimony with _id                                            |`db.collectionname.findOne({_id: new ObjectID('generatedstring')}, calback());`|
-
-__note:__ Using skip is expensive as it walks through the collection to get the offset. As number for `skip()` increases, this gets more expensive for performance
-
-* Look into saving cursors and iterating through collection from set points after each query
-
-## Sample MongoDB Schema
-
-_For testimonies, pretty simple_
-
-```javascript
-// mytestimony.testimonies
-{
-	"_id": ObjectId("50427d77e4ba90f9269360c1"),
-		// from _id in users document
-		"author_id": ObjectId("99927d77e4ba90f9269360c1"),
-		"date": // native MongoDB date string,
-		"testimony" : // Some long string,
-		"tags": ['God','Holy Spirit','alchohol','freedom'],
-		"shareUrl": 'http://testim.ony/576el43'
-}
-```
-
-_For users_
-  
-```javascript
-// mytestimony.users
-{
-	"_id": ObjectId("99927d77e4ba90f9269360c1"),
-		"author": "Joe Smith",
-		"email": "joe.smith@email.com",
-		"password": // md5 hash that's salted
-}
-```
-  
 
 ## RESTful API
 
