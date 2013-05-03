@@ -13,8 +13,9 @@ module.exports = {
   }
 
   , testimoniesAdd: function(req, res) {
+     var name = req.body.name ? req.body.name : 'Anonymous';
      var obj = {
-          name: req.body.name
+          name: name
         , testimony: req.body.testimony
         , tags: createTagsArray(req.body.tags)
         , title: req.body.title

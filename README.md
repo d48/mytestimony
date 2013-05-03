@@ -97,3 +97,4 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
 - sanitization on client side and server side form submission
   * HTML escaping from user supplied input (especially formatted testimony)
   * insert tags and remove duplicates
+- client side validation of form

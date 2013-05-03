@@ -47,7 +47,8 @@ var MYT = MYT || {};  // defines MYT namespace
 
     // submit form if no errors
     if(!errors.length) {
-      console.log('submitted');
+      // @todo submit to api via ajax. only close window if no errors
+      document.forms[MYT.attributes.formId].submit();
     }
     
   }
@@ -91,8 +92,8 @@ var MYT = MYT || {};  // defines MYT namespace
   function closeForm(e) {
     e = e || window.event; // IE doesn't pass in the event object
     e.preventDefault();
-    MYT.utils.addClass(document.getElementById(MYT.attributes.formId), 'close');
-    MYT.utils.removeClass(document.getElementById(MYT.attributes.formId), 'open');
+    MYT.utils.addClass(document.getElementById(MYT.attributes.formContainerId), 'close');
+    MYT.utils.removeClass(document.getElementById(MYT.attributes.formContainerId), 'open');
   }
 
   /**
@@ -107,8 +108,8 @@ var MYT = MYT || {};  // defines MYT namespace
   function showForm(e) {
     e = e || window.event; // IE doesn't pass in the event object
     e.preventDefault();
-    MYT.utils.addClass(document.getElementById(MYT.attributes.formId), 'open');
-    MYT.utils.removeClass(document.getElementById(MYT.attributes.formId), 'close');
+    MYT.utils.addClass(document.getElementById(MYT.attributes.formContainerId), 'open');
+    MYT.utils.removeClass(document.getElementById(MYT.attributes.formContainerId), 'close');
   }
 
 
@@ -136,10 +137,11 @@ var MYT = MYT || {};  // defines MYT namespace
       , i              = 0
       ;
 
-    // set up obj attributes
-    // @todo why did I set up an attributes object again?
+    // set up obj attributes to call from functions within the application
     this.attributes = {};
     this.attributes.formId               = options.formId               || '';
+    this.attributes.formContainerId      = options.formContainerId      || '';
+    this.attributes.submitId             = options.formContainerId      || '';
     this.attributes.tagSingleContainerId = options.tagSingleContainerId || '';
     this.attributes.tagSingleId          = options.tagSingleId          || '';
     this.attributes.tagsInputId          = options.tagsInputId          || '';
@@ -147,7 +149,9 @@ var MYT = MYT || {};  // defines MYT namespace
     this.attributes.tagsTemplate         = options.tagsTemplate         || '';
 
     // Set up click handlers
-    testimonies.addEventListener('click', testimoniesClick, false);
+    if (testimonies) {
+      testimonies.addEventListener('click', testimoniesClick, false);
+    }
 
     // @todo separate into its own module
     d.getElementById(closeId).addEventListener('click', closeForm, false);

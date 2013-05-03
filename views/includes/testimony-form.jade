@@ -3,7 +3,7 @@
 
     h2 Create Your Testimony
 
-    form( method="post", action="/testimonies", name="testimony-form" )
+    form( method="post", action="/testimonies", name="form-testimony", id="form-testimony" )
         div#name-container
             label(for="name") Enter your name (*optional)
             span.hint If blank, it will show from "Anonymous"
@@ -31,7 +31,7 @@
 
         div.btn-group
             button#preview(class="btn btn-default btn-large") Preview
-            button#submit(class="btn btn-default btn-large") Submit
+            button#submit-button(class="btn btn-default btn-large") Submit
 
     script( id="tags-template", type="text/doT-template" )
         {{~it.tags:value:index}}

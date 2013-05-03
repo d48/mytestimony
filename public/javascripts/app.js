@@ -3,9 +3,10 @@
   var startApp = function() {
     var options = {
           closeId                : 'close'
-          , formId               : 'testimony-form'
+          , formId               : 'form-testimony'
+          , formContainerId      : 'testimony-form'
           , openId               : 'start'
-          , submitId             : 'submit'
+          , submitId             : 'submit-button'
           , tagSingleContainerId : 'tag-single-container'
           , tagSingleId          : 'tag-single'
           , tagsInputId          : 'tags'
