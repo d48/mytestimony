@@ -98,3 +98,4 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
   * HTML escaping from user supplied input (especially formatted testimony)
   * insert tags and remove duplicates
 - client side validation of form
+- form wysiwig with bold, italics, strikethrough, bullet list, number list 
