@@ -106,10 +106,13 @@ var MYT = MYT || {};  // defines MYT namespace
    * @author Ryan Regalado 
    */
   function showForm(e) {
-    e = e || window.event; // IE doesn't pass in the event object
+    var e = e || window.event // IE doesn't pass in the event object
+      , formContainer = document.getElementById(MYT.attributes.formContainerId) 
+      ;
     e.preventDefault();
-    MYT.utils.addClass(document.getElementById(MYT.attributes.formContainerId), 'open');
-    MYT.utils.removeClass(document.getElementById(MYT.attributes.formContainerId), 'close');
+    MYT.utils.addClass( formContainer, 'open' );
+    MYT.utils.removeClass( formContainer, 'close' );
+    formContainer.style.height = document.height + 'px'; // set height
   }
 
 
