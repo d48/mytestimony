@@ -12,6 +12,7 @@
           , tagsInputId          : 'tags'
           , tagsBoxId            : 'tagbox'
           , tagsTemplate         : 'tags-template'
+          , testimonyBoxId       : 'testimony-box'
           , viewTesClass         : 'view-testimony'
           , testimoniesId        : 'testimonies'
     }

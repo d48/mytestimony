@@ -4,11 +4,29 @@ var MYT = MYT || {};  // defines MYT namespace
 (function(){
 
   /**
+   * Checks word count in given element
+   * 
+   * @name wordCount
+   * @param {Object} el - DOM element, a textarea field
+   * @returns {Int} count - number of words in element 
+   * @example 
+   *    wordCount( document.getElementById('textFieldId') ); 
+   * @method 
+   * @author Ryan Regalado 
+   */
+  function wordCount(el) {
+    var count = 0
+      ;
+
+    return count;
+  }
+
+  /**
    * Checks form for validation and submits if valid
    * 
    * @name submitTestimony
    * @param {Object} e - Event object
-   * @returns {type} MYT - 
+   * @returns {void} - Submits form to API
    * @method 
    * @author Ryan Regalado 
    */
@@ -150,6 +168,7 @@ var MYT = MYT || {};  // defines MYT namespace
     this.attributes.tagsInputId          = options.tagsInputId          || '';
     this.attributes.tagsBoxId            = options.tagsBoxId            || '';
     this.attributes.tagsTemplate         = options.tagsTemplate         || '';
+    this.attributes.testimonyBoxId       = options.testimonyBoxId       || '';
 
     // Set up click handlers
     if (testimonies) {
