@@ -11,7 +11,7 @@ label{display:block;font-size:16px;font-weight:bold;margin-bottom:10px}
 #testimony-form .btn-group{float:right}
 #testimony-form .hint{display:block;margin:-5px 0 10px 0}
 #enter-testimony{float:left}
-#word-count{float:right}
+#words{float:right}
 #close{cursor:pointer;display:inline;float:right;margin-top:20px;text-decoration:underline}
 #tag-single-container{border:none !important;}
 #tag-single-container input{border:none !important;font-family:Arial,Helvetica,sans-serif;font-size:16px;margin-bottom:0 !important;margin-left:-3px !important;min-width:150px !important;padding:3px;}
