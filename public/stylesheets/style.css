@@ -38,7 +38,7 @@ label{display:block;font-size:16px;font-weight:bold;margin-bottom:10px}
 #heading .share p{margin-top:0}
 #heading .share li{display:inline-block;margin-right:5px;padding:2px 5px}
 .testimony ul{list-style-type:none;margin:0;padding:0;margin-top:-10px}
-body{background-color:#fff;overflow-x:hidden;padding:0 30px;font:14px Arial,Helvetica,sans-serif;height:100%}
+body{background-color:#fff;overflow-x:hidden;padding:0 30px;font:14px Arial,Helvetica,sans-serif}
 a{color:#00b7ff}
 h1{float:left;font-size:2.25em;font-weight:normal}
 h2{display:inline-block;font-size:1.75em;font-weight:normal}
