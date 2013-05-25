@@ -150,6 +150,8 @@ var MYT = MYT || {};  // defines MYT namespace
    * @author Ryan Regalado 
    */
   function init(options) {
+    var options = options || {};
+    
     var d              = window.document
       , closeId        = options.closeId       || ''
       , openId         = options.openId        || ''
