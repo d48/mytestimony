@@ -199,3 +199,7 @@ var MYT = MYT || {};  // defines MYT namespace
   return MYT;
 
 }());
+
+// for node require and testing
+var module = module || {};
+module.exports = MYT;
