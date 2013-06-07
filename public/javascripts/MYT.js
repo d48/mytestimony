@@ -42,7 +42,7 @@ var MYT = MYT || {};  // defines MYT namespace
     // validate form
     var checkFields = {}
       , errors = []
-      , fields = ['testimony', 'title']
+      , fields = ['testimony-box', 'title']
       , i = 0
       , utils = MYT.utils
       ;
