@@ -3,6 +3,7 @@
   var startApp = function() {
     var options = {
           closeId                : 'close'
+          , editorId             : 'editor'
           , formId               : 'form-testimony'
           , formContainerId      : 'testimony-form'
           , openId               : 'start'

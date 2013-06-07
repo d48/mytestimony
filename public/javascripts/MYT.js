@@ -167,6 +167,7 @@ var MYT = MYT || {};  // defines MYT namespace
 
     // set up obj attributes to call from functions within the application
     this.attributes = {};
+    this.attributes.editorId             = options.editorId             || '';
     this.attributes.formId               = options.formId               || '';
     this.attributes.formContainerId      = options.formContainerId      || '';
     this.attributes.submitId             = options.formContainerId      || '';
@@ -190,6 +191,7 @@ var MYT = MYT || {};  // defines MYT namespace
       wordCount( window.event, document.getElementById('word-count') );
     }, false);
 
+    MYT.plugins.editor.init();
     MYT.plugins.tags.init();
   }
 
