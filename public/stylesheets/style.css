@@ -22,6 +22,8 @@ label{display:block;font-size:16px;font-weight:bold;margin-bottom:10px}
 #tagbox ul li .x{color:#ccc;cursor:pointer;display:inline;float:right;margin-left:5px;}
 #tagbox ul li .x:hover{color:#000}
 #tagbox ul li p{float:left;margin:0;padding:0}
+#editor{clear:both;list-style-type:none;margin:0;padding:0;margin-bottom:10px;}
+#editor li{display:inline;margin-right:5px}
 .error input,.error textarea{border:2px solid #f00}
 .error label{color:#f00}
 .author{font-weight:bold;margin-top:-20px}
