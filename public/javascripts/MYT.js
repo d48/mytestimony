@@ -18,7 +18,7 @@ var MYT = MYT || {};  // defines MYT namespace
   function wordCount(e, targ) {
     var count = 0
       , e = e || window.event
-      , val = e.target.value
+      , val = e.target.innerHTML
       , targ = targ || {} 
       ;
 
@@ -167,7 +167,8 @@ var MYT = MYT || {};  // defines MYT namespace
 
     // set up obj attributes to call from functions within the application
     this.attributes = {};
-    this.attributes.editorId             = options.editorId             || '';
+    this.attributes.editorBarId          = options.editorBarId          || '';
+    this.attributes.editorBoxId          = options.editorBoxId          || '';
     this.attributes.formId               = options.formId               || '';
     this.attributes.formContainerId      = options.formContainerId      || '';
     this.attributes.submitId             = options.formContainerId      || '';

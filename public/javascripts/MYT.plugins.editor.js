@@ -10,9 +10,11 @@ MYT.plugins = MYT.plugins || {};
 
         var target = e.target || e.srcElement; // IE targeting
 
+        // @todo clicking on icon taking focus away on highlighted textbox
+        // look into cancelling off-focus or check if button click keeps focus on div textarea
         switch( target.className ) {
           case 'icon-bold':
-            console.log('bold');
+            document.execCommand ('bold', false, null);
             break;
           case 'icon-italic':
             console.log('italic');
@@ -29,11 +31,19 @@ MYT.plugins = MYT.plugins || {};
         } 
     }
 
+    function initEditor() {
+        var editor = document.getElementById(MYT.attributes.editorBoxId);     
+    }
 
     function init() {
         // set up event listeners
         var d = window.document;
-        d.getElementById(MYT.attributes.editorId).addEventListener('click', clickIcon, false);
+
+        // set up editor
+        initEditor();
+
+        // listeners
+        d.getElementById(MYT.attributes.editorBarId).addEventListener('click', clickIcon, false);
     }
 
 
