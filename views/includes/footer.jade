@@ -7,4 +7,8 @@ block footer
     script(src="/javascripts/MYT.plugins.tags.js")
     script(src="/javascripts/MYT.plugins.editor.js")
     script(src="/javascripts/app.js")
-
+    script(src="/socket.io/socket.io.js")
+    script
+        socket.on('connect', function(data) {
+            console.log('connected client', data);
+        });

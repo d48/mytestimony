@@ -4,15 +4,16 @@
  */
 
 var express   = require('express')
-  , http      = require('http')
-  , routes    = require('./routes')
-  , routesapi = require('./routes/api')
-  , stylus    = require('stylus')
-  , nib       = require('nib')
-  ;
+    , http      = require('http')
+    , routes    = require('./routes')
+    , routesapi = require('./routes/api')
+    , stylus    = require('stylus')
+    , nib       = require('nib')
+    , app       = express();
+    , server    = http.createServer(app);
+    , io        = require('socket.io')(server)
+;
 
-var app = express();
-var server = http.createServer(app);
 
 function compile(str, path) {
   return stylus(str)
