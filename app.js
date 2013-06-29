@@ -9,10 +9,12 @@ var express   = require('express')
     , routesapi = require('./routes/api')
     , stylus    = require('stylus')
     , nib       = require('nib')
-    , app       = express();
-    , server    = http.createServer(app);
-    , io        = require('socket.io')(server)
 ;
+
+var app       = express();
+var server    = http.createServer(app);
+var io        = require('socket.io').listen(app);
+
 
 
 function compile(str, path) {
