@@ -7,8 +7,8 @@ var express     = require('express')
     , app       = express()
     , server    = require('http').createServer(app)
     , io        = require('socket.io').listen(server)
-    , routes    = require('./routes')
-    , routesapi = require('./routes/api')
+    , routes    = require('./app/routes')
+    , routesapi = require('./app/routes/api')
     , stylus    = require('stylus')
     , nib       = require('nib')
     ;
@@ -22,15 +22,15 @@ function compile(str, path) {
 
 // Configuration
 app.configure(function(){
-  app.set('views', __dirname + '/views');
+  app.set('views', __dirname + '/app/views');
   app.set('view engine', 'jade');
   app.set('view options', {layout: false});
   app.locals.pretty = true;
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-  app.use(stylus.middleware({ src: __dirname + '/public', compile: compile }));
+  app.use(stylus.middleware({ src: __dirname + '/client', compile: compile }));
   app.use(app.router);
-  app.use(express.static(__dirname + '/public'));
+  app.use(express.static(__dirname + '/client'));
 });
 
 app.configure('development', function(){
@@ -64,7 +64,6 @@ io.sockets.on('connection', function (socket) {
   socket.on('connected', function (data) {
     console.log('client says: ' + data.status);
   });
-
 });
 
 

@@ -1,12 +1,12 @@
 block footer
     //- @todo plan how to pull in libs into application with dependency loading, eg require.js
-    script(src="/javascripts/libs/doT.js")
+    script(src="/js/libs/doT.js")
     //- @todo add to build a dev/prod flag for separate files like below or concat/minified version to link to
-    script(src="/javascripts/MYT.js")
-    script(src="/javascripts/MYT.utils.js")
-    script(src="/javascripts/MYT.plugins.tags.js")
-    script(src="/javascripts/MYT.plugins.editor.js")
-    script(src="/javascripts/app.js")
+    script(src="/js/MYT.js")
+    script(src="/js/MYT.utils.js")
+    script(src="/js/MYT.plugins.tags.js")
+    script(src="/js/MYT.plugins.editor.js")
+    script(src="/js/app.js")
     script(src="/socket.io/socket.io.js")
     script
         var socket = io.connect('http://localhost');

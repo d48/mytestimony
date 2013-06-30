@@ -2,7 +2,7 @@
  * Route object passed to app  
  */
 var request = require('request')
-  , appHelper = require('./../app/utils/helpers.js');
+  , appHelper = require('./../js/utils/helpers.js');
 
 // url mappings
 var urls = {
