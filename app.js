@@ -7,8 +7,8 @@ var express     = require('express')
     , app       = express()
     , server    = require('http').createServer(app)
     , io        = require('socket.io').listen(server)
-    , routes    = require('./app/routes')
-    , routesapi = require('./app/routes/api')
+    , routes    = require('./server/routes')
+    , routesapi = require('./server/routes/api')
     , stylus    = require('stylus')
     , nib       = require('nib')
     ;
@@ -22,7 +22,7 @@ function compile(str, path) {
 
 // Configuration
 app.configure(function(){
-  app.set('views', __dirname + '/app/views');
+  app.set('views', __dirname + '/server/views');
   app.set('view engine', 'jade');
   app.set('view options', {layout: false});
   app.locals.pretty = true;
