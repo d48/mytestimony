@@ -1,7 +1,6 @@
 var assert = require('assert');
 var should = require('should');
-var MYT = require('../public/javascripts/MYT.js');
-
+var MYT = require('../client/js/MYT.js');
 
 describe('MYT.js', function() {
   describe('init', function() {
