@@ -40,7 +40,7 @@ var MYT = MYT || {};  // defines MYT namespace
     e.preventDefault();
 
     // validate form
-    var checkFields = {}
+    var checkFields = {} 
       , errors = []
       , fields = [
           MYT.attributes.testimonyBoxId
@@ -58,7 +58,8 @@ var MYT = MYT || {};  // defines MYT namespace
 
       // @todo specify field validation type
       // example: notEmpty, noSpecialChars, onlyDigits, onlyLetters
-      if(el.value === '') {
+      if((el.nodeName === 'INPUT' && el.value === '')
+         || (el.nodeName === 'DIV' && el.innerHTML === '')) {
         // record which fields have errors and display to user
         utils.addClass(el.parentElement, 'error'); 
         errors.push(field);
