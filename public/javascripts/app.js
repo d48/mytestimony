@@ -4,7 +4,7 @@
     var options = {
           closeId                : 'close'
           , editorBarId          : 'editor'
-          , editorBoxId          : 'testimony-box'
+          , editorBoxId          : 'testimonybox'
           , formId               : 'form-testimony'
           , formContainerId      : 'testimony-form'
           , openId               : 'start'
@@ -14,7 +14,8 @@
           , tagsInputId          : 'tags'
           , tagsBoxId            : 'tagbox'
           , tagsTemplate         : 'tags-template'
-          , testimonyBoxId       : 'testimony-box'
+          , testimonyBoxId       : 'testimonybox'
+          , titleId              : 'title'
           , viewTesClass         : 'view-testimony'
           , testimoniesId        : 'testimonies'
     }

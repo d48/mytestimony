@@ -8,7 +8,7 @@ label{display:block;font-size:16px;font-weight:bold;margin-bottom:10px}
 #testimony-form.open{right:0;visibility:visible}
 #testimony-form:after{content:"";clear:both;display:block;visibility:hidden;font-size:0;height:0}
 #testimony-form input,#testimony-form textarea{width:100%}
-#testimony-form #testimony-box{background-color:#fff;border:1px solid #ccc;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;border-radius:4px;display:block;font-size:14px;line-height:18px;margin:0;margin-bottom:30px;padding:10px;min-width:300px;height:300px;overflow:scroll;margin-bottom:30px}
+#testimony-form #testimonybox{background-color:#fff;border:1px solid #ccc;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;border-radius:4px;display:block;font-size:14px;line-height:18px;margin:0;margin-bottom:30px;padding:10px;min-width:300px;height:300px;overflow:scroll;margin-bottom:30px}
 #testimony-form .btn-group{float:right}
 #testimony-form .hint{display:block;margin:-5px 0 10px 0}
 #enter-testimony{float:left}
@@ -26,7 +26,7 @@ label{display:block;font-size:16px;font-weight:bold;margin-bottom:10px}
 #editor{clear:both;list-style-type:none;margin:0;padding:0;margin-bottom:10px;}
 #editor li{display:inline;margin-right:5px;}
 #editor li:hover{cursor:pointer}
-.error input,.error textarea{border:2px solid #f00}
+.error input,.error textarea,.error div{border:2px solid #f00}
 .error label{color:#f00}
 .author{font-weight:bold;margin-top:-20px}
 #testimony-footer{border-top:1px solid #ccc}

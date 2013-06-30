@@ -42,7 +42,10 @@ var MYT = MYT || {};  // defines MYT namespace
     // validate form
     var checkFields = {}
       , errors = []
-      , fields = ['testimony-box', 'title']
+      , fields = [
+          MYT.attributes.testimonyBoxId
+        , MYT.attributes.titleId
+        ]
       , i = 0
       , utils = MYT.utils
       ;
@@ -178,6 +181,7 @@ var MYT = MYT || {};  // defines MYT namespace
     this.attributes.tagsBoxId            = options.tagsBoxId            || '';
     this.attributes.tagsTemplate         = options.tagsTemplate         || '';
     this.attributes.testimonyBoxId       = options.testimonyBoxId       || '';
+    this.attributes.titleId              = options.titleId              || '';
 
     // Set up click handlers
     if (testimonies) {
