@@ -3,18 +3,15 @@
  * Module dependencies.
  */
 
-var express   = require('express')
-    , http      = require('http')
+var express     = require('express')
+    , app       = express()
+    , server    = require('http').createServer(app)
+    , io        = require('socket.io').listen(server)
     , routes    = require('./routes')
     , routesapi = require('./routes/api')
     , stylus    = require('stylus')
     , nib       = require('nib')
 ;
-
-var app       = express();
-var server    = http.createServer(app);
-var io        = require('socket.io').listen(app);
-
 
 
 function compile(str, path) {
@@ -59,6 +56,19 @@ app.get('/api/v1/testimonies', routesapi.testimonies);
 app.get('/api/v1/testimonies/:id', routesapi.testimoniesId);
 app.get('/api/v1/tags', routesapi.tags);
 app.post('/api/v1/testimonies', routesapi.testimoniesAdd);
+
+
+/* sockets */
+io.sockets.on('connection', function (socket) {
+  socket.emit('connect', { hello: 'world' });
+
+  socket.on('connected', function (data) {
+    console.log('client says: ' + data.status);
+  });
+
+});
+
+
 
 server.listen(3000);
 // console.log("Express server listening on port %d in %s mode", server.address().port, app.settings.env);
