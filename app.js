@@ -11,8 +11,7 @@ var express     = require('express')
     , routesapi = require('./routes/api')
     , stylus    = require('stylus')
     , nib       = require('nib')
-;
-
+    ;
 
 function compile(str, path) {
   return stylus(str)
