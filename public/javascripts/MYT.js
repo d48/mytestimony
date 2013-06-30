@@ -59,7 +59,8 @@ var MYT = MYT || {};  // defines MYT namespace
       // @todo specify field validation type
       // example: notEmpty, noSpecialChars, onlyDigits, onlyLetters
       if((el.nodeName === 'INPUT' && el.value === '')
-         || (el.nodeName === 'DIV' && el.innerHTML === '')) {
+         || (el.nodeName === 'DIV' && 
+            (el.innerHTML === '' || el.innerHTML === '<br>'))) {
         // record which fields have errors and display to user
         utils.addClass(el.parentElement, 'error'); 
         errors.push(field);
