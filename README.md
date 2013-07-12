@@ -105,3 +105,6 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
     * sample: http://jsfiddle.net/design48/bmbgc/1/
 - look into glue.js for CommonJS modules for the browser for modularizing code
   * http://mixu.net/gluejs/
+- check out bootstrap flatly theme for ideas on site design 
+  * add light/subtle texture in background - paper
+  * strip out all things unneeded as initial size is 139kb!
