@@ -33,11 +33,11 @@ label{display:block;font-size:16px;font-weight:bold;margin-bottom:10px}
 #return{text-decoration:underline}
 #testimony-detail{margin-bottom:30px}
 #testimony-footer{border-top:1px solid #ccc}
-.tags{border-right:1px solid #ccc;float:left;width:50%;}
+.tags{border-right:1px solid #ccc;float:left;padding-top:15px;width:50%;}
 .tags li{background-color:#f8f8f8;border:1px solid #ccc;-webkit-border-radius:10px;-moz-border-radius:10px;-ms-border-radius:10px;-o-border-radius:10px;border-radius:10px;display:inline-block;font-size:.9em;padding:2px 10px;margin-right:5px;}
 .tags li:hover{background-color:#ccc;color:#777;cursor:pointer}
 .tags .tags-list .label{margin-right:7.5px}
-.flag{float:left;padding-left:30px;width:50%;}
+.flag{float:left;padding-left:30px;padding-top:15px;width:50%;}
 .flag li{display:inline-block;margin-right:5px;padding:2px 5px}
 #heading{float:left;width:100%;}
 #heading .title{float:left;min-width:200px;width:50%}
