@@ -16,7 +16,7 @@
 body
   background-color: $backgroundColor
   overflow-x: hidden
-  padding: 0 $gutter
+  padding: $gutterHalf $gutter
   font: $font
 a
   color: #00B7FF
@@ -85,9 +85,7 @@ p
       width: 80%
 
     button 
-      float: left
-      margin-left: 50px
-      margin-top: 15px 
+      float: right
 
 #content
   clear: both
@@ -104,6 +102,7 @@ p
   border-left: 1px solid $mainBorderColor
   height: 100%
   padding-left: $gutter
+  padding-top: $gutter
   position: fixed 
   right: 0
   top: 0
