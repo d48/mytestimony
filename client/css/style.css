@@ -10,6 +10,7 @@ label{display:block;font-size:16px;font-weight:bold;margin-bottom:10px}
 #testimony-form input,#testimony-form textarea{width:100%}
 #testimony-form #testimonybox{background-color:#fff;border:1px solid #ccc;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;border-radius:4px;display:block;font-size:14px;line-height:18px;margin:0;margin-bottom:30px;padding:10px;min-width:300px;height:300px;overflow:scroll;margin-bottom:30px}
 #testimony-form .btn-group{float:right}
+#testimony-form .control-group{margin-bottom:30px}
 #testimony-form #form-testimony .error input,#testimony-form #form-testimony .error textarea,#testimony-form #form-testimony .error .required{border:2px solid #f00}
 #testimony-form #form-testimony .error label{color:#f00}
 #testimony-form .hint{display:block;margin:-5px 0 10px 0}

@@ -4,12 +4,12 @@
     h2 Create Your Testimony
 
     form( method="post", action="/testimonies", name="form-testimony", id="form-testimony" )
-        div#name-container
+        div#name-container.control-group
             label(for="name") Enter your name (*optional)
-            span.hint If blank, it will show from "Anonymous"
+            small.hint If blank, it will show from "Anonymous"
             input#name(name="name", type="textbox")
 
-        div#testimony-container
+        div#testimony-container.control-group
             label(for="testimony", id="enter-testimony") Enter your testimony below
             div#words Word count: 
                 span#word-count 0
@@ -22,13 +22,13 @@
 
             div#testimonybox(name="testimony", cols="40", rows="10", contenteditable="true", class="required")
 
-        div#title-container
+        div#title-container.control-group
             label(for="title") Enter a title for your testimony
             input#title(name="title", type="textbox", class="required")
 
-        div#tags-container
+        div#tags-container.control-group
             label(for="tags") Enter some tags to categorize your testimony
-            span.hint Separate by comma or hit 'Enter' after each
+            small.hint Separate by comma or hit 'Enter' after each
             input#tags(name="tags", type="hidden")
 
             div#tagbox
