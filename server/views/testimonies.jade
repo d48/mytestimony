@@ -26,9 +26,9 @@ block main
         div.tags
             h4 Tags
             p This testimony has been tagged with these keywords
-            ul
+            div.tags-list 
                 each tag in testimonyTags
-                    li= tag
+                    span(class="label label-success")= tag
 
         div.flag
             h4 Flag
