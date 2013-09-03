@@ -17,7 +17,7 @@
     "socket.io-client": "~0.9.16",
     "socket.io": "~0.9.16"
   },
-  "engine": "0.8.14",
+  "engine": "0.10.12",
   "scripts": {
     "test": "mocha -R spec test/*.js"
   },
