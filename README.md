@@ -91,6 +91,7 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
  * installed node and npm
  * ~~configured base node app, request not resolving. need to troubleshoot~~
    * updated http and port, hit public dns url: http://ec2-54-213-215-238.us-west-2.compute.amazonaws.com:8080/hello.txt
+   * user is specific for ssh ssh -i mythosts.pem ec2-user@ec2-54-213-215-238.us-west-2.compute.amazonaws.com
 	
 
 ## Todo
