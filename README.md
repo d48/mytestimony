@@ -89,7 +89,8 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
   * convoluted to set up the instance
   * following blog post http://thefloppydisk.wordpress.com/2013/04/25/a-node-js-application-on-the-amazon-cloud-part-1-installing-node-on-an-ec2-instance/
  * installed node and npm
- * configured base node app, request not resolving. need to troubleshoot
+ * ~~configured base node app, request not resolving. need to troubleshoot~~
+   * updated http and port, hit public dns url: http://ec2-54-213-215-238.us-west-2.compute.amazonaws.com:8080/hello.txt
 	
 
 ## Todo
