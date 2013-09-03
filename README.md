@@ -85,6 +85,8 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
      * Login modal
      * Register form
      * Account settings
+* setting up aws ec2 instance to have git deploy to it upon commits
+  * convoluted to set up the instance
 	
 
 ## Todo
