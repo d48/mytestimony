@@ -87,6 +87,7 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
      * Account settings
 * setting up aws ec2 instance to have git deploy to it upon commits
   * convoluted to set up the instance
+  * following blog post http://thefloppydisk.wordpress.com/2013/04/25/a-node-js-application-on-the-amazon-cloud-part-1-installing-node-on-an-ec2-instance/
 	
 
 ## Todo
