@@ -1,4 +1,3 @@
 h4.subhead= testimony.title
-- var trimmed = testimony.testimony.substring(0,160) + '...'
-div.description!= trimmed
+div.description!= testimony.testimony
 button(type="button", class="view-testimony btn btn-default btn-medium", id= testimony._id) View

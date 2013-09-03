@@ -125,11 +125,13 @@ module.exports = {
       , formKeys = {} // object to pass post data 
       ;
 
+    console.log('req body on add', req.body);
+
     formKeys = {
       form:{
           name: req.body.name
         , tags: req.body.tags
-        , testimony: req.body.testimony
+        , testimony: req.body.testimonyHidden
         , title: req.body.title
       }
     };

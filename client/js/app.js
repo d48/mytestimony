@@ -7,6 +7,7 @@
           , editorBoxId          : 'testimonybox'
           , formId               : 'form-testimony'
           , formContainerId      : 'testimony-form'
+          , hiddenTestimonyBoxId : 'testimonyHidden'
           , openId               : 'start'
           , submitId             : 'submit-button'
           , tagSingleContainerId : 'tag-single-container'

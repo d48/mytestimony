@@ -76,6 +76,13 @@ var MYT = MYT || {};  // defines MYT namespace
     // submit form if no errors
     if(!errors.length) {
       // @todo submit to api via ajax. only close window if no errors
+      // special field for testimony editor
+      var elEditor = document.getElementById(MYT.attributes.testimonyBoxId)
+          , elHiddenEditor = document.getElementById(MYT.attributes.hiddenTestimonyBoxId)
+          ;
+      
+      elHiddenEditor.value = elEditor.innerHTML;
+
       document.forms[MYT.attributes.formId].submit();
     }
     
@@ -176,6 +183,7 @@ var MYT = MYT || {};  // defines MYT namespace
     this.attributes.editorBoxId          = options.editorBoxId          || '';
     this.attributes.formId               = options.formId               || '';
     this.attributes.formContainerId      = options.formContainerId      || '';
+    this.attributes.hiddenTestimonyBoxId = options.hiddenTestimonyBoxId || '';
     this.attributes.submitId             = options.formContainerId      || '';
     this.attributes.tagSingleContainerId = options.tagSingleContainerId || '';
     this.attributes.tagSingleId          = options.tagSingleId          || '';

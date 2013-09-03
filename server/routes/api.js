@@ -14,7 +14,7 @@ module.exports = {
 
   , testimoniesAdd: function(req, res) {
      var name = req.body.name ? req.body.name : 'Anonymous';
-     console.log(req.body);
+     console.log('req via api', req.body);
      var obj = {
           name: name
         , testimony: req.body.testimony
@@ -24,9 +24,9 @@ module.exports = {
 
      // console.log('this is obj', obj);
 
-     // tm.insert('testimonies', obj, function(error, response) {
-     //    res.json(response);
-     //  }); 
+     tm.insert('testimonies', obj, function(error, response) {
+        res.json(response);
+      }); 
   }
 
   , testimoniesId: function(req, res) {
