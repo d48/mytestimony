@@ -3,6 +3,12 @@ var MYT = MYT || {};  // defines MYT namespace
 
 (function(){
 
+    var Form = {
+        init: function() {
+            console.log('initing');
+        }
+    };
+
   /**
    * Updates word count on object. 
    * 
@@ -212,7 +218,8 @@ var MYT = MYT || {};  // defines MYT namespace
 
   // API
   MYT = {
-    init: init
+    init: init,
+    Form: Form
   };
 
   return MYT;
