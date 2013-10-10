@@ -4,35 +4,56 @@ MYT.plugins = MYT.plugins || {};
 
 (function() {
 
+    var editor;
 
-        function clickIcon(e) {
+    /**
+     * disable mousedown on icon click
+     * @param  {object} e window event object
+     * @return {void}   disables default event on mousedown
+     */
+    function mouseDownIcon(e) {
+        e = e || window.event;
+        e.preventDefault();
+
+    }
+
+    /**
+     * sets editor formatting  
+     * @param  {object} e window event object
+     * @return {void}   formats selected text in editor window
+     */
+    function clickIcon(e) {
         e = e || window.event; // IE doesn't pass in the event object
 
-        var target = e.target || e.srcElement; // IE targeting
+        var target = e.target || e.srcElement // IE targeting
+            , cmd = ''
+            ;
 
-        // @todo clicking on icon taking focus away on highlighted textbox
-        // look into cancelling off-focus or check if button click keeps focus on div textarea
         switch( target.className ) {
           case 'icon-bold':
-            document.execCommand ('bold', false, null);
+            // document.execCommand('bold', false, null); 
+            cmd = 'bold';
             break;
           case 'icon-italic':
-            console.log('italic');
+            cmd = 'italic';            
             break;
           case 'icon-underline':
-            console.log('underline');
+            cmd = 'underline';            
             break;
           case 'icon-strikethrough':
-            console.log('strikethrough');
+            cmd = 'strikethrough';
             break;
           default:
             console.log('editor bar');
             break;
         } 
+
+        document.execCommand(cmd, false, null); 
+
     }
 
     function initEditor() {
-        var editor = document.getElementById(MYT.attributes.editorBoxId);     
+         editor = document.getElementById(MYT.attributes.editorBoxId);   
     }
 
     function init() {
@@ -43,6 +64,7 @@ MYT.plugins = MYT.plugins || {};
         initEditor();
 
         // listeners
+        d.getElementById(MYT.attributes.editorBarId).addEventListener('mousedown', mouseDownIcon, false);
         d.getElementById(MYT.attributes.editorBarId).addEventListener('click', clickIcon, false);
     }
 
