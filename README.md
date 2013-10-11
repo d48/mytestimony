@@ -109,8 +109,7 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
 - client side validation of form
   * make more robust
 - form wysiwig with bold, italics, strikethrough, bullet list, number list 
-  * look into execCommand
-    * sample: http://jsfiddle.net/design48/bmbgc/1/
+  * working now. be sure to add bullet/number list
 - look into glue.js for CommonJS modules for the browser for modularizing code
   * http://mixu.net/gluejs/
 - share feature
