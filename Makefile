@@ -1,5 +1,5 @@
 test:
-	./node_modules/.bin/mocha \
+	./node_modules/mocha/bin/mocha \
 		--reporter spec
 
 startapp: 

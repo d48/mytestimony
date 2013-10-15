@@ -6,6 +6,7 @@ describe('MYT.js', function() {
   describe('init', function() {
     it('should instantiate its attributes object with properties and values', function() {
       [].should.be.empty;
+      true.should.be.ok;
     });
   });
 });
