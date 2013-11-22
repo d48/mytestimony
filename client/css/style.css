@@ -8,7 +8,8 @@ label{display:block;font-size:16px;font-weight:bold;margin-bottom:10px}
 #testimony-form.open{right:0;visibility:visible}
 #testimony-form:after{content:"";clear:both;display:block;visibility:hidden;font-size:0;height:0}
 #testimony-form input,#testimony-form textarea{width:100%}
-#testimony-form #testimonybox{background-color:#fff;border:1px solid #ccc;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;border-radius:4px;display:block;font-size:14px;line-height:18px;margin:0;margin-bottom:30px;padding:10px;min-width:300px;height:300px;overflow:scroll;margin-bottom:30px}
+#testimony-form #testimonybox{background-color:#fff;border:1px solid #ccc;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;border-radius:4px;display:block;font-size:14px;line-height:18px;margin:0;margin-bottom:30px;padding:10px;min-width:300px;height:300px;overflow:scroll;margin-bottom:30px;}
+#testimony-form #testimonybox ol,#testimony-form #testimonybox ul{margin:15px 30px}
 #testimony-form .btn-group{float:right}
 #testimony-form .control-group{margin-bottom:30px}
 #testimony-form #form-testimony .error input,#testimony-form #form-testimony .error textarea,#testimony-form #form-testimony .error .required{border:2px solid #f00}
@@ -45,7 +46,6 @@ label{display:block;font-size:16px;font-weight:bold;margin-bottom:10px}
 #heading .share h5{margin-bottom:20px}
 #heading .share p{margin-top:0}
 #heading .share li{display:inline-block;margin-right:5px;padding:2px 5px}
-.testimony ul{list-style-type:none;margin:0;padding:0;margin-top:-10px}
 body{background-image:url("../img/ricepaper2.png");overflow-x:hidden;padding:15px 30px;font:14px Arial,Helvetica,sans-serif}
 a{color:#00b7ff}
 h1{float:left;font-size:2.25em;font-weight:normal}
@@ -56,12 +56,14 @@ p{line-height:24px;margin-bottom:30px}
 .content-title{clear:both;display:block;margin:20px 0}
 .tagline{margin-left:10px;padding-top:6px}
 #testimonies{list-style-type:none;padding:0;margin:0;}
+#testimonies .description ol,#testimonies .description ul{margin:15px 30px}
+#testimonies .description li{list-style-type:disc}
 #testimonies .latest{background-color:#efefef;border:5px solid #ccc;-webkit-border-radius:10px;-moz-border-radius:10px;-ms-border-radius:10px;-o-border-radius:10px;border-radius:10px}
 #testimonies .new{float:left;line-height:1px;margin-left:5px;margin-top:22px;font-size:4em}
-#testimonies li{overflow:hidden;padding:30px;}
-#testimonies li .subhead{float:left;margin:0 0 10px 0}
-#testimonies li .description{clear:left;float:left;padding:0;width:80%}
-#testimonies li button{float:right}
+#testimonies > li{overflow:hidden;padding:30px;}
+#testimonies > li .subhead{float:left;margin:0 0 10px 0}
+#testimonies > li .description{clear:left;float:left;padding:0;width:80%}
+#testimonies > li button{float:right}
 #content{clear:both}
 #main{float:left;padding-right:30px;padding-top:15px;width:75%;}
 #main > h1,#main > h2{margin-top:0}

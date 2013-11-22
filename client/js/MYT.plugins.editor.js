@@ -31,7 +31,6 @@ MYT.plugins = MYT.plugins || {};
 
         switch( target.className ) {
           case 'icon-bold':
-            // document.execCommand('bold', false, null); 
             cmd = 'bold';
             break;
           case 'icon-italic':
@@ -40,11 +39,15 @@ MYT.plugins = MYT.plugins || {};
           case 'icon-underline':
             cmd = 'underline';            
             break;
-          case 'icon-strikethrough':
-            cmd = 'strikethrough';
+          case 'icon-list':
+            cmd = 'insertUnorderedList';
             break;
+          case 'icon-numbered-list':
+            cmd = 'insertOrderedList';
+            break;
+
+
           default:
-            console.log('editor bar');
             break;
         } 
 
