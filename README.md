@@ -78,9 +78,11 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
      * ~~Create page~~
 	   * ~~Design testimony detail page~~
      * ~~List of random testimonials~~
-     * Edit page (in progress)
-       * insert testimony into db upon passing validation
+     * ~~Edit page~~
+       * ~~insert testimony into db upon passing validation~~
        * Preview button
+       * Idea of now having testimony form be multi-steps with option
+         for user to provide email to have generated link for safe keeping
      * Browse tag results
      * Login modal
      * Register form
