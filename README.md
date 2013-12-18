@@ -117,3 +117,5 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
   * http://mixu.net/gluejs/
 - share feature
   * ux design to have button open up div with options
+- CI
+  * look into http://ci.testling.com/
