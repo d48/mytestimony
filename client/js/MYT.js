@@ -153,7 +153,7 @@ var MYT = MYT || {};  // defines MYT namespace
     e.preventDefault();
     MYT.utils.addClass( formContainer, 'open' );
     MYT.utils.removeClass( formContainer, 'close' );
-    formContainer.style.height = document.height + 'px'; // set height
+    formContainer.style.height = document.body.scrollHeight + 'px'; // set height
   }
 
 
