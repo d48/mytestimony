@@ -10,29 +10,6 @@ var MYT = MYT || {};  // defines MYT namespace
     };
 
   /**
-   * Updates word count on object. 
-   * 
-   * @name wordCount
-   * @param {Object} el - DOM element, a textarea field
-   * @param {Object} targ - DOM element to update count figure
-   * @returns {void} - Updates targ with count
-   * @example 
-   *    wordCount( window.event, document.getElementById('textFieldId') ); 
-   * @method 
-   * @author Ryan Regalado 
-   */
-  function wordCount(e, targ) {
-    var count = 0
-      , e = e || window.event
-      , val = e.target.innerHTML
-      , targ = targ || {} 
-      ;
-
-    count = val.match(/\S+/g).length;
-    targ.innerHTML = count;
-  }
-
-  /**
    * Checks form for validation and submits if valid
    * 
    * @name submitTestimony
@@ -208,9 +185,6 @@ var MYT = MYT || {};  // defines MYT namespace
     d.getElementById(closeId).addEventListener('click', closeForm, false);
     d.getElementById(openId).addEventListener('click', showForm, false);
     d.getElementById(submitId).addEventListener('click', submitTestimony, false);
-    d.getElementById(this.attributes.testimonyBoxId).addEventListener('keyup', function() {
-      wordCount( window.event, document.getElementById('word-count') );
-    }, false);
 
     MYT.plugins.editor.init();
     MYT.plugins.tags.init();

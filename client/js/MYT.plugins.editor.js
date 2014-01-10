@@ -55,20 +55,77 @@ MYT.plugins = MYT.plugins || {};
 
     }
 
+    /**
+     * Updates word count on object. 
+     * 
+     * @name wordCount
+     * @param {Object} el - DOM element, a textarea field
+     * @param {Object} targ - DOM element to update count figure
+     * @returns {void} - Updates targ with count
+     * @example 
+     *    wordCount( window.event, document.getElementById('textFieldId') ); 
+     * @method 
+     * @author Ryan Regalado 
+     */
+    function wordCount(e, targ) {
+      var count = 0
+        , e = e || window.event
+        , val = e.target.innerText
+        , targ = targ || {} 
+        ;
+
+      console.log('editor', val);
+
+      count = val.match(/\S+/g).length;
+      targ.innerHTML = count;
+    }
+
+
+    /**
+     * initialize editor
+     * 
+     * @name initEditor
+     * @returns void - Sets editor object
+     * @method 
+     * @author Ryan Regalado 
+     */
     function initEditor() {
          editor = document.getElementById(MYT.attributes.editorBoxId);   
     }
 
-    function init() {
-        // set up event listeners
+
+    /**
+     * setup event listeners
+     * 
+     * @name setupListeners
+     * @returns void 
+     * @method 
+     * @author Ryan Regalado 
+     */
+    function setupListeners() {
         var d = window.document;
 
-        // set up editor
-        initEditor();
-
-        // listeners
         d.getElementById(MYT.attributes.editorBarId).addEventListener('mousedown', mouseDownIcon, false);
         d.getElementById(MYT.attributes.editorBarId).addEventListener('click', clickIcon, false);
+
+        d.getElementById(MYT.attributes.testimonyBoxId).addEventListener('keyup', function() {
+          wordCount( window.event, document.getElementById('word-count') );
+        }, false);
+    }
+
+    /**
+     * Initiliaze plugin for editor
+     * 
+     * @name init
+     * @returns void - sets up listeners
+     * @example 
+     * 
+     * @method 
+     * @author Ryan Regalado 
+     */
+    function init() {
+        initEditor();
+        setupListeners();
     }
 
 
