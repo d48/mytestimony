@@ -1,0 +1,111 @@
+*
+  box-sizing: border-box
+  -o-box-sizing: border-box
+  -ms-box-sizing: border-box
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+
+body
+  /* background-color: $backgroundColor */
+  background-image: url(../img/ricepaper2.png)
+  overflow-x: hidden
+  padding: $gutterHalf $gutter
+  font: $font
+a
+  color: #00B7FF
+
+h1
+  float: left
+  font-size: 2.25em
+  font-weight: normal
+
+h2
+  display: inline-block
+  font-size: 1.75em
+  font-weight: normal
+
+h3 
+  font-size: 1.7em
+  font-weight: normal
+
+h4 
+  font-size: 1.5em
+  font-weight: normal
+
+p 
+  line-height: 24px
+  margin-bottom: $gutter
+
+.content-title
+  clear: both
+  display: block
+  margin: 20px 0
+
+.tagline
+  margin-left: 10px
+  padding-top: 6px
+
+#testimonies
+  list-style-type: none
+  padding: 0
+  margin: 0
+
+  .description 
+    ol, ul 
+      margin: $gutterHalf $gutter 
+
+    li 
+      list-style-type: disc
+
+  .latest
+    background-color: #efefef
+    border: 5px solid #ccc
+    border-radius: 10px
+
+  .new
+    float: left
+    line-height: 1px
+    margin-left: 5px
+    margin-top: 22px
+    font-size: 4.0em
+
+  > li 
+    overflow: hidden
+    padding: $gutter
+
+    .subhead
+      float: left
+      margin: 0 0 10px 0
+
+    .description 
+      clear: left
+      float: left
+      padding: 0
+      width: 80%
+
+
+    button 
+      float: right
+
+#content
+  clear: both
+
+#main
+  float: left
+  padding-right: $gutter
+  padding-top: $gutterHalf
+  width: 75%
+
+  & > h1, > h2
+    margin-top: 0
+
+#sidebar
+  border-left: 1px solid $mainBorderColor
+  height: 100%
+  padding-left: $gutter
+  padding-top: 100px
+  position: fixed 
+  right: 0
+  top: 0
+  width: 25%
+
