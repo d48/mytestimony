@@ -112,6 +112,34 @@ var MYT = MYT || {};  // defines MYT namespace
     e.preventDefault();
     MYT.utils.addClass(document.getElementById(MYT.attributes.formContainerId), 'close');
     MYT.utils.removeClass(document.getElementById(MYT.attributes.formContainerId), 'open');
+    removeListeners();
+  }
+
+  /**
+   * Creates DOM listeners for: 
+   *    keyup event in closing form
+   * 
+   * @name createListeners
+   * @returns void -  sets up DOM listeners
+   * @method 
+   * @author Ryan Regalado 
+   */
+  function createListeners() {
+      document.body.addEventListener('keyup', keyListener, false);
+  }
+
+
+  /**
+   * Removes DOM listeners for: 
+   *    keyup event in closing form
+   * 
+   * @name createListeners
+   * @returns void -  removes up DOM listeners
+   * @method 
+   * @author Ryan Regalado 
+   */
+  function removeListeners() {
+      document.body.removeEventListener('keyup', keyListener, false);
   }
 
   /**
@@ -131,8 +159,33 @@ var MYT = MYT || {};  // defines MYT namespace
     MYT.utils.addClass( formContainer, 'open' );
     MYT.utils.removeClass( formContainer, 'close' );
     formContainer.style.height = document.body.scrollHeight + 'px'; // set height
+    createListeners();
   }
 
+
+  /**
+   * key checking: 
+   *    closes form
+   * 
+   * @name keyListener
+   * @param {object} e - Window event object
+   * @returns void - checks for escape: keyCode = 27
+   * @method 
+   * @author Ryan Regalado 
+   */
+  function keyListener(e) {
+      var e = e || window.event
+          , keyCode = e.keyCode
+          ;
+
+      switch(keyCode) {
+          case 27:
+              closeForm();
+              break;
+          default: 
+              break;
+      }
+  }
 
 
 

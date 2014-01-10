@@ -74,8 +74,6 @@ MYT.plugins = MYT.plugins || {};
         , targ = targ || {} 
         ;
 
-      console.log('editor', val);
-
       count = val.match(/\S+/g).length;
       targ.innerHTML = count;
     }
