@@ -96,6 +96,13 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
    * user is specific for ssh ssh -i mythosts.pem ec2-user@ec2-54-213-215-238.us-west-2.compute.amazonaws.com
    * to run node.js continually, installed `forever` module: https://github.com/nodejitsu/forever
    * looking to instlaling new instance of mongodb instead of configuring from marketplace. 
+* move Single Page Application model
+    * reading tech talk of medium.com setup: https://medium.com/tech-talk/fb44da86dc1f
+    * no page refreshes
+    * streamline content loading (lazy loading, scroll to bottom and load more), look at http://artsy.net
+        * vid of browsing through with loaders, modals, and content fades: http://screencast.com/t/VyrULmZL9m2u
+    * streamline editor, look at http://www.medium.com
+        * vid of browsing and using editor to create a post: http://www.screencast.com/t/wKkNX88hQGwl
 	
 
 ## Todo
