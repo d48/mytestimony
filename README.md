@@ -95,7 +95,7 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
    * updated http and port, hit public dns url: http://ec2-54-213-215-238.us-west-2.compute.amazonaws.com
    * user is specific for ssh ssh -i mythosts.pem ec2-user@ec2-54-213-215-238.us-west-2.compute.amazonaws.com
    * to run node.js continually, installed `forever` module: https://github.com/nodejitsu/forever
-   * looking to instlaling new instance of mongodb instead of configuring from marketplace. 
+   * ~~looking to instlaling new instance of mongodb instead of configuring from marketplace.~~
 * move Single Page Application model
     * reading tech talk of medium.com setup: https://medium.com/tech-talk/fb44da86dc1f
     * no page refreshes
