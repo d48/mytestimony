@@ -15,7 +15,8 @@
     "supervisor": "0.5.2",
     "should": "~1.2.2",
     "socket.io-client": "~0.9.16",
-    "socket.io": "~0.9.16"
+    "socket.io": "~0.9.16",
+    "forever": "~0.10.11"
   },
   "engine": "0.10.12",
   "scripts": {
