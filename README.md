@@ -18,6 +18,8 @@ This is a website to help people share about their tesimony of what God has done
 3. Tools to share easily via email and text. Example: short URLs and share utility to social networks.
 4. Can set testimony to be viewed publicly and anonymously so that search engines can pick up on keywords that may help others in their struggles and see how God helped and changed their lives.
 
+[View temporary working website on Amazon EC2 instance](http://54.186.24.182/)
+
 
 ## Technology
 
@@ -96,7 +98,7 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
    * user is specific for ssh ssh -i mythosts.pem ec2-user@ec2-54-213-215-238.us-west-2.compute.amazonaws.com
    * to run node.js continually, installed `forever` module: https://github.com/nodejitsu/forever
    * ~~looking to instlaling new instance of mongodb instead of configuring from marketplace.~~
- * new Url: ec2-54-186-24-182.us-west-2.compute.amazonaws.com
+   * new Url: http://ec2-54-186-24-182.us-west-2.compute.amazonaws.com or http://54.186.24.182/
 * move Single Page Application model
     * reading tech talk of medium.com setup: https://medium.com/tech-talk/fb44da86dc1f
     * no page refreshes
