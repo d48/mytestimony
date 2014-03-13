@@ -2,7 +2,7 @@
 
 THIS_PID=$$
 # start mongodb
-mongod --dbpath ./data/db/ &
+mongod --dbpath ./data/db/ --smallfiles &
 
 # monitor node js app and auto restart on directory/file changes
 ./node_modules/supervisor/lib/cli-wrapper.js -w app.js,server/routes,server/models -e 'js' app.js &
