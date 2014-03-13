@@ -89,14 +89,13 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
      * Login modal
      * Register form
      * Account settings
-* setting up aws ec2 instance to have git deploy to it upon commits
-  * convoluted to set up the instance
-  * following blog post http://thefloppydisk.wordpress.com/2013/04/25/a-node-js-application-on-the-amazon-cloud-part-1-installing-node-on-an-ec2-instance/
- * installed node and npm
+* ~~setting up aws ec2 instance to have git deploy to it upon commits~~
+  * ~~convoluted to set up the instance~~
+  * ~~following blog post http://thefloppydisk.wordpress.com/2013/04/25/a-node-js-application-on-the-amazon-cloud-part-1-installing-node-on-an-ec2-instance/~~
+ * ~~installed node and npm~~
  * ~~configured base node app, request not resolving. need to troubleshoot~~
-   * updated http and port, hit public dns url: http://ec2-54-213-215-238.us-west-2.compute.amazonaws.com
-   * user is specific for ssh ssh -i mythosts.pem ec2-user@ec2-54-213-215-238.us-west-2.compute.amazonaws.com
-   * to run node.js continually, installed `forever` module: https://github.com/nodejitsu/forever
+   * ~~user is specific for ssh ssh -i mythosts.pem ec2-user@ec2-54-213-215-238.us-west-2.compute.amazonaws.com~~
+   * ~~to run node.js continually, installed `forever` module: https://github.com/nodejitsu/forever~~
    * ~~looking to instlaling new instance of mongodb instead of configuring from marketplace.~~
    * new Url: http://ec2-54-186-24-182.us-west-2.compute.amazonaws.com or http://54.186.24.182/
 * move Single Page Application model
@@ -129,3 +128,4 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
   * ux design to have button open up div with options
 - CI
   * look into http://ci.testling.com/
+  * connect to ci and continuous deployment environment 
