@@ -11,6 +11,7 @@ var express     = require('express')
     , routesapi = require('./server/routes/api')
     , stylus    = require('stylus')
     , nib       = require('nib')
+    , port      = 3000
     ;
 
 function compile(str, path) {
@@ -68,6 +69,6 @@ io.sockets.on('connection', function (socket) {
 
 
 
-server.listen(3000);
+server.listen(port);
 // console.log("Express server listening on port %d in %s mode", server.address().port, app.settings.env);
 console.log("Express server listening");
