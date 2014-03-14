@@ -5,7 +5,7 @@ THIS_PID=$$
 mongod --dbpath ./data/db/ --smallfiles &
 
 # monitor node js app and auto restart on directory/file changes
-./node_modules/supervisor/lib/cli-wrapper.js -w app.js,server/routes,server/models -e 'js' app.js &
+./node_modules/forever/bin/forever start app.js &
 
 echo "Run this to kill the script"
 echo "kill -TERM -$THIS_PID"

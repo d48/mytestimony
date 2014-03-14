@@ -2,7 +2,7 @@
 
 # prints first column from output of jobs
 # JOBLINE=`ps ax | grep [bin/start]-app.sh | awk '{print $1}'`
-JOBLINE=`ps ax | grep [start]app | awk '{print $1}'`
+JOBLINE=`ps ax | grep [startapp]dev | awk '{print $1}'`
 
 echo "running kill -TERM -${JOBLINE}"
 kill -TERM -${JOBLINE}
