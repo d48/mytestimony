@@ -129,3 +129,9 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
 - CI
   * look into http://ci.testling.com/
   * connect to ci and continuous deployment environment 
+- Security
+  * https://speakerdeck.com/ckarande/top-overlooked-security-threats-to-node-dot-js-web-applications
+- Modules 
+  * browserify
+  * requirejs
+  * breaking up js into modules for client
