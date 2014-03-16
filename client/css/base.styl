@@ -102,9 +102,31 @@ p
   border-left: 1px solid $mainBorderColor
   height: 100%
   padding-left: $gutter
+  padding-right: $gutter
   padding-top: 100px
   position: fixed 
   right: 0
+  text-align: center
   top: 0
   width: 25%
+
+.hr-divider
+  margin-top: $gutterHalf
+  padding: $gutter
+  position: relative
+
+  .hr-line 
+    background-color: #ccc
+    height: 1px
+
+  .hr-text
+    background-color: $backgroundColor
+    font-size: $large
+    font-style: italic
+    position: absolute
+    top: $gutterHalf + 5
+    width: $gutter * 2
+    margin-left: -($gutter)
+
+
 
