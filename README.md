@@ -105,6 +105,8 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
         * vid of browsing through with loaders, modals, and content fades: http://screencast.com/t/VyrULmZL9m2u
     * streamline editor, look at http://www.medium.com
         * vid of browsing and using editor to create a post: http://www.screencast.com/t/wKkNX88hQGwl
+* Authentication 
+    * Set up passwordless authentication that hooks into email: http://blog.design48.net/2014/04/15/passwordless-authentication/
 	
 
 ## Todo
