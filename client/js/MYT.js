@@ -3,6 +3,7 @@ var MYT = MYT || {};  // defines MYT namespace
 
 (function(){
 
+    // @todo Form module inside sidebar module
     var Form = {
         init: function() {
             console.log('initing');
@@ -226,6 +227,7 @@ var MYT = MYT || {};  // defines MYT namespace
     this.attributes.tagsInputId          = options.tagsInputId          || '';
     this.attributes.tagsBoxId            = options.tagsBoxId            || '';
     this.attributes.tagsTemplate         = options.tagsTemplate         || '';
+    this.attributes.tagsDropDownId       = options.tagsDropDownId       || 'tag-category';
     this.attributes.testimonyBoxId       = options.testimonyBoxId       || '';
     this.attributes.titleId              = options.titleId              || '';
 
@@ -239,6 +241,9 @@ var MYT = MYT || {};  // defines MYT namespace
     d.getElementById(openId).addEventListener('click', showForm, false);
     d.getElementById(submitId).addEventListener('click', submitTestimony, false);
 
+    MYT.modules.sidebar.init();
+
+    // @todo place in sidebar?
     MYT.plugins.editor.init();
     MYT.plugins.tags.init();
   }

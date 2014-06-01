@@ -150,6 +150,27 @@ MYT.plugins = MYT.plugins || {};
       tagSingle.firstElementChild.value = ''; // clear out value for next 
     }
 
+    function _selectTag(e) {
+        console.log('selection has been made', e.target.value);
+    }
+
+    
+    /**
+     * Creates events listeners for elements
+     * 
+     * @name _createListeners
+     * @param {object} el - DOM elements to create listeners for
+     * @returns {void} - creates event listeners
+     * @property {type} varName - description
+     * @method 
+     * @memberof MYT.plugins.tags
+     * @author Ryan Regalado 
+     */
+    function _createListeners(el) {
+        console.log('creating select tag listener', el);
+        el.addEventListener('change', _selectTag);
+    }
+
     // sets up tagbox and event listeners
     function init() {
         // set up event listeners
@@ -163,9 +184,12 @@ MYT.plugins = MYT.plugins || {};
         var templateId = MYT.attributes.tagsTemplate
             , tagTemplate = document.getElementById(templateId).innerHTML
             , template = doT.template(tagTemplate)
+            , elTagsDropDown = document.getElementById(MYT.attributes.tagsDropDownId)
             ;
 
         MYT.plugins.tags.template = template;
+
+        _createListeners(elTagsDropDown);
     }
 
 
