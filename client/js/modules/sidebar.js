@@ -32,7 +32,7 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
      * @author Ryan Regalado 
      */
     function _createFormListeners() {
-        document.body.addEventListener('keyup', _keyListener, false);
+        d.body.addEventListener('keyup', _keyListener, false);
     }
 
 
@@ -47,7 +47,7 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
      * @author Ryan Regalado 
      */
      function _removeFormListeners() {
-        document.body.removeEventListener('keyup', _keyListener, false);
+        d.body.removeEventListener('keyup', _keyListener, false);
      }
      
      /**
@@ -89,8 +89,8 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
      function closeForm(e) {
          e = e || window.event; // IE doesn't pass in the event object
          e.preventDefault();
-         MYT.utils.addClass(document.getElementById(MYT.attributes.formContainerId), 'close');
-         MYT.utils.removeClass(document.getElementById(MYT.attributes.formContainerId), 'open');
+         MYT.utils.addClass(d.getElementById(MYT.attributes.formContainerId), 'close');
+         MYT.utils.removeClass(d.getElementById(MYT.attributes.formContainerId), 'open');
          _removeFormListeners();
      }
 
@@ -122,7 +122,7 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
          var fieldsLen = fields.length;
          for(i; i < fieldsLen; i++) {
              var field = fields[i]
-                 , el = document.getElementById(field)
+                 , el = d.getElementById(field)
                  ;
 
              // @todo specify field validation type
@@ -146,13 +146,13 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
          if(!errors.length) {
              // @todo submit to api via ajax. only close window if no errors
              // special field for testimony editor
-             var elEditor = document.getElementById(MYT.attributes.testimonyBoxId)
-                 , elHiddenEditor = document.getElementById(MYT.attributes.hiddenTestimonyBoxId)
+             var elEditor = d.getElementById(MYT.attributes.testimonyBoxId)
+                 , elHiddenEditor = d.getElementById(MYT.attributes.hiddenTestimonyBoxId)
                  ;
 
              elHiddenEditor.value = elEditor.innerHTML;
 
-             document.forms[MYT.attributes.formId].submit();
+             d.forms[MYT.attributes.formId].submit();
          }
 
      }
@@ -172,13 +172,13 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
      */
      function showForm(e) {
          var e = e || window.event // IE doesn't pass in the event object
-             , formContainer = document.getElementById(MYT.attributes.formContainerId) 
+             , formContainer = d.getElementById(MYT.attributes.formContainerId) 
              ;
 
          e.preventDefault();
          MYT.utils.addClass( formContainer, 'open' );
          MYT.utils.removeClass( formContainer, 'close' );
-         formContainer.style.height = document.body.scrollHeight + 'px'; // set height
+         formContainer.style.height = d.body.scrollHeight + 'px'; // set height
          _createFormListeners();
      }
      
@@ -215,13 +215,15 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
      */
     function init() {
         _createListeners(); 
+
+        // kick off editor and tag box
+        MYT.plugins.editor.init();
+        MYT.plugins.tags.init();
     }
 
 
-    // Sidebar api to expose
-    var Sidebar = {
+    return {
         init: init
     }
 
-    return Sidebar;
 })();

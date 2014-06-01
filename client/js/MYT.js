@@ -95,10 +95,6 @@ var MYT = MYT || {};  // defines MYT namespace
 
 
     MYT.modules.sidebar.init();
-
-    // @todo place in sidebar?
-    MYT.plugins.editor.init();
-    MYT.plugins.tags.init();
   }
 
   // API
