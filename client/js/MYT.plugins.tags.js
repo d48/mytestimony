@@ -157,7 +157,7 @@ MYT.plugins = MYT.plugins || {};
         d.getElementById(MYT.attributes.tagSingleId).addEventListener('keydown', addHandler, false);
         d.getElementById(MYT.attributes.tagsBoxId).addEventListener('click', removeHandler, false);
         // debug. remove default until ready to work on
-        d.getElementById('preview').onclick = function() {return false;};
+        // d.getElementById('preview').onclick = function() {return false;};
 
         // cache tagbox template
         var templateId = MYT.attributes.tagsTemplate
