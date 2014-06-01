@@ -82,10 +82,10 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
      * ~~List of random testimonials~~
      * ~~Edit page~~
        * ~~insert testimony into db upon passing validation~~
-       * Preview button
+       * ~~Preview button~~ will iterate on this for future version
        * Idea of now having testimony form be multi-steps with option
          for user to provide email to have generated link for safe keeping
-     * Browse tag results
+     * Browse tag results [in progress]
      * Login modal
      * Register form
      * Account settings
@@ -134,6 +134,9 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
 - Security
   * https://speakerdeck.com/ckarande/top-overlooked-security-threats-to-node-dot-js-web-applications
 - Modules 
-  * browserify
+  * ~~browserify~~ nope, adds to much overhead
   * requirejs
-  * breaking up js into modules for client
+  * ~~breaking up js into modules for client~~ in progress
+- Create own XHR lib
+  * would like to just rip jQuery.ajax if possible
+  * If not, can just build own from http://toddmotto.com/writing-a-standalone-ajax-xhr-javascript-micro-library/
