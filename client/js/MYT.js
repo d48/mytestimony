@@ -10,68 +10,6 @@ var MYT = MYT || {};  // defines MYT namespace
         }
     };
 
-  /**
-   * Checks form for validation and submits if valid
-   * 
-   * @name submitTestimony
-   * @param {Object} e - Event object
-   * @returns {void} - Submits form to API
-   * @method 
-   * @author Ryan Regalado 
-   */
-  function submitTestimony(e) {
-    e = e || window.event; // IE doesn't pass in the event object
-    e.preventDefault();
-
-    // validate form
-    var checkFields = {} 
-      , errors = []
-      , fields = [
-          MYT.attributes.testimonyBoxId
-        , MYT.attributes.titleId
-        ]
-      , i = 0
-      , utils = MYT.utils
-      ;
-
-    var fieldsLen = fields.length;
-    for(i; i < fieldsLen; i++) {
-      var field = fields[i]
-        , el = document.getElementById(field)
-        ;
-
-      // @todo specify field validation type
-      // example: notEmpty, noSpecialChars, onlyDigits, onlyLetters
-      if((el.nodeName === 'INPUT' && el.value === '')
-         || (el.nodeName === 'DIV' && 
-            (el.innerHTML === '' || el.innerHTML === '<br>'))) {
-        // record which fields have errors and display to user
-        utils.addClass(el.parentElement, 'error'); 
-        errors.push(field);
-      } else {
-        utils.removeClass(el.parentElement, 'error'); 
-        // remove field from error object
-        if(errors.indexOf(field) !== -1){
-          errors.splice(errors.indexOf(field),1);
-        }
-      }
-    }
-
-    // submit form if no errors
-    if(!errors.length) {
-      // @todo submit to api via ajax. only close window if no errors
-      // special field for testimony editor
-      var elEditor = document.getElementById(MYT.attributes.testimonyBoxId)
-          , elHiddenEditor = document.getElementById(MYT.attributes.hiddenTestimonyBoxId)
-          ;
-      
-      elHiddenEditor.value = elEditor.innerHTML;
-
-      document.forms[MYT.attributes.formId].submit();
-    }
-    
-  }
-
 
   /**
    * Delegate event handler to process button clicks
@@ -99,96 +37,6 @@ var MYT = MYT || {};  // defines MYT namespace
   }
 
 
-  /**
-   * Close testimony form that opens from 'Start' button
-   * 
-   * @name closeForm
-   * @param {Object} e - Event object
-   * @returns void - Hides the testimony form
-   * @method 
-   * @author Ryan Regalado 
-   */
-  function closeForm(e) {
-    e = e || window.event; // IE doesn't pass in the event object
-    e.preventDefault();
-    MYT.utils.addClass(document.getElementById(MYT.attributes.formContainerId), 'close');
-    MYT.utils.removeClass(document.getElementById(MYT.attributes.formContainerId), 'open');
-    removeListeners();
-  }
-
-  /**
-   * Creates DOM listeners for: 
-   *    keyup event in closing form
-   * 
-   * @name createListeners
-   * @returns void -  sets up DOM listeners
-   * @method 
-   * @author Ryan Regalado 
-   */
-  function createListeners() {
-      document.body.addEventListener('keyup', keyListener, false);
-  }
-
-
-  /**
-   * Removes DOM listeners for: 
-   *    keyup event in closing form
-   * 
-   * @name createListeners
-   * @returns void -  removes up DOM listeners
-   * @method 
-   * @author Ryan Regalado 
-   */
-  function removeListeners() {
-      document.body.removeEventListener('keyup', keyListener, false);
-  }
-
-  /**
-   * Displays testimony form
-   * 
-   * @name showForm
-   * @param {Object} e - Event object
-   * @returns void - Shows form 
-   * @method 
-   * @author Ryan Regalado 
-   */
-  function showForm(e) {
-    var e = e || window.event // IE doesn't pass in the event object
-      , formContainer = document.getElementById(MYT.attributes.formContainerId) 
-      ;
-    e.preventDefault();
-    MYT.utils.addClass( formContainer, 'open' );
-    MYT.utils.removeClass( formContainer, 'close' );
-    formContainer.style.height = document.body.scrollHeight + 'px'; // set height
-    createListeners();
-  }
-
-
-  /**
-   * key checking: 
-   *    closes form
-   * 
-   * @name keyListener
-   * @param {object} e - Window event object
-   * @returns void - checks for escape: keyCode = 27
-   * @method 
-   * @author Ryan Regalado 
-   */
-  function keyListener(e) {
-      var e = e || window.event
-          , keyCode = e.keyCode
-          ;
-
-      switch(keyCode) {
-          case 27:
-              closeForm();
-              break;
-          default: 
-              break;
-      }
-  }
-
-
 
   /**
    * Kick of the app's lifecycle
@@ -201,10 +49,19 @@ var MYT = MYT || {};  // defines MYT namespace
   function init(options) {
     var options = options || {};
     
+    // @todo this is a bit overboard. We know this specific application has targeted IDs
+    //       so this can be removed and just look for this. Can save internal reference
+    //       in a config object for quick look up like:
+    //
+    //       defaults = {
+    //          closeId: 'close'
+    //          , openId: 'start'
+    //          ...
+    //       };
     var d              = window.document
-      , closeId        = options.closeId       || ''
-      , openId         = options.openId        || ''
-      , submitId       = options.submitId      || ''
+      , closeId        = options.closeId       || 'close'
+      , openId         = options.openId        || 'start'
+      , submitId       = options.submitId      || 'submit-button'
       , tagsTemplate   = options.tagsTemplate  || ''
       , viewTesClass   = options.viewTesClass  || ''
       , testimoniesId  = options.testimoniesId || ''
@@ -236,10 +93,6 @@ var MYT = MYT || {};  // defines MYT namespace
       testimonies.addEventListener('click', testimoniesClick, false);
     }
 
-    // @todo separate into its own module
-    d.getElementById(closeId).addEventListener('click', closeForm, false);
-    d.getElementById(openId).addEventListener('click', showForm, false);
-    d.getElementById(submitId).addEventListener('click', submitTestimony, false);
 
     MYT.modules.sidebar.init();
 
