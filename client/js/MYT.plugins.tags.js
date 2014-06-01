@@ -150,46 +150,41 @@ MYT.plugins = MYT.plugins || {};
       tagSingle.firstElementChild.value = ''; // clear out value for next 
     }
 
-    function _selectTag(e) {
-        console.log('selection has been made', e.target.value);
-    }
 
-    
     /**
-     * Creates events listeners for elements
+     * setup listeners on tag box
      * 
      * @name _createListeners
-     * @param {object} el - DOM elements to create listeners for
-     * @returns {void} - creates event listeners
-     * @property {type} varName - description
+     * @returns {void} - sets up listeners
      * @method 
      * @memberof MYT.plugins.tags
      * @author Ryan Regalado 
      */
-    function _createListeners(el) {
-        console.log('creating select tag listener', el);
-        el.addEventListener('change', _selectTag);
-    }
-
-    // sets up tagbox and event listeners
-    function init() {
-        // set up event listeners
+    function _createListeners() {
         var d = window.document;
         d.getElementById(MYT.attributes.tagSingleId).addEventListener('keydown', addHandler, false);
         d.getElementById(MYT.attributes.tagsBoxId).addEventListener('click', removeHandler, false);
-        // debug. remove default until ready to work on
-        // d.getElementById('preview').onclick = function() {return false;};
+    }
+    
+    /**
+     * kicks off tags lifecycle
+     * 
+     * @name init
+     * @returns {void} - starts plugin lifecycle
+     * @method 
+     * @memberof MYT.plugins.tags
+     * @author Ryan Regalado 
+     */
+    function init() {
+        _createListeners();
 
         // cache tagbox template
         var templateId = MYT.attributes.tagsTemplate
             , tagTemplate = document.getElementById(templateId).innerHTML
             , template = doT.template(tagTemplate)
-            , elTagsDropDown = document.getElementById(MYT.attributes.tagsDropDownId)
             ;
 
         MYT.plugins.tags.template = template;
-
-        _createListeners(elTagsDropDown);
     }
 
 
