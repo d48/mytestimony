@@ -55,11 +55,11 @@ $ make stopapp
 
 **Homepage - one page app**
 
-![Homepage](https://github.com/d48/mytestimony/raw/master/design/wireframes/wireframe-home-v1.png)
+![Homepage](https://github.com/d48/mytestimony/raw/master/design/wireframes/home-wireframe.png)
 
 **Homepage - Share Testimony**
 
-![Create](http://f.cl.ly/items/3V0h0S103d2C2O0o0v0v/home-wf-share.png)
+![Create](https://github.com/d48/mytestimony/raw/master/design/wireframes/home-wf-share.png)
 
 ## Database setup
 

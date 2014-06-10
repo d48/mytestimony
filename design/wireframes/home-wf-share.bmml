@@ -1,42 +1,42 @@
-<mockup version="1.0" skin="sketch" measuredW="1353" measuredH="845" mockupW="1285" mockupH="824">
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1353" measuredH="997" mockupW="1285" mockupH="976">
   <controls>
-    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="68" y="21" w="1285" h="824" measuredW="450" measuredH="400" zOrder="0" locked="true" isInGroup="-1">
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="68" y="21" w="1285" h="976" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
       <controlProperties>
         <text>MyTestimony%20-%20Share%20about%20God%20in%20your%20life%0Ahttp%3A//www.mytestimony.com</text>
       </controlProperties>
     </control>
-    <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="111" y="121" w="331" h="46" measuredW="321" measuredH="50" zOrder="1" locked="true" isInGroup="-1">
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="111" y="132" w="331" h="-1" measuredW="315" measuredH="48" zOrder="1" locked="false" isInGroup="-1">
       <controlProperties>
         <size>40</size>
         <text>MyTestimony.com</text>
       </controlProperties>
     </control>
-    <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="134" y="294" w="-1" h="-1" measuredW="184" measuredH="33" zOrder="3" locked="true" isInGroup="-1">
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="134" y="354" w="-1" h="-1" measuredW="184" measuredH="32" zOrder="3" locked="false" isInGroup="-1">
       <controlProperties>
         <size>24</size>
         <text>Wonderful%20Jesus</text>
       </controlProperties>
     </control>
-    <control controlID="3" controlTypeID="com.balsamiq.mockups::Paragraph" x="134" y="328" w="662" h="112" measuredW="200" measuredH="80" zOrder="4" locked="true" isInGroup="-1">
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Paragraph" x="134" y="388" w="662" h="112" measuredW="275" measuredH="80" zOrder="4" locked="false" isInGroup="-1">
       <controlProperties>
         <size>16</size>
         <text>%20In%201972%2C%20it%20seemed%20that%20all%20the%20doors%20were%20closing%20on%20us%20where%20we%20lived.%20A%20new%20job%20opportunity%20opened%20up%20for%20my%20husband%20in%20Laredo%2C%20Texas.%20But%20because%20of%20my%20husband%u2019s%20job%20situation%2C%20we%20went%20ahead%20and%20moved%20our%20family%20anyway...</text>
       </controlProperties>
     </control>
-    <control controlID="4" controlTypeID="com.balsamiq.mockups::Button" x="1081" y="298" w="215" h="60" measuredW="101" measuredH="34" zOrder="5" locked="true" isInGroup="-1">
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Button" x="1081" y="126" w="215" h="60" measuredW="178" measuredH="32" zOrder="5" locked="false" isInGroup="-1">
       <controlProperties>
         <color>15658734</color>
         <size>24</size>
-        <text>Start%20%3E</text>
+        <text>Share%20Yours%20%3E</text>
       </controlProperties>
     </control>
-    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="1069" y="239" w="-1" h="-1" measuredW="247" measuredH="33" zOrder="6" locked="true" isInGroup="-1">
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Button" x="835" y="411" w="103" h="31" measuredW="57" measuredH="27" zOrder="6" locked="false" isInGroup="-1">
       <controlProperties>
-        <size>24</size>
-        <text>Ready%20to%20share%20yours%3F</text>
+        <size>16</size>
+        <text>View</text>
       </controlProperties>
     </control>
-    <control controlID="12" controlTypeID="com.balsamiq.mockups::RoundButton" x="111" y="267" w="879" h="161" measuredW="32" measuredH="32" zOrder="2" locked="true" isInGroup="-1">
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::RoundButton" x="111" y="327" w="879" h="161" measuredW="32" measuredH="32" zOrder="2" locked="false" isInGroup="-1">
       <controlProperties>
         <borderColor>13421772</borderColor>
         <color>15658734</color>
@@ -44,34 +44,34 @@
         <text/>
       </controlProperties>
     </control>
-    <control controlID="18" controlTypeID="com.balsamiq.mockups::Label" x="457" y="125" w="428" h="38" measuredW="396" measuredH="41" zOrder="8" locked="true" isInGroup="-1">
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Label" x="440" y="156" w="428" h="-1" measuredW="401" measuredH="40" zOrder="8" locked="false" isInGroup="-1">
       <controlProperties>
         <italic>false</italic>
         <size>32</size>
         <text>-%20Sharing%20How%20Great%20God%20Is</text>
       </controlProperties>
     </control>
-    <control controlID="31" controlTypeID="com.balsamiq.mockups::Label" x="111" y="202" w="-1" h="-1" measuredW="275" measuredH="41" zOrder="13" locked="true" isInGroup="-1">
+    <control controlID="31" controlTypeID="com.balsamiq.mockups::Label" x="111" y="242" w="-1" h="-1" measuredW="407" measuredH="40" zOrder="13" locked="false" isInGroup="-1">
       <controlProperties>
         <size>32</size>
-        <text>Latest%20Testimonies</text>
+        <text>Viewing%3A%20Latest%20Testimonies</text>
       </controlProperties>
     </control>
-    <control controlID="38" controlTypeID="__group__" x="134" y="468" w="804" h="77" measuredW="804" measuredH="77" zOrder="9" locked="true" isInGroup="-1">
+    <control controlID="38" controlTypeID="__group__" x="134" y="528" w="804" h="77" measuredW="804" measuredH="77" zOrder="9" locked="false" isInGroup="-1">
       <groupChildrenDescriptors>
-        <control controlID="0" controlTypeID="com.balsamiq.mockups::Label" x="0" y="0" w="-1" h="-1" measuredW="327" measuredH="33" zOrder="0" locked="false" isInGroup="38">
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Label" x="0" y="0" w="-1" h="-1" measuredW="329" measuredH="32" zOrder="0" locked="false" isInGroup="38">
           <controlProperties>
             <size>24</size>
             <text>My%20Testimony%20of%20God%u2019s%20Grace%20</text>
           </controlProperties>
         </control>
-        <control controlID="1" controlTypeID="com.balsamiq.mockups::Paragraph" x="0" y="34" w="662" h="43" measuredW="200" measuredH="80" zOrder="1" locked="false" isInGroup="38">
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Paragraph" x="0" y="34" w="662" h="43" measuredW="275" measuredH="80" zOrder="1" locked="false" isInGroup="38">
           <controlProperties>
             <size>16</size>
             <text>It%20was%202%3A30%20am%20when%20the%20police%20woke%20our%20family%20to%20let%20us%20know%20that%20my%20older%20brother%20had%20been%20killed%20in%20an%20automobile%20accident.%20My%20life%20has%20never%20been%20the%20same%20since...</text>
           </controlProperties>
         </control>
-        <control controlID="2" controlTypeID="com.balsamiq.mockups::Button" x="701" y="37" w="103" h="31" measuredW="59" measuredH="27" zOrder="2" locked="false" isInGroup="38">
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Button" x="701" y="37" w="103" h="31" measuredW="57" measuredH="27" zOrder="2" locked="false" isInGroup="38">
           <controlProperties>
             <size>16</size>
             <text>View</text>
@@ -79,212 +79,169 @@
         </control>
       </groupChildrenDescriptors>
     </control>
-    <control controlID="40" controlTypeID="com.balsamiq.mockups::VRule" x="1041" y="117" w="-1" h="676" measuredW="5" measuredH="100" zOrder="16" locked="true" isInGroup="-1"/>
-    <control controlID="45" controlTypeID="com.balsamiq.mockups::Icon" x="342" y="298" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="7" locked="true" isInGroup="-1">
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::Icon" x="342" y="378" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="7" locked="false" isInGroup="-1">
       <controlProperties>
         <icon>AsteriskIcon%7Csmall</icon>
       </controlProperties>
     </control>
-    <control controlID="55" controlTypeID="com.balsamiq.mockups::Tooltip" x="372" y="258" w="110" h="49" measuredW="118" measuredH="0" zOrder="17" locked="true" isInGroup="-1">
+    <control controlID="55" controlTypeID="com.balsamiq.mockups::Tooltip" x="372" y="338" w="110" h="49" measuredW="113" measuredH="0" zOrder="14" locked="false" isInGroup="-1">
       <controlProperties>
         <align>left</align>
         <text>Just%20posted%21</text>
         <tooltipDirection>SW</tooltipDirection>
       </controlProperties>
     </control>
-    <control controlID="61" controlTypeID="com.balsamiq.mockups::Label" x="134" y="716" w="-1" h="-1" measuredW="300" measuredH="33" zOrder="14" locked="true" isInGroup="-1">
+    <control controlID="74" controlTypeID="com.balsamiq.mockups::Label" x="134" y="652" w="-1" h="-1" measuredW="275" measuredH="32" zOrder="10" locked="false" isInGroup="-1">
       <controlProperties>
         <size>24</size>
-        <text>Jesus%20Saved%20My%20Life%20Today</text>
+        <text>God%u2019s%20Hand%20of%20Protection</text>
       </controlProperties>
     </control>
-    <control controlID="62" controlTypeID="com.balsamiq.mockups::Paragraph" x="134" y="750" w="662" h="43" measuredW="200" measuredH="80" zOrder="15" locked="true" isInGroup="-1">
+    <control controlID="75" controlTypeID="com.balsamiq.mockups::Paragraph" x="134" y="686" w="662" h="43" measuredW="275" measuredH="80" zOrder="11" locked="false" isInGroup="-1">
       <controlProperties>
         <size>16</size>
-        <text>My%20mother%20was%20raised%20in%20a%20Catholic%20orphanage.%20Religion%20was%20force-fed%20to%20her%2C%20so%20when%20I%20was%20a%20child%20I%20was%20taught%20very%20little%20about%20God.%20I%20knew%20nothing%20about%20a%20relationship%20with%20Jesus...</text>
+        <text>I%20guess%20my%20parents%20always%20drank%2C%20but%20it%20never%20really%20became%20a%20problem%20that%20I%20noticed%20until%20I%20was%20around%20eight.%20One%20Saturday%20morning%20my%20dad%20came%20home%20drunk%20and%20proceeded...</text>
       </controlProperties>
     </control>
-    <control controlID="65" controlTypeID="__group__" x="1096" y="392" w="197" h="37" measuredW="197" measuredH="37" zOrder="18" locked="true" isInGroup="-1">
+    <control controlID="76" controlTypeID="com.balsamiq.mockups::Button" x="835" y="709" w="103" h="31" measuredW="57" measuredH="27" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>View</text>
+      </controlProperties>
+    </control>
+    <control controlID="81" controlTypeID="com.balsamiq.mockups::Label" x="993" y="241" w="-1" h="-1" measuredW="303" measuredH="32" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>24</size>
+        <text>%3C-%20%20Select%20a%20tag%20/%20category%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="82" controlTypeID="com.balsamiq.mockups::ComboBox" x="699" y="264" w="219" h="-1" measuredW="83" measuredH="29" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Latest</text>
+      </controlProperties>
+    </control>
+    <control controlID="83" controlTypeID="com.balsamiq.mockups::Icon" x="933" y="262" w="-1" h="-1" measuredW="32" measuredH="32" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>Help2Icon%7Cmedium</icon>
+      </controlProperties>
+    </control>
+    <control controlID="84" controlTypeID="com.balsamiq.mockups::HRule" x="111" y="205" w="1185" h="-1" measuredW="100" measuredH="10" zOrder="18" locked="false" isInGroup="-1"/>
+    <control controlID="86" controlTypeID="com.balsamiq.mockups::Tooltip" x="954" y="273" w="318" h="84" measuredW="325" measuredH="0" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <text>A%20tag%20is%20a%20keyword%20that%20describes%20the%20content%20of%20the%20testimony%2C%20eg.%20%27Holy%20Spirit%27%2C%20%27drugs%27%2C%20%27saved%27.</text>
+        <tooltipDirection>NW</tooltipDirection>
+      </controlProperties>
+    </control>
+    <control controlID="88" controlTypeID="com.balsamiq.mockups::Canvas" x="68" y="94" w="1285" h="877" measuredW="100" measuredH="70" zOrder="20" locked="true" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.75</backgroundAlpha>
+        <color>0</color>
+      </controlProperties>
+    </control>
+    <control controlID="89" controlTypeID="com.balsamiq.mockups::Button" x="877" y="318" w="215" h="60" measuredW="103" measuredH="32" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>15658734</color>
+        <size>24</size>
+        <text>Start%20%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="90" controlTypeID="com.balsamiq.mockups::Label" x="865" y="259" w="-1" h="-1" measuredW="245" measuredH="32" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>24</size>
+        <text>Ready%20to%20share%20yours%3F</text>
+      </controlProperties>
+    </control>
+    <control controlID="91" controlTypeID="com.balsamiq.mockups::Button" x="631" y="649" w="103" h="31" measuredW="57" measuredH="27" zOrder="23" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>View</text>
+      </controlProperties>
+    </control>
+    <control controlID="92" controlTypeID="com.balsamiq.mockups::VRule" x="837" y="137" w="-1" h="676" measuredW="10" measuredH="100" zOrder="24" locked="false" isInGroup="-1"/>
+    <control controlID="93" controlTypeID="__group__" x="892" y="412" w="197" h="31" measuredW="197" measuredH="31" zOrder="25" locked="false" isInGroup="-1">
       <groupChildrenDescriptors>
-        <control controlID="0" controlTypeID="com.balsamiq.mockups::Title" x="80" y="0" w="-1" h="-1" measuredW="31" measuredH="37" zOrder="0" locked="false" isInGroup="65">
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Title" x="80" y="0" w="-1" h="-1" measuredW="27" measuredH="31" zOrder="0" locked="false" isInGroup="93">
           <controlProperties>
             <italic>true</italic>
             <size>28</size>
             <text>or</text>
           </controlProperties>
         </control>
-        <control controlID="1" controlTypeID="com.balsamiq.mockups::HRule" x="0" y="13" w="65" h="-1" measuredW="100" measuredH="5" zOrder="1" locked="false" isInGroup="65"/>
-        <control controlID="2" controlTypeID="com.balsamiq.mockups::HRule" x="132" y="14" w="65" h="-1" measuredW="100" measuredH="5" zOrder="2" locked="false" isInGroup="65"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::HRule" x="0" y="13" w="65" h="-1" measuredW="100" measuredH="10" zOrder="1" locked="false" isInGroup="93"/>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::HRule" x="132" y="14" w="65" h="-1" measuredW="100" measuredH="10" zOrder="2" locked="false" isInGroup="93"/>
       </groupChildrenDescriptors>
     </control>
-    <control controlID="68" controlTypeID="com.balsamiq.mockups::Label" x="1069" y="467" w="-1" h="-1" measuredW="253" measuredH="33" zOrder="19" locked="true" isInGroup="-1">
+    <control controlID="94" controlTypeID="com.balsamiq.mockups::Label" x="865" y="487" w="-1" h="-1" measuredW="257" measuredH="32" zOrder="26" locked="false" isInGroup="-1">
       <controlProperties>
         <size>24</size>
         <text>Read%20some%20testimonies</text>
       </controlProperties>
     </control>
-    <control controlID="69" controlTypeID="com.balsamiq.mockups::ComboBox" x="1065" y="526" w="219" h="-1" measuredW="217" measuredH="28" zOrder="20" locked="true" isInGroup="-1">
+    <control controlID="95" controlTypeID="com.balsamiq.mockups::ComboBox" x="861" y="546" w="219" h="-1" measuredW="223" measuredH="29" zOrder="27" locked="false" isInGroup="-1">
       <controlProperties>
         <size>18</size>
         <text>Select%20a%20tag%20/%20category</text>
       </controlProperties>
     </control>
-    <control controlID="70" controlTypeID="com.balsamiq.mockups::Icon" x="1299" y="524" w="-1" h="-1" measuredW="32" measuredH="32" zOrder="22" locked="true" isInGroup="-1">
-      <controlProperties>
-        <icon>Help2Icon%7Cmedium</icon>
-      </controlProperties>
-    </control>
-    <control controlID="74" controlTypeID="com.balsamiq.mockups::Label" x="134" y="592" w="-1" h="-1" measuredW="267" measuredH="33" zOrder="10" locked="true" isInGroup="-1">
-      <controlProperties>
-        <size>24</size>
-        <text>God%u2019s%20Hand%20of%20Protection</text>
-      </controlProperties>
-    </control>
-    <control controlID="75" controlTypeID="com.balsamiq.mockups::Paragraph" x="134" y="626" w="662" h="43" measuredW="200" measuredH="80" zOrder="11" locked="true" isInGroup="-1">
-      <controlProperties>
-        <size>16</size>
-        <text>I%20guess%20my%20parents%20always%20drank%2C%20but%20it%20never%20really%20became%20a%20problem%20that%20I%20noticed%20until%20I%20was%20around%20eight.%20One%20Saturday%20morning%20my%20dad%20came%20home%20drunk%20and%20proceeded...</text>
-      </controlProperties>
-    </control>
-    <control controlID="76" controlTypeID="com.balsamiq.mockups::Button" x="835" y="629" w="103" h="31" measuredW="59" measuredH="27" zOrder="12" locked="true" isInGroup="-1">
-      <controlProperties>
-        <size>16</size>
-        <text>View</text>
-      </controlProperties>
-    </control>
-    <control controlID="77" controlTypeID="com.balsamiq.mockups::Button" x="835" y="749" w="103" h="31" measuredW="59" measuredH="27" zOrder="23" locked="true" isInGroup="-1">
-      <controlProperties>
-        <size>16</size>
-        <text>View</text>
-      </controlProperties>
-    </control>
-    <control controlID="78" controlTypeID="com.balsamiq.mockups::Canvas" x="457" y="88" w="896" h="734" measuredW="100" measuredH="70" zOrder="24" locked="true" isInGroup="-1"/>
-    <control controlID="80" controlTypeID="com.balsamiq.mockups::Link" x="1270" y="121" w="-1" h="-1" measuredW="52" measuredH="26" zOrder="25" locked="false" isInGroup="-1">
-      <controlProperties>
-        <size>18</size>
-        <text>Close</text>
-      </controlProperties>
-    </control>
-    <control controlID="81" controlTypeID="com.balsamiq.mockups::Label" x="1251" y="120" w="-1" h="-1" measuredW="19" measuredH="28" zOrder="26" locked="false" isInGroup="-1">
-      <controlProperties>
-        <bold>true</bold>
-        <size>20</size>
-        <text>X</text>
-      </controlProperties>
-    </control>
-    <control controlID="102" controlTypeID="com.balsamiq.mockups::Button" x="869" y="392" w="103" h="31" measuredW="59" measuredH="27" zOrder="27" locked="true" isInGroup="-1">
-      <controlProperties>
-        <size>16</size>
-        <text>View</text>
-      </controlProperties>
-    </control>
-    <control controlID="103" controlTypeID="com.balsamiq.mockups::Tooltip" x="798" y="453" w="198" h="115" measuredW="212" measuredH="0" zOrder="21" locked="true" isInGroup="-1">
+    <control controlID="96" controlTypeID="com.balsamiq.mockups::Tooltip" x="594" y="473" w="198" h="115" measuredW="208" measuredH="0" zOrder="28" locked="false" isInGroup="-1">
       <controlProperties>
         <align>left</align>
         <text>A%20tag%20is%20a%20keyword%20that%20describes%20the%20content%20of%20the%20testimony%2C%20eg.%20%27Holy%20Spirit%27%2C%20%27drugs%27%2C%20%27saved%27.</text>
         <tooltipDirection>NE</tooltipDirection>
       </controlProperties>
     </control>
-    <control controlID="104" controlTypeID="com.balsamiq.mockups::Label" x="557" y="162" w="472" h="46" measuredW="336" measuredH="41" zOrder="28" locked="false" isInGroup="-1">
+    <control controlID="97" controlTypeID="com.balsamiq.mockups::Icon" x="1095" y="544" w="-1" h="-1" measuredW="32" measuredH="32" zOrder="29" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>Help2Icon%7Cmedium</icon>
+      </controlProperties>
+    </control>
+    <control controlID="98" controlTypeID="com.balsamiq.mockups::Button" x="631" y="769" w="103" h="31" measuredW="57" measuredH="27" zOrder="30" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>View</text>
+      </controlProperties>
+    </control>
+    <control controlID="99" controlTypeID="com.balsamiq.mockups::Canvas" x="253" y="108" w="896" h="845" measuredW="100" measuredH="70" zOrder="31" locked="false" isInGroup="-1"/>
+    <control controlID="100" controlTypeID="com.balsamiq.mockups::Link" x="1066" y="141" w="-1" h="-1" measuredW="47" measuredH="24" zOrder="32" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Close</text>
+      </controlProperties>
+    </control>
+    <control controlID="101" controlTypeID="com.balsamiq.mockups::Label" x="1047" y="140" w="-1" h="-1" measuredW="14" measuredH="28" zOrder="33" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>20</size>
+        <text>X</text>
+      </controlProperties>
+    </control>
+    <control controlID="102" controlTypeID="com.balsamiq.mockups::Button" x="665" y="412" w="103" h="31" measuredW="57" measuredH="27" zOrder="34" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>View</text>
+      </controlProperties>
+    </control>
+    <control controlID="103" controlTypeID="com.balsamiq.mockups::Label" x="353" y="182" w="472" h="-1" measuredW="317" measuredH="40" zOrder="35" locked="false" isInGroup="-1">
       <controlProperties>
         <size>32</size>
-        <text>Create%20Your%20Testimony</text>
+        <text>Share%20Your%20Testimony</text>
       </controlProperties>
     </control>
-    <control controlID="105" controlTypeID="com.balsamiq.mockups::Button" x="1022" y="684" w="248" h="57" measuredW="83" measuredH="29" zOrder="29" locked="false" isInGroup="-1">
-      <controlProperties>
-        <color>14540253</color>
-        <menuIcon>false</menuIcon>
-        <size>20</size>
-        <state>up</state>
-        <text>Submit</text>
-      </controlProperties>
-    </control>
-    <control controlID="106" controlTypeID="com.balsamiq.mockups::TextArea" x="557" y="368" w="708" h="195" measuredW="200" measuredH="140" zOrder="30" locked="false" isInGroup="-1">
+    <control controlID="105" controlTypeID="com.balsamiq.mockups::TextArea" x="353" y="388" w="708" h="195" measuredW="200" measuredH="140" zOrder="36" locked="false" isInGroup="-1">
       <controlProperties>
         <size>18</size>
         <text>Begin%20typing%20here</text>
         <verticalScrollbar>true</verticalScrollbar>
       </controlProperties>
     </control>
-    <control controlID="107" controlTypeID="com.balsamiq.mockups::TextArea" x="557" y="608" w="709" h="44" measuredW="200" measuredH="140" zOrder="31" locked="false" isInGroup="-1">
-      <controlProperties>
-        <text/>
-        <verticalScrollbar>false</verticalScrollbar>
-      </controlProperties>
-    </control>
-    <control controlID="108" controlTypeID="com.balsamiq.mockups::Label" x="557" y="585" w="368" h="21" measuredW="335" measuredH="24" zOrder="32" locked="false" isInGroup="-1">
-      <controlProperties>
-        <size>16</size>
-        <text>Enter%20some%20tags%20to%20categorize%20your%20testimonial.</text>
-      </controlProperties>
-    </control>
-    <control controlID="110" controlTypeID="__group__" x="578" y="619" w="89" h="22" measuredW="89" measuredH="22" zOrder="33" locked="false" isInGroup="-1">
-      <groupChildrenDescriptors>
-        <control controlID="0" controlTypeID="com.balsamiq.mockups::RadioButton" x="0" y="0" w="89" h="22" measuredW="65" measuredH="25" zOrder="0" locked="false" isInGroup="110">
-          <controlProperties>
-            <size>16</size>
-            <text>savior</text>
-          </controlProperties>
-        </control>
-        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="0" y="0" w="13" h="21" measuredW="14" measuredH="24" zOrder="1" locked="false" isInGroup="110">
-          <controlProperties>
-            <size>16</size>
-            <text>x</text>
-          </controlProperties>
-        </control>
-      </groupChildrenDescriptors>
-    </control>
-    <control controlID="111" controlTypeID="__group__" x="766" y="619" w="122" h="22" measuredW="122" measuredH="22" zOrder="34" locked="false" isInGroup="-1">
-      <groupChildrenDescriptors>
-        <control controlID="0" controlTypeID="com.balsamiq.mockups::RadioButton" x="0" y="0" w="122" h="22" measuredW="75" measuredH="25" zOrder="0" locked="false" isInGroup="111">
-          <controlProperties>
-            <size>16</size>
-            <text>abusive</text>
-          </controlProperties>
-        </control>
-        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="0" y="0" w="13" h="21" measuredW="14" measuredH="24" zOrder="1" locked="false" isInGroup="111">
-          <controlProperties>
-            <size>16</size>
-            <text>x</text>
-          </controlProperties>
-        </control>
-      </groupChildrenDescriptors>
-    </control>
-    <control controlID="112" controlTypeID="__group__" x="667" y="619" w="122" h="22" measuredW="122" measuredH="22" zOrder="35" locked="false" isInGroup="-1">
-      <groupChildrenDescriptors>
-        <control controlID="0" controlTypeID="com.balsamiq.mockups::RadioButton" x="0" y="0" w="122" h="22" measuredW="71" measuredH="25" zOrder="0" locked="false" isInGroup="112">
-          <controlProperties>
-            <size>16</size>
-            <text>alcohol</text>
-          </controlProperties>
-        </control>
-        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="0" y="0" w="13" h="21" measuredW="14" measuredH="24" zOrder="1" locked="false" isInGroup="112">
-          <controlProperties>
-            <size>16</size>
-            <text>x</text>
-          </controlProperties>
-        </control>
-      </groupChildrenDescriptors>
-    </control>
-    <control controlID="114" controlTypeID="com.balsamiq.mockups::Icon" x="524" y="368" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="36" locked="false" isInGroup="-1">
+    <control controlID="111" controlTypeID="com.balsamiq.mockups::Icon" x="320" y="388" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="37" locked="false" isInGroup="-1">
       <controlProperties>
         <icon>Help2Icon%7Csmall</icon>
       </controlProperties>
     </control>
-    <control controlID="115" controlTypeID="com.balsamiq.mockups::Icon" x="524" y="585" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="37" locked="false" isInGroup="-1">
-      <controlProperties>
-        <icon>Help2Icon%7Csmall</icon>
-      </controlProperties>
-    </control>
-    <control controlID="116" controlTypeID="com.balsamiq.mockups::Tooltip" x="532" y="631" w="219" h="130" measuredW="270" measuredH="0" zOrder="38" locked="false" isInGroup="-1">
-      <controlProperties>
-        <align>left</align>
-        <text>Tags%20help%20people%20find%20keywords%20that%20appear%20in%20your%20testimony.%20This%20will%20allow%20your%20testimony%20to%20be%20found%20when%20they%20search%20or%20click%20on%20those%20keywords.</text>
-        <tooltipDirection>NW</tooltipDirection>
-      </controlProperties>
-    </control>
-    <control controlID="117" controlTypeID="com.balsamiq.mockups::Tooltip" x="532" y="398" w="264" h="98" measuredW="45" measuredH="0" zOrder="39" locked="false" isInGroup="-1">
+    <control controlID="114" controlTypeID="com.balsamiq.mockups::Tooltip" x="328" y="418" w="264" h="98" measuredW="40" measuredH="0" zOrder="38" locked="false" isInGroup="-1">
       <controlProperties>
         <align>left</align>
         <text/>
@@ -292,29 +249,134 @@
         <underline>true</underline>
       </controlProperties>
     </control>
-    <control controlID="118" controlTypeID="com.balsamiq.mockups::Paragraph" x="548" y="422" w="237" h="80" measuredW="200" measuredH="80" zOrder="40" locked="false" isInGroup="-1">
+    <control controlID="115" controlTypeID="com.balsamiq.mockups::Paragraph" x="344" y="442" w="237" h="80" measuredW="275" measuredH="80" zOrder="39" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Read%20our%20%5BHow%20to%20Write%20a%20Testimony%5D%20guide%20to%20get%20ideas%20of%20format%2C%20length%2C%20or%20outline%20to%20get%20you%20started.</text>
       </controlProperties>
     </control>
-    <control controlID="120" controlTypeID="com.balsamiq.mockups::FormattingToolbar" x="557" y="343" w="707" h="-1" measuredW="270" measuredH="29" zOrder="41" locked="false" isInGroup="-1"/>
-    <control controlID="121" controlTypeID="com.balsamiq.mockups::TextArea" x="557" y="262" w="709" h="44" measuredW="200" measuredH="140" zOrder="42" locked="false" isInGroup="-1">
+    <control controlID="116" controlTypeID="com.balsamiq.mockups::FormattingToolbar" x="353" y="363" w="707" h="-1" measuredW="261" measuredH="29" zOrder="40" locked="false" isInGroup="-1"/>
+    <control controlID="117" controlTypeID="com.balsamiq.mockups::TextArea" x="353" y="282" w="709" h="44" measuredW="200" measuredH="140" zOrder="41" locked="false" isInGroup="-1">
       <controlProperties>
         <state>up</state>
         <text/>
         <verticalScrollbar>false</verticalScrollbar>
       </controlProperties>
     </control>
-    <control controlID="122" controlTypeID="com.balsamiq.mockups::Label" x="557" y="239" w="368" h="21" measuredW="195" measuredH="24" zOrder="43" locked="false" isInGroup="-1">
+    <control controlID="118" controlTypeID="com.balsamiq.mockups::Label" x="353" y="259" w="368" h="-1" measuredW="203" measuredH="24" zOrder="42" locked="false" isInGroup="-1">
       <controlProperties>
         <size>16</size>
         <text>Enter%20your%20name%20%28*optional%29</text>
       </controlProperties>
     </control>
-    <control controlID="125" controlTypeID="com.balsamiq.mockups::Paragraph" x="1029" y="749" w="237" h="80" measuredW="200" measuredH="80" zOrder="44" locked="false" isInGroup="-1">
+    <control controlID="120" controlTypeID="__group__" x="320" y="725" w="746" h="244" measuredW="746" measuredH="244" zOrder="43" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Button" x="498" y="99" w="248" h="57" measuredW="86" measuredH="28" zOrder="0" locked="false" isInGroup="120">
+          <controlProperties>
+            <color>14540253</color>
+            <menuIcon>false</menuIcon>
+            <size>20</size>
+            <state>up</state>
+            <text>Submit</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::TextArea" x="33" y="23" w="709" h="44" measuredW="200" measuredH="140" zOrder="1" locked="false" isInGroup="120">
+          <controlProperties>
+            <text/>
+            <verticalScrollbar>false</verticalScrollbar>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="33" y="0" w="368" h="-1" measuredW="346" measuredH="24" zOrder="2" locked="false" isInGroup="120">
+          <controlProperties>
+            <size>16</size>
+            <text>Enter%20some%20tags%20to%20categorize%20your%20testimonial.</text>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="__group__" x="54" y="34" w="89" h="24" measuredW="89" measuredH="24" zOrder="3" locked="false" isInGroup="120">
+          <groupChildrenDescriptors>
+            <control controlID="0" controlTypeID="com.balsamiq.mockups::RadioButton" x="0" y="0" w="89" h="22" measuredW="61" measuredH="25" zOrder="0" locked="false" isInGroup="3">
+              <controlProperties>
+                <size>16</size>
+                <text>savior</text>
+              </controlProperties>
+            </control>
+            <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="0" y="0" w="13" h="-1" measuredW="10" measuredH="24" zOrder="1" locked="false" isInGroup="3">
+              <controlProperties>
+                <size>16</size>
+                <text>x</text>
+              </controlProperties>
+            </control>
+          </groupChildrenDescriptors>
+        </control>
+        <control controlID="4" controlTypeID="__group__" x="242" y="34" w="122" h="24" measuredW="122" measuredH="24" zOrder="4" locked="false" isInGroup="120">
+          <groupChildrenDescriptors>
+            <control controlID="0" controlTypeID="com.balsamiq.mockups::RadioButton" x="0" y="0" w="122" h="22" measuredW="71" measuredH="25" zOrder="0" locked="false" isInGroup="4">
+              <controlProperties>
+                <size>16</size>
+                <text>abusive</text>
+              </controlProperties>
+            </control>
+            <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="0" y="0" w="13" h="-1" measuredW="10" measuredH="24" zOrder="1" locked="false" isInGroup="4">
+              <controlProperties>
+                <size>16</size>
+                <text>x</text>
+              </controlProperties>
+            </control>
+          </groupChildrenDescriptors>
+        </control>
+        <control controlID="5" controlTypeID="__group__" x="143" y="34" w="122" h="24" measuredW="122" measuredH="24" zOrder="5" locked="false" isInGroup="120">
+          <groupChildrenDescriptors>
+            <control controlID="0" controlTypeID="com.balsamiq.mockups::RadioButton" x="0" y="0" w="122" h="22" measuredW="66" measuredH="25" zOrder="0" locked="false" isInGroup="5">
+              <controlProperties>
+                <size>16</size>
+                <text>alcohol</text>
+              </controlProperties>
+            </control>
+            <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="0" y="0" w="13" h="-1" measuredW="10" measuredH="24" zOrder="1" locked="false" isInGroup="5">
+              <controlProperties>
+                <size>16</size>
+                <text>x</text>
+              </controlProperties>
+            </control>
+          </groupChildrenDescriptors>
+        </control>
+        <control controlID="6" controlTypeID="com.balsamiq.mockups::Icon" x="0" y="0" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="6" locked="false" isInGroup="120">
+          <controlProperties>
+            <icon>Help2Icon%7Csmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="7" controlTypeID="com.balsamiq.mockups::Tooltip" x="8" y="46" w="219" h="130" measuredW="226" measuredH="0" zOrder="7" locked="false" isInGroup="120">
+          <controlProperties>
+            <align>left</align>
+            <text>Tags%20help%20people%20find%20keywords%20that%20appear%20in%20your%20testimony.%20This%20will%20allow%20your%20testimony%20to%20be%20found%20when%20they%20search%20or%20click%20on%20those%20keywords.</text>
+            <tooltipDirection>NW</tooltipDirection>
+          </controlProperties>
+        </control>
+        <control controlID="8" controlTypeID="com.balsamiq.mockups::Paragraph" x="505" y="164" w="237" h="80" measuredW="275" measuredH="80" zOrder="8" locked="false" isInGroup="120">
+          <controlProperties>
+            <align>center</align>
+            <text>This%20will%20post%20immediately%20to%20the%20MyTestimony.com%20website.</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="121" controlTypeID="com.balsamiq.mockups::TextArea" x="353" y="639" w="709" h="44" measuredW="200" measuredH="140" zOrder="44" locked="false" isInGroup="-1">
       <controlProperties>
-        <align>center</align>
-        <text>This%20will%20post%20immediately%20to%20the%20MyTestimony.com%20website.</text>
+        <state>up</state>
+        <text/>
+        <verticalScrollbar>false</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="122" controlTypeID="com.balsamiq.mockups::Label" x="353" y="616" w="368" h="-1" measuredW="209" measuredH="24" zOrder="45" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Enter%20title%20for%20your%20testimony</text>
+      </controlProperties>
+    </control>
+    <control controlID="124" controlTypeID="com.balsamiq.mockups::Label" x="366" y="290" w="368" h="-1" measuredW="105" measuredH="28" zOrder="46" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10066329</color>
+        <size>20</size>
+        <text>Anonymous</text>
       </controlProperties>
     </control>
   </controls>
