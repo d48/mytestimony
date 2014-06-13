@@ -65,10 +65,15 @@ p{line-height:24px;margin-bottom:30px}
 #testimonies > li .description{clear:left;float:left;padding:0;width:80%}
 #testimonies > li button{float:right}
 #content{clear:both}
-#main{float:left;padding-right:30px;padding-top:15px;width:75%;}
+#main{float:left;padding-right:30px;padding-top:30px;width:75%;}
 #main > h1,#main > h2{margin-top:0}
-#sidebar{border-left:1px solid #ccc;height:100%;padding-left:30px;padding-right:30px;padding-top:100px;position:fixed;right:0;text-align:center;top:0;width:25%;}
-#sidebar #read{margin-bottom:15px}
+#subnav{border-top:1px solid #ccc;margin-top:15px;padding-top:15px;}
+#subnav #read{margin-bottom:15px}
 .hr-divider{margin-top:15px;padding:30px;position:relative;}
 .hr-divider .hr-line{background-color:#ccc;height:1px}
 .hr-divider .hr-text{background-color:#fff;font-size:22px;font-style:italic;position:absolute;top:20px;width:60px;margin-left:-30px}
+.subTitle{float:left}
+#tagSelector{float:right;padding-top:15px}
+#tagSelector--tagCategory{margin-right:7.5px;margin-top:3.75px}
+#read{display:inline}
+#start{float:right}

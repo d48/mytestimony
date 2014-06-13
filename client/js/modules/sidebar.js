@@ -197,7 +197,7 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
      * @author Ryan Regalado 
      */
     function _createListeners() {
-        d.getElementById('tag-category').addEventListener('change', _selectTag, false);
+        d.getElementById('tagSelector--tagCategory').addEventListener('change', _selectTag, false);
         d.getElementById('close').addEventListener('click', closeForm, false);
         d.getElementById('start').addEventListener('click', showForm, false);
         d.getElementById('submit-button').addEventListener('click', submitTestimony, false);
