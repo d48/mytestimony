@@ -10,11 +10,13 @@ html
   body(class= page) 
     block testimony-form
 
-    #sidebar
-        block sidebar
+    #header.row
+        h1 MyTestimony.com
+        h2.tagline - Sharing How Great God Is
+        button(id="start", class="btn btn-default btn-large") Share Yours
 
-    h1 MyTestimony.com
-    h2.tagline - Sharing How Great God Is
+    #subnav.row
+        block subnav
 
     #content
         #main
