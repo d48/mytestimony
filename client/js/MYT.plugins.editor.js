@@ -72,9 +72,10 @@ MYT.plugins = MYT.plugins || {};
         , e = e || window.event
         , val = e.target.innerText
         , targ = targ || {} 
+        , match = val.match(/\S+/g)
         ;
 
-      count = val.match(/\S+/g).length;
+      count = match ? match.length : 0;
       targ.innerHTML = count;
     }
 
