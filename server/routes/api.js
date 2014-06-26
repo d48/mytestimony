@@ -43,5 +43,10 @@ module.exports = {
       res.json(tags);
     });
   }
- 
+
+  , testimoniesFromTag: function(req, res) {
+      tm.find('testimonies', req.params.tag, function(error, testimonies) {
+          res.json(testimonies);
+      });
+  }
 }

@@ -55,6 +55,7 @@ app.post('/testimonies', routes.testimoniesAdd);
 app.get('/api/v1/testimonies', routesapi.testimonies);
 app.get('/api/v1/testimonies/:id', routesapi.testimoniesId);
 app.get('/api/v1/tags', routesapi.tags);
+app.get('/api/v1/tags/:tag', routesapi.testimoniesFromTag);
 app.post('/api/v1/testimonies', routesapi.testimoniesAdd);
 
 
