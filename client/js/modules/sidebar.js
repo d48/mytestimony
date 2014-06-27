@@ -18,7 +18,8 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
 
 
      function _selectTag(e) {
-          console.log('selection has been made', e.target.value);
+         var event = e || window.event;
+          console.log('selection has been made', event.target.value);
      }
 
     /**
