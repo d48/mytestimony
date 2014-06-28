@@ -24,6 +24,8 @@
      * @method 
      * @memberof MYT
      * @author Ryan Regalado 
+     * @todo reference xhr lib creation for api
+     * http://toddmotto.com/writing-a-standalone-ajax-xhr-javascript-micro-library/
      */
     myt.request = function(options) {
 
