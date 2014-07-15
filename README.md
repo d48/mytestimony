@@ -137,6 +137,6 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
   * ~~browserify~~ nope, adds to much overhead
   * requirejs
   * ~~breaking up js into modules for client~~ in progress
-- Create own XHR lib
-  * would like to just rip jQuery.ajax if possible
-  * If not, can just build own from http://toddmotto.com/writing-a-standalone-ajax-xhr-javascript-micro-library/
+- ~~Create own XHR lib~~
+  * ~~would like to just rip jQuery.ajax if possible~~
+  * ~~If not, can just build own from http://toddmotto.com/writing-a-standalone-ajax-xhr-javascript-micro-library/~~
