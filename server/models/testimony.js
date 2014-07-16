@@ -44,6 +44,37 @@ module.exports = {
     });  
   }
 
+    /**
+     * Returns collection based on find condition
+     * 
+     * @name find
+     * @param {string} collName - collection name
+     * @param {string} tag - tag passed from route
+     * @param {function} cb -  callback to execute on success
+     * @returns {object} - JSON object
+     * @method 
+     * @author Ryan Regalado 
+     */
+  , find: function(collName, tag, cb) {
+      this.getCollection(collName, function(err, collection) {
+          if (err) cb(err);
+          else {
+              // set as array in case want to filter based on multiple
+              var condition = {
+                  tags: {
+                      $all: [tag]
+                  }
+              }
+              ;
+
+              collection.find(condition).toArray(function(err, results) {
+                  if (err) cb(err);
+                  else cb(null, results);
+              });
+          }
+      });
+  }
+
   /**
    * return all documents from mongodb 
    * @todo: abstract into db methods so can reuse

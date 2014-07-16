@@ -92,23 +92,17 @@ p
 #main
   float: left
   padding-right: $gutter
-  padding-top: $gutterHalf
+  padding-top: $gutter
   width: 75%
 
   & > h1, > h2
     margin-top: 0
 
-#sidebar
-  border-left: 1px solid $mainBorderColor
-  height: 100%
-  padding-left: $gutter
-  padding-right: $gutter
-  padding-top: 100px
-  position: fixed 
-  right: 0
-  text-align: center
-  top: 0
-  width: 25%
+/* Subnav */
+#subnav
+  border-top: 1px solid $mainBorderColor
+  margin-top: $gutterHalf
+  padding-top: $gutterHalf
 
   #read
     margin-bottom: $gutterHalf
@@ -132,4 +126,20 @@ p
     margin-left: -($gutter)
 
 
+.subTitle
+    float: left
+    
+#tagSelector
+    float: right
+    padding-top: $gutterHalf
 
+#tagSelector--tagCategory
+    margin-right: $gutterSmall
+    margin-top: $gutterSmall * 0.5
+
+#read
+    display: inline
+
+/* Buttons */
+#start 
+    float: right

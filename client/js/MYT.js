@@ -21,7 +21,7 @@ var MYT = MYT || {};  // defines MYT namespace
    * @author Ryan Regalado 
    */
   function testimoniesClick(e) {
-    e = e || window.event; // IE doesn't pass in the event object
+    var e = e || window.event; // IE doesn't pass in the event object
     e.preventDefault();
 
     if (e.target.nodeName !== "BUTTON") {

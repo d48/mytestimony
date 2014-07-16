@@ -14,11 +14,31 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
 
     var elTagsDropDown
         , d = document
+        , request = MYT.request
+        , reqUrl = '/api/v1/tags/'
         ;
 
 
+     /**
+      * gets all testimonies via xhr call to api with tag set to value
+      * 
+      * @name _selectTag
+      * @param {object} e - event object 
+      * @returns {object} - JSON of testimonies with given tag
+      * @property {string} tag - tag selected from drop down menu
+      * @method 
+      * @memberof MYT
+      * @author Ryan Regalado 
+      * @todo Update dom from selection
+      */
      function _selectTag(e) {
-          console.log('selection has been made', e.target.value);
+         var event = e || window.event
+             , tag = event.target.value
+         ;
+         request.get(reqUrl + tag)
+             .success(function(data) {
+                 console.log('tag selected: ', tag, data);
+             });
      }
 
     /**
@@ -197,7 +217,7 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
      * @author Ryan Regalado 
      */
     function _createListeners() {
-        d.getElementById('tag-category').addEventListener('change', _selectTag, false);
+        d.getElementById('tagSelector--tagCategory').addEventListener('change', _selectTag, false);
         d.getElementById('close').addEventListener('click', closeForm, false);
         d.getElementById('start').addEventListener('click', showForm, false);
         d.getElementById('submit-button').addEventListener('click', submitTestimony, false);

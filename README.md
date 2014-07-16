@@ -18,7 +18,7 @@ This is a website to help people share about their tesimony of what God has done
 3. Tools to share easily via email and text. Example: short URLs and share utility to social networks.
 4. Can set testimony to be viewed publicly and anonymously so that search engines can pick up on keywords that may help others in their struggles and see how God helped and changed their lives.
 
-[View temporary working website on Amazon EC2 instance](http://54.186.24.182/)
+[View temporary working website on Amazon EC2 instance](http://mytestimony.design48.net)
 
 
 ## Technology
@@ -137,6 +137,6 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
   * ~~browserify~~ nope, adds to much overhead
   * requirejs
   * ~~breaking up js into modules for client~~ in progress
-- Create own XHR lib
-  * would like to just rip jQuery.ajax if possible
-  * If not, can just build own from http://toddmotto.com/writing-a-standalone-ajax-xhr-javascript-micro-library/
+- ~~Create own XHR lib~~
+  * ~~would like to just rip jQuery.ajax if possible~~
+  * ~~If not, can just build own from http://toddmotto.com/writing-a-standalone-ajax-xhr-javascript-micro-library/~~
