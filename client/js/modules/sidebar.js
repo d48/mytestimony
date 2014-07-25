@@ -15,7 +15,7 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
     var elTagsDropDown
         , d = document
         , request = MYT.request
-        , reqUrl = '/api/v1/tags/'
+        , reqBaseUrl = '/api/v1/'
         ;
 
 
@@ -34,10 +34,15 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
      function _selectTag(e) {
          var event = e || window.event
              , tag = event.target.value
+             , reqUrl = (tag === 'mytIndex')
+                ? reqUrl = reqBaseUrl + 'testimonies'
+                : reqUrl = reqBaseUrl + 'tags/' + tag
          ;
-         request.get(reqUrl + tag)
+
+         request.get(reqUrl)
              .success(function(data) {
-                 console.log('tag selected: ', tag, data);
+                 var container = document.querySelector('#testimonies');
+                 jade.render(container, 'testimonies-block', {testimonies: data});
              });
      }
 
