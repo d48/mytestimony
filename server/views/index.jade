@@ -8,13 +8,4 @@ block subnav
 
 block main 
 
-    ul#testimonies
-        // update so uses template to reduce repeated code
-        each testimony, index in testimonies
-            if index === 0
-                li.latest
-                    include includes/index-testimonies.jade
-            else
-                li
-                    include includes/index-testimonies.jade
-
+    include includes/testimonies-block.jade

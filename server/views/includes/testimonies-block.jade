@@ -1,0 +1,10 @@
+ul#testimonies
+    // update so uses template to reduce repeated code
+    each testimony, index in testimonies
+        if index === 0
+            li.latest
+                include index-testimonies.jade
+        else
+            li
+                include index-testimonies.jade
+
