@@ -16,6 +16,7 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
         , d = document
         , request = MYT.request
         , reqBaseUrl = '/api/v1/'
+        , strDefaultSubtitle = 'Latest Testmonies'
         ;
 
 
@@ -34,15 +35,16 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
      function _selectTag(e) {
          var event = e || window.event
              , tag = event.target.value
-             , reqUrl = (tag === 'mytIndex')
+             , _isLatest = function() { return tag.toLowerCase()  === 'latest testimonies'; }
+             , reqUrl = _isLatest()
                 ? reqUrl = reqBaseUrl + 'testimonies'
                 : reqUrl = reqBaseUrl + 'tags/' + tag
          ;
 
          request.get(reqUrl)
              .success(function(data) {
-                 var container = document.querySelector('#testimonies');
-                 jade.render(container, 'testimonies-block', {testimonies: data});
+                 document.querySelector('#subTitle').innerText = tag;
+                 jade.render(document.querySelector('#testimonies'), 'testimonies-block', {testimonies: data});
              });
      }
 
