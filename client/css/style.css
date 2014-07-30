@@ -1,7 +1,7 @@
 input,select,textarea{background-color:#fff;border:1px solid #ccc;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;border-radius:4px;display:block;font-size:14px;line-height:18px;margin:0;margin-bottom:30px;padding:10px;min-width:300px}
 label{display:block;font-size:16px;font-weight:bold;margin-bottom:10px}
 .btn-group button{float:left;margin-right:10px}
-#testimony-form{background:rgba(225,225,225,0.95);width:700px;min-height:900px;height:100%;padding:0 40px;border-left:1px solid #ccc;-webkit-box-shadow:5px 5px 5px 10px rgba(0,0,0,0.1);-moz-box-shadow:5px 5px 5px 10px rgba(0,0,0,0.1);-ms-box-shadow:5px 5px 5px 10px rgba(0,0,0,0.1);-o-box-shadow:5px 5px 5px 10px rgba(0,0,0,0.1);box-shadow:5px 5px 5px 10px rgba(0,0,0,0.1);overflow:hidden;position:absolute;top:0;right:-700px;z-index:10;}
+#testimony-form{background:#e1e1e1;width:700px;min-height:900px;height:100%;padding:0 40px;border:1px solid #ccc;-webkit-box-shadow:0 5px 5px 5px rgba(0,0,0,0.1);-moz-box-shadow:0 5px 5px 5px rgba(0,0,0,0.1);-ms-box-shadow:0 5px 5px 5px rgba(0,0,0,0.1);-o-box-shadow:0 5px 5px 5px rgba(0,0,0,0.1);box-shadow:0 5px 5px 5px rgba(0,0,0,0.1);overflow:hidden;position:absolute;top:0;right:-700px;z-index:10;}
 #testimony-form.open,#testimony-form.close{-webkit-transition-property:right;-moz-transition-property:right;-o-transition-property:right;-ms-transition-property:right;transition-property:right;-webkit-transition-duration:.4s;-moz-transition-duration:.4s;-o-transition-duration:.4s;-ms-transition-duration:.4s;transition-duration:.4s;-webkit-transition-timing-function:ease;-moz-transition-timing-function:ease;-o-transition-timing-function:ease;-ms-transition-timing-function:ease;transition-timing-function:ease;position:absolute}
 #testimony-form.close{right:-700px}
 #testimony-form.open{right:0;visibility:visible}
@@ -29,6 +29,8 @@ label{display:block;font-size:16px;font-weight:bold;margin-bottom:10px}
 #editor{clear:both;list-style-type:none;margin:0;padding:0;margin-bottom:10px;}
 #editor li{display:inline;margin-right:5px;}
 #editor li:hover{cursor:pointer}
+.modalShow #testimony-form--background{display:block}
+#testimony-form--background{background-color:#000;width:100%;height:100%;display:none;opacity:.75;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=75);filter:alpha(opacity=75);position:fixed;top:0;left:0;z-index:1}
 .author{font-weight:bold;margin-top:-20px}
 #return{text-decoration:underline}
 #testimony-detail{margin-bottom:30px}

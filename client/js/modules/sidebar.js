@@ -17,6 +17,8 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
         , request = MYT.request
         , reqBaseUrl = '/api/v1/'
         , strDefaultSubtitle = 'Latest Testmonies'
+        , strModalShow = 'modalShow'
+        , _utils = MYT.utils
         ;
 
 
@@ -119,6 +121,8 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
          MYT.utils.addClass(d.getElementById(MYT.attributes.formContainerId), 'close');
          MYT.utils.removeClass(d.getElementById(MYT.attributes.formContainerId), 'open');
          _removeFormListeners();
+
+         _utils.removeClass(document.body, strModalShow);
      }
 
      /**
@@ -207,6 +211,8 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
          MYT.utils.removeClass( formContainer, 'close' );
          formContainer.style.height = d.body.scrollHeight + 'px'; // set height
          _createFormListeners();
+
+         _utils.addClass(document.body, strModalShow);
      }
      
 
