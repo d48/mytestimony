@@ -205,11 +205,10 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
          var e = e || window.event // IE doesn't pass in the event object
              , formContainer = d.getElementById(MYT.attributes.formContainerId) 
              ;
-
          e.preventDefault();
          MYT.utils.addClass( formContainer, 'open' );
          MYT.utils.removeClass( formContainer, 'close' );
-         formContainer.style.height = d.body.scrollHeight + 'px'; // set height
+         // formContainer.style.height = d.body.scrollHeight + 'px'; // set height
          _createFormListeners();
 
          _utils.addClass(document.body, strModalShow);
