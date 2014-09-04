@@ -107,6 +107,12 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
         * vid of browsing and using editor to create a post: http://www.screencast.com/t/wKkNX88hQGwl
 * Authentication 
     * Set up passwordless authentication that hooks into email: http://blog.design48.net/2014/04/15/passwordless-authentication/
+* Creating Testimony
+    * idea from Jacin about Zemanta for auto-tagging and suggestions
+    * http://demo.zemanta.com/
+    * ![Zemanta](http://f.cl.ly/items/3c15133z3p203s3F0y3c/Image%202014-09-03%20at%208.29.52%20PM.png)
+* Search
+    * by author, tag, date, username, etc
 	
 
 ## Todo
