@@ -116,6 +116,9 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
 	
 
 ## Todo
+- Create Minimum Viable Product (MVP) list in wiki table 
+  * determine with checkmarks what are critical pieces needed for launch
+  * determine what is Phase 2
 - Start rolling out mocha tests
   * hook in zombie.js or phantom.js to mock in DOM 
 - Integrate `jsdoc3` lib and throw in `doc` directory. To build on every post-commit or set up watch on changes to .js file
