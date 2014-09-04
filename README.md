@@ -113,6 +113,13 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
     * ![Zemanta](http://f.cl.ly/items/3c15133z3p203s3F0y3c/Image%202014-09-03%20at%208.29.52%20PM.png)
 * Search
     * by author, tag, date, username, etc
+* Timeline
+    * view specific user timeline and testimonies based on date specified in testimony
+    * user/testimony linking with approval process
+* Poster and visitor engagement
+    * have poster inspired by comments, likes, shares
+    * may not have comments so as to control spam and having to control
+    
 	
 
 ## Todo
