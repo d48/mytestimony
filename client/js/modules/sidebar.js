@@ -46,7 +46,7 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
          request.get(reqUrl)
              .success(function(data) {
                  document.querySelector('#subTitle').innerText = tag;
-                 jade.render(document.querySelector('#testimonies'), 'testimonies-block', {testimonies: data});
+                 jade.render(document.querySelector('#main'), 'testimonies-block', {testimonies: data});
              });
      }
 

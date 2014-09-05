@@ -24,7 +24,7 @@ var MYT = MYT || {};  // defines MYT namespace
     var e = e || window.event; // IE doesn't pass in the event object
     e.preventDefault();
 
-    if (e.target.nodeName !== "BUTTON") {
+    if (e.target.nodeName !== "BUTTON" && !MYT.utils.hasClass(e.target, 'view-testimony')) {
       return false;
     }
 
@@ -60,6 +60,7 @@ var MYT = MYT || {};  // defines MYT namespace
     //       };
     var d              = window.document
       , closeId        = options.closeId       || 'close'
+      , elMain         = document.getElementById('main')
       , openId         = options.openId        || 'start'
       , submitId       = options.submitId      || 'submit-button'
       , tagsTemplate   = options.tagsTemplate  || ''
@@ -89,8 +90,8 @@ var MYT = MYT || {};  // defines MYT namespace
     this.attributes.titleId              = options.titleId              || '';
 
     // Set up click handlers
-    if (testimonies) {
-      testimonies.addEventListener('click', testimoniesClick, false);
+    if (elMain) {
+        elMain.addEventListener('click', testimoniesClick, false);
     }
 
 
