@@ -21,14 +21,18 @@ var MYT = MYT || {};  // defines MYT namespace
    * @author Ryan Regalado 
    */
   function testimoniesClick(e) {
-    var e = e || window.event; // IE doesn't pass in the event object
+    var e = e || window.event, target = e.target; // IE doesn't pass in the event object
     e.preventDefault();
 
-    if (e.target.nodeName !== "BUTTON" && !MYT.utils.hasClass(e.target, 'view-testimony')) {
-      return false;
+    if (target.nodeName !== "BUTTON" && !MYT.utils.hasClass(target, 'view-testimony')) {
+        // testimony detail a:link
+        if (target.id === 'return') {
+            window.location.href = target.href;
+            return true;
+        } else return false;
     }
 
-    var btnId    = e.target.getAttribute('id')
+    var btnId    = target.getAttribute('id')
       , location = window.location
       , origin   = location.origin
       ;
