@@ -23,7 +23,8 @@ This is a website to help people share about their tesimony of what God has done
 
 ## Technology
 
-[From Wiki](https://github.com/d48/mytestimony/wiki/Technology)
+* [Overview](https://github.com/d48/mytestimony/wiki/Technology)
+* [MongoDb usage](https://github.com/d48/mytestimony/wiki/Database)
 
 ## How to configure/install and run locally
 
