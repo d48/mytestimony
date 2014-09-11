@@ -9,6 +9,11 @@
             small.hint If blank, it will show from "Anonymous"
             input#name(name="name", type="textbox")
 
+        div#email-container.control-group
+            label(for="email") Enter your e-mail address
+            small.hint Required so you can approve to publish and to edit this testimony at a later time
+            input#email(name="email", type="textbox", class="required")
+
         div#testimony-container.control-group
             label(for="testimony", id="enter-testimony") Enter your testimony below
             div#words Word count: 

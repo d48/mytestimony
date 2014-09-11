@@ -151,3 +151,6 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
   * ~~browserify~~ nope, adds to much overhead
   * requirejs
   * ~~breaking up js into modules for client~~ in progress
+- Crypto
+  * use native crypto lib to create custom hash for edit string that will be used as link for editing specific testimony
+  * this will be enabled once smtp server setup to send out email to confirm for user if they want to publish testimony

@@ -92,6 +92,7 @@ var MYT = MYT || {};  // defines MYT namespace
     this.attributes.tagsDropDownId       = options.tagsDropDownId       || 'tag-category';
     this.attributes.testimonyBoxId       = options.testimonyBoxId       || '';
     this.attributes.titleId              = options.titleId              || '';
+    this.attributes.emailId              = 'email'
 
     // Set up click handlers
     if (elMain) {
