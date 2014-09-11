@@ -154,3 +154,5 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
 - Crypto
   * use native crypto lib to create custom hash for edit string that will be used as link for editing specific testimony
   * this will be enabled once smtp server setup to send out email to confirm for user if they want to publish testimony
+- Tags
+  * bug: on testimony form, adding tag for `6:38` doesn't take once press enter key. 
