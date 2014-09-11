@@ -156,3 +156,5 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
   * this will be enabled once smtp server setup to send out email to confirm for user if they want to publish testimony
 - Tags
   * bug: on testimony form, adding tag for `6:38` doesn't take once press enter key. 
+- DB
+  * manage db solution apart from github
