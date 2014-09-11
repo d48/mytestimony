@@ -129,7 +129,8 @@ module.exports = {
 
     formKeys = {
       form:{
-          name: req.body.name
+          email: req.body.email
+        , name: req.body.name
         , tags: req.body.tags
         , testimony: req.body.testimonyHidden
         , title: req.body.title
