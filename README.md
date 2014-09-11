@@ -23,7 +23,8 @@ This is a website to help people share about their tesimony of what God has done
 
 ## Technology
 
-[From Wiki](https://github.com/d48/mytestimony/wiki/Technology)
+* [Overview](https://github.com/d48/mytestimony/wiki/Technology)
+* [MongoDb usage](https://github.com/d48/mytestimony/wiki/Database)
 
 ## How to configure/install and run locally
 
@@ -130,7 +131,6 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
   * hook in zombie.js or phantom.js to mock in DOM 
 - Integrate `jsdoc3` lib and throw in `doc` directory. To build on every post-commit or set up watch on changes to .js file
   * Start looking into grunt for build/deploy scripts
-- Throw up instance on aws (Amazon Web Services)
 - Look into postmark.js and wrapper for api https://github.com/voodootikigod/postmark.js
   * look into general smtp service via node
 - sanitization on client side and server side form submission
@@ -138,8 +138,6 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
   * insert tags and remove duplicates
 - client side validation of form
   * make more robust
-- form wysiwig with bold, italics, strikethrough, bullet list, number list 
-  * working now. be sure to add bullet/number list
 - look into glue.js for CommonJS modules for the browser for modularizing code
   * http://mixu.net/gluejs/
 - share feature
@@ -153,6 +151,8 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
   * ~~browserify~~ nope, adds to much overhead
   * requirejs
   * ~~breaking up js into modules for client~~ in progress
-- ~~Create own XHR lib~~
-  * ~~would like to just rip jQuery.ajax if possible~~
-  * ~~If not, can just build own from http://toddmotto.com/writing-a-standalone-ajax-xhr-javascript-micro-library/~~
+- Crypto
+  * use native crypto lib to create custom hash for edit string that will be used as link for editing specific testimony
+  * this will be enabled once smtp server setup to send out email to confirm for user if they want to publish testimony
+- Tags
+  * bug: on testimony form, adding tag for `6:38` doesn't take once press enter key. 

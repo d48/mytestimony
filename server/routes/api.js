@@ -15,8 +15,12 @@ module.exports = {
   , testimoniesAdd: function(req, res) {
      var name = req.body.name ? req.body.name : 'Anonymous';
      console.log('req via api', req.body);
+
+     // @todo `publish` key will be set false initially once email smtp and edit hash algorithm set up
      var obj = {
-          name: name
+          email: req.body.email
+        , name: name
+        , publish: true
         , testimony: req.body.testimony
         , tags: createTagsArray(req.body.tags)
         , title: req.body.title

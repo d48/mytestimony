@@ -134,6 +134,8 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
      * @method 
      * @memberof MYT.modules.sidebar
      * @author Ryan Regalado 
+     * @todo if user sees error, when they edit item again, make sure color
+     *       of text is regular color instead of red
      */
      function submitTestimony(e) {
          e = e || window.event; // IE doesn't pass in the event object
@@ -143,8 +145,9 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
          var checkFields = {} 
          , errors = []
              , fields = [
-             MYT.attributes.testimonyBoxId
-             , MYT.attributes.titleId
+                 MYT.attributes.testimonyBoxId
+                 , MYT.attributes.titleId
+                 , MYT.attributes.emailId
              ]
              , i = 0
              , utils = MYT.utils
