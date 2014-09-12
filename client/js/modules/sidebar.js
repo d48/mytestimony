@@ -15,7 +15,10 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
     var elTagsDropDown
         , d = document
         , request = MYT.request
-        , reqUrl = '/api/v1/tags/'
+        , reqBaseUrl = '/api/v1/'
+        , strDefaultSubtitle = 'Latest Testmonies'
+        , strModalShow = 'modalShow'
+        , _utils = MYT.utils
         ;
 
 
@@ -34,10 +37,16 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
      function _selectTag(e) {
          var event = e || window.event
              , tag = event.target.value
+             , _isLatest = function() { return tag.toLowerCase()  === 'latest testimonies'; }
+             , reqUrl = _isLatest()
+                ? reqUrl = reqBaseUrl + 'testimonies'
+                : reqUrl = reqBaseUrl + 'tags/' + tag
          ;
-         request.get(reqUrl + tag)
+
+         request.get(reqUrl)
              .success(function(data) {
-                 console.log('tag selected: ', tag, data);
+                 document.querySelector('#subTitle').innerText = tag;
+                 jade.render(document.querySelector('#main'), 'testimonies-block', {testimonies: data});
              });
      }
 
@@ -112,6 +121,8 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
          MYT.utils.addClass(d.getElementById(MYT.attributes.formContainerId), 'close');
          MYT.utils.removeClass(d.getElementById(MYT.attributes.formContainerId), 'open');
          _removeFormListeners();
+
+         _utils.removeClass(document.body, strModalShow);
      }
 
      /**
@@ -123,6 +134,8 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
      * @method 
      * @memberof MYT.modules.sidebar
      * @author Ryan Regalado 
+     * @todo if user sees error, when they edit item again, make sure color
+     *       of text is regular color instead of red
      */
      function submitTestimony(e) {
          e = e || window.event; // IE doesn't pass in the event object
@@ -132,8 +145,9 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
          var checkFields = {} 
          , errors = []
              , fields = [
-             MYT.attributes.testimonyBoxId
-             , MYT.attributes.titleId
+                 MYT.attributes.testimonyBoxId
+                 , MYT.attributes.titleId
+                 , MYT.attributes.emailId
              ]
              , i = 0
              , utils = MYT.utils
@@ -194,12 +208,13 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
          var e = e || window.event // IE doesn't pass in the event object
              , formContainer = d.getElementById(MYT.attributes.formContainerId) 
              ;
-
          e.preventDefault();
          MYT.utils.addClass( formContainer, 'open' );
          MYT.utils.removeClass( formContainer, 'close' );
-         formContainer.style.height = d.body.scrollHeight + 'px'; // set height
+         // formContainer.style.height = d.body.scrollHeight + 'px'; // set height
          _createFormListeners();
+
+         _utils.addClass(document.body, strModalShow);
      }
      
 
@@ -219,8 +234,10 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
     function _createListeners() {
         d.getElementById('tagSelector--tagCategory').addEventListener('change', _selectTag, false);
         d.getElementById('close').addEventListener('click', closeForm, false);
+        d.getElementById('testimony-form--background').addEventListener('click', closeForm, false);
         d.getElementById('start').addEventListener('click', showForm, false);
         d.getElementById('submit-button').addEventListener('click', submitTestimony, false);
+        
     }
 
 

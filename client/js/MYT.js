@@ -21,14 +21,18 @@ var MYT = MYT || {};  // defines MYT namespace
    * @author Ryan Regalado 
    */
   function testimoniesClick(e) {
-    var e = e || window.event; // IE doesn't pass in the event object
+    var e = e || window.event, target = e.target; // IE doesn't pass in the event object
     e.preventDefault();
 
-    if (e.target.nodeName !== "BUTTON") {
-      return false;
+    if (target.nodeName !== "BUTTON" && !MYT.utils.hasClass(target, 'view-testimony')) {
+        // testimony detail a:link
+        if (target.id === 'return') {
+            window.location.href = target.href;
+            return true;
+        } else return false;
     }
 
-    var btnId    = e.target.getAttribute('id')
+    var btnId    = target.getAttribute('id')
       , location = window.location
       , origin   = location.origin
       ;
@@ -60,6 +64,7 @@ var MYT = MYT || {};  // defines MYT namespace
     //       };
     var d              = window.document
       , closeId        = options.closeId       || 'close'
+      , elMain         = document.getElementById('main')
       , openId         = options.openId        || 'start'
       , submitId       = options.submitId      || 'submit-button'
       , tagsTemplate   = options.tagsTemplate  || ''
@@ -87,10 +92,11 @@ var MYT = MYT || {};  // defines MYT namespace
     this.attributes.tagsDropDownId       = options.tagsDropDownId       || 'tag-category';
     this.attributes.testimonyBoxId       = options.testimonyBoxId       || '';
     this.attributes.titleId              = options.titleId              || '';
+    this.attributes.emailId              = 'email'
 
     // Set up click handlers
-    if (testimonies) {
-      testimonies.addEventListener('click', testimoniesClick, false);
+    if (elMain) {
+        elMain.addEventListener('click', testimoniesClick, false);
     }
 
 

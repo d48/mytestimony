@@ -37,9 +37,30 @@ var MYT = MYT || {};
         elem.className = className.trim(); // remove whitespace
     }
 
+    /**
+     * Determines if elment has class
+     * 
+     * @name hasClass
+     * @param {object} elem - DOM element
+     * @param {string} name - name of class to check for
+     * @returns {boolean} true|false if element has class name
+     * @example 
+     * MYT.utils.hasClass(document.querySelector('#btn'), 'btn-default'); // returns true
+     * @method 
+     * @memberof MYT.utils
+     * @author Ryan Regalado 
+     */
+    function hasClass(elem, name) {
+        var className = elem.className
+            , reg = new RegExp(name, 'g')
+        ;
+        return className.match(reg) ? true : false;
+    }
+
     // api
     MYT.utils = {
           addClass: addClass
+        , hasClass: hasClass 
         , removeClass: removeClass
     };
 
