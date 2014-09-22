@@ -159,3 +159,7 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
   * bug: on testimony form, adding tag for `6:38` doesn't take once press enter key. 
 - DB
   * manage db solution apart from github
+- Text share feature
+  * created twilio account. See how to integrate share feature to send text message with short url to testimony
+- Short URL service
+  * Find 3rd party service or build one
