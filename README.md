@@ -148,6 +148,7 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
 - Security
   * https://speakerdeck.com/ckarande/top-overlooked-security-threats-to-node-dot-js-web-applications
   * CSRF for forms here: http://scottksmith.com/blog/2014/09/04/simple-steps-to-secure-your-express-node-application
+  * look into node lib for common security issues to apply for express middleware: https://github.com/evilpacket/helmet
 - Modules 
   * ~~browserify~~ nope, adds to much overhead
   * requirejs
