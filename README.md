@@ -166,3 +166,4 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
   * Find 3rd party service or build one
 - Setup cluster
   * use cluster module to setupMaste and fork() so can scale
+  * http://rowanmanning.com/posts/node-cluster-and-express/
