@@ -16,7 +16,8 @@
     "socket.io-client": "~0.9.16",
     "socket.io": "~0.9.16",
     "forever": "~0.10.11",
-    "clientjade": "~0.1.1"
+    "clientjade": "~0.1.1",
+    "hashids": "^1.0.1"
   },
   "engine": "0.10.12",
   "scripts": {
