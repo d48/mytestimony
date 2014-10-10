@@ -7,6 +7,7 @@
   , ObjectID = mongo.ObjectID
   , server   = new Server('localhost', 27017, {auto_reconnect: true})
   , db       = new Db(DB_NAME, server, {safe: true})
+  , shortId  = require('short-mongo-id')
   ;
 
 // open up connection
@@ -132,6 +133,7 @@ module.exports = {
          var objID = new ObjectID();
          obj._id = objID;
          obj.date = new Date();
+         obj.shortId = shortId(objID.valueOf());
 
          collection.insert(obj, function(err, results) {
            if (err) cb(err);
