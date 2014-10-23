@@ -165,3 +165,8 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
   * created twilio account. See how to integrate share feature to send text message with short url to testimony
 - shortID
   * update local db instance for temp shortId to using shortId lib
+- Short URL service
+  * Find 3rd party service or build one
+- Setup cluster
+  * use cluster module to setupMaste and fork() so can scale
+  * http://rowanmanning.com/posts/node-cluster-and-express/
