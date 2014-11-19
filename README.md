@@ -62,9 +62,18 @@ $ make stopapp
 
 ![Create](https://github.com/d48/mytestimony/raw/master/design/wireframes/home-wf-share.png)
 
+
+## Diagrams
+
+**Create Testimony flow**
+
+![create testimony flow](https://github.com/d48/mytestimony/raw/master/design/diagrams/create-testimony-flowchart.png)
+
+
 ## Database setup
 
 [From Wiki](https://github.com/d48/mytestimony/wiki/Database)
+
 
 
 ## RESTful API
