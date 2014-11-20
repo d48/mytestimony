@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/d48/mytestimony.png?branch=master)](https://travis-ci.org/d48/mytestimony)
+[!Build Status](https://travis-ci.org/d48/mytestimony.png?branch=master)](https://travis-ci.org/d48/mytestimony)
 
 ```
  __    __     __  __     ______   ______     ______     ______   __     __    __     ______     __   __     __  __    
@@ -176,4 +176,6 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
 - Setup cluster
   * use cluster module to setupMaste and fork() so can scale
   * http://rowanmanning.com/posts/node-cluster-and-express/
+- Design
+  * create mood board: http://lai.github.io/rendevo.html
     
