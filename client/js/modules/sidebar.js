@@ -118,8 +118,8 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
      function closeForm(e) {
          e = e || window.event; // IE doesn't pass in the event object
          e.preventDefault();
-         MYT.utils.addClass(d.getElementById(MYT.attributes.formContainerId), 'close');
-         MYT.utils.removeClass(d.getElementById(MYT.attributes.formContainerId), 'open');
+         _utils.addClass(d.getElementById(MYT.attributes.formContainerId), 'close');
+         _utils.removeClass(d.getElementById(MYT.attributes.formContainerId), 'open');
          _removeFormListeners();
 
          _utils.removeClass(document.body, strModalShow);
@@ -150,7 +150,6 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
                  , MYT.attributes.emailId
              ]
              , i = 0
-             , utils = MYT.utils
              ;
 
          var fieldsLen = fields.length;
@@ -165,10 +164,10 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
                      || (el.nodeName === 'DIV' && 
                          (el.innerHTML === '' || el.innerHTML === '<br>'))) {
                              // record which fields have errors and display to user
-                             utils.addClass(el.parentElement, 'error'); 
+                             _utils.addClass(el.parentElement, 'error'); 
                              errors.push(field);
                          } else {
-                             utils.removeClass(el.parentElement, 'error'); 
+                             _utils.removeClass(el.parentElement, 'error'); 
                              // remove field from error object
                              if(errors.indexOf(field) !== -1){
                                  errors.splice(errors.indexOf(field),1);
@@ -182,9 +181,18 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
              // special field for testimony editor
              var elEditor = d.getElementById(MYT.attributes.testimonyBoxId)
                  , elHiddenEditor = d.getElementById(MYT.attributes.hiddenTestimonyBoxId)
+                 , sSanitizedText = ''
                  ;
 
+             // sanitize elEditor.innerHTML
+             // @todo 
+             // sSanitizedText = _utils.sanitizeInput(elEditor.innerHTML, ['span'])
              elHiddenEditor.value = elEditor.innerHTML;
+
+
+             // console.log('editor', elEditor);
+             // console.log('editor html', elEditor.innerHTML);
+             // console.log('editor text', elEditor.innerText);
 
              d.forms[MYT.attributes.formId].submit();
          }
@@ -209,8 +217,8 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
              , formContainer = d.getElementById(MYT.attributes.formContainerId) 
              ;
          e.preventDefault();
-         MYT.utils.addClass( formContainer, 'open' );
-         MYT.utils.removeClass( formContainer, 'close' );
+         _utils.addClass( formContainer, 'open' );
+         _utils.removeClass( formContainer, 'close' );
          // formContainer.style.height = d.body.scrollHeight + 'px'; // set height
          _createFormListeners();
 

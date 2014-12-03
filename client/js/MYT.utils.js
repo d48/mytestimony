@@ -57,11 +57,33 @@ var MYT = MYT || {};
         return className.match(reg) ? true : false;
     }
 
+    /**
+     * Sanitizes input by taking in options object of what is acceptable. Will
+     * remove any HTML tags found in options list
+     * 
+     * @name sanitizeInput
+     * @param {string} text - Sample HTML text to sanitize
+     * @param {array} aRemoveList - list of html tags to strip. 
+     *                          Default is: ['a','bold','li','p','span','ul']
+     * @returns {type} result - 
+     * @example 
+     * MYT.utils.sanitizeInput('<p><span style="font-size: 10px;">Boom</span></p>', ['span']);
+     * // returns '<p>boom</p>'
+     * @method 
+     * @author Ryan Regalado 
+     */
+    function sanitizeInput(text, aRemoveList) {
+        var result;
+
+        return result;
+    }
+
     // api
     MYT.utils = {
           addClass: addClass
         , hasClass: hasClass 
         , removeClass: removeClass
+        , sanitizeInput: sanitizeInput
     };
 
     return MYT.utils;
