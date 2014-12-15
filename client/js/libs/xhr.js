@@ -51,7 +51,7 @@
             ; // end xhr var
 
             request.open(method, url, true); // true = async
-            request.setRequestHeader('Content-type', 'applicaiton/x-www-form-urlencoded');
+            request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
             request.onreadystatechange = function () {
                 if (request.readyState === 4) {
                     if (request.status === 200) {
