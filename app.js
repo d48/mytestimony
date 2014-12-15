@@ -11,7 +11,7 @@ var express     = require('express')
     , routesapi = require('./server/routes/api')
     , stylus    = require('stylus')
     , nib       = require('nib')
-    , port      = 3000
+    , port      = 4000
     ;
 
 function compile(str, path) {
