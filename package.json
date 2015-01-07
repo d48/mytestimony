@@ -18,7 +18,7 @@
     "should": "~1.2.2",
     "socket.io": "~0.9.16",
     "socket.io-client": "~0.9.16",
-    "stylus": "0.30.1"
+    "stylus": "0.49.3"
   },
   "engine": "0.10.12",
   "scripts": {
