@@ -19,6 +19,22 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
         , strDefaultSubtitle = 'Latest Testmonies'
         , strModalShow = 'modalShow'
         , _utils = MYT.utils
+
+        /**
+         * constant for form ids
+         * 
+         * @formIds
+         * @property {array} DOM ids for each form element
+         * @memberof MYT.modules.sidebar
+         * @author Ryan Regalado 
+         */
+        , formIds = {
+               name: 'name' 
+            ,  email: 'email' 
+            ,  testimony: 'testimonybox' 
+            ,  title: 'title' 
+            ,  tags: 'tags' 
+        } 
         ;
 
 
@@ -116,7 +132,7 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
      * @author Ryan Regalado 
      */
      function closeForm(e) {
-         e = e || window.event; // IE doesn't pass in the event object
+         var e = e || window.event; // IE doesn't pass in the event object
          e.preventDefault();
          _utils.addClass(d.getElementById(MYT.attributes.formContainerId), 'close');
          _utils.removeClass(d.getElementById(MYT.attributes.formContainerId), 'open');
@@ -124,6 +140,42 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
 
          _utils.removeClass(document.body, strModalShow);
      }
+
+
+     function _getFormFields() {
+         var results = [];
+
+         for(item in formIds) {
+             if (formIds.hasOwnProperty(item)) {
+                results.push(document.querySelector('#' + formIds[item]));
+             }
+         }
+
+         return results;
+     }
+
+     /**
+     * Previews form in temporary view to show to user what it will look like
+     * if published
+     * 
+     * @name previewTestimony
+     * @param {Object} e - Event object
+     * @returns {void} - opens modal or shows simple view of testimony rendered
+     * @method 
+     * @memberof MYT.modules.sidebar
+     * @author Ryan Regalado 
+     * @todo finish up preview function
+     */
+     function previewTestimony(e) {
+         var e = e || window.event; // IE doesn't pass in the event object
+         e.preventDefault();
+
+         var aFields = _getFormFields();
+         console.log('here are the form fields', aFields);
+     }
+
+
+
 
      /**
      * Checks form for validation and submits if valid
@@ -143,7 +195,7 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
 
          // validate form
          var checkFields = {} 
-         , errors = []
+             , errors = []
              , fields = [
                  MYT.attributes.testimonyBoxId
                  , MYT.attributes.titleId
@@ -188,18 +240,9 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
              // @todo 
              // sSanitizedText = _utils.sanitizeInput(elEditor.innerHTML, ['span'])
              elHiddenEditor.value = elEditor.innerHTML;
-
-
-             // console.log('editor', elEditor);
-             // console.log('editor html', elEditor.innerHTML);
-             // console.log('editor text', elEditor.innerText);
-
              d.forms[MYT.attributes.formId].submit();
          }
-
      }
-     
-     
      
      
      /**
@@ -244,8 +287,8 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
         d.getElementById('close').addEventListener('click', closeForm, false);
         d.getElementById('testimony-form--background').addEventListener('click', closeForm, false);
         d.getElementById('start').addEventListener('click', showForm, false);
+        d.getElementById('preview-button').addEventListener('click', previewTestimony, false);
         d.getElementById('submit-button').addEventListener('click', submitTestimony, false);
-        
     }
 
 
