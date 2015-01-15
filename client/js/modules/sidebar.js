@@ -54,14 +54,14 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
          var event = e || window.event
              , tag = event.target.value
              , _isLatest = function() { return tag.toLowerCase()  === 'latest testimonies'; }
-             , reqUrl = _isLatest()
+             , reqUrl = _isLatest() || tag === '' || typeof tag === 'undefined'
                 ? reqUrl = reqBaseUrl + 'testimonies'
                 : reqUrl = reqBaseUrl + 'tags/' + tag
          ;
 
          request.get(reqUrl)
              .success(function(data) {
-                 document.querySelector('#subTitle').innerText = tag;
+                 document.querySelector('#subTitle').innerText = (tag === '') ? 'Latest Testimonies' : tag;
                  jade.render(document.querySelector('#main'), 'testimonies-block', {testimonies: data});
              });
      }
