@@ -69,6 +69,7 @@ var MYT = MYT || {};
      * @example 
      * MYT.utils.sanitizeInput('<p><span style="font-size: 10px;">Boom</span></p>', ['span']);
      * // returns '<p>boom</p>'
+     * @memberof MYT.utils
      * @method 
      * @author Ryan Regalado 
      */
@@ -78,10 +79,55 @@ var MYT = MYT || {};
         return result;
     }
 
+
+    /**
+     * Checks if object is defined
+     * 
+     * @name isDefined
+     * @param {*} obj - any native type
+     * @returns {boolean} - true|false 
+     * @example 
+     * isDefined('hello'); // returns true 
+     * @method 
+     * @memberof MYT.utils
+     * @author Ryan Regalado 
+     */
+    function isDefined(obj) {
+        return (typeof obj !== 'undefined') ? true : false;
+    }
+
+    /**
+     * Prepends one DOM element before another
+     * 
+     * @name append
+     * @param {object} el - DOM element
+     * @param {object} elBefore - DOM element
+     * @returns {void} - appends element to the DOM
+     * @example 
+     * MYT.utils(document.getElementById('someid'), document.getElementById('anotherid')); 
+     * // appends 'someid' right before 'anotherid'
+     * @method 
+     * @memberof MYT.utils
+     * @author Ryan Regalado 
+     * @todo complete method with insert command
+     */
+    function append(el, elBefore) {
+        if (!isDefined(el)) {
+            return; 
+        } else {
+            if (!isDefined(elBefore)) {
+                return;
+            }
+        }
+        console.log('appending to the tree');
+    }
+
     // api
     MYT.utils = {
           addClass: addClass
+        , append: append
         , hasClass: hasClass 
+        , isDefined: isDefined 
         , removeClass: removeClass
         , sanitizeInput: sanitizeInput
     };
