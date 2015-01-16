@@ -65,7 +65,7 @@ var MYT = MYT || {};
      * @param {string} text - Sample HTML text to sanitize
      * @param {array} aRemoveList - list of html tags to strip. 
      *                          Default is: ['a','bold','li','p','span','ul']
-     * @returns {type} result - 
+     * @returns {string} result - sanitized HTML removing any extraneous tags
      * @example 
      * MYT.utils.sanitizeInput('<p><span style="font-size: 10px;">Boom</span></p>', ['span']);
      * // returns '<p>boom</p>'
