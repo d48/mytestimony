@@ -7,12 +7,12 @@
         div#name-container.control-group
             label(for="name") Enter your name (*optional)
             small.hint If blank, it will show from "Anonymous"
-            input#name(name="name", type="textbox")
+            input#name(name="name", type="textbox", class="field")
 
         div#email-container.control-group
             label(for="email") Enter your e-mail address
             small.hint Required so you can approve to publish and to edit this testimony at a later time
-            input#email(name="email", type="textbox", class="required")
+            input#email(name="email", type="textbox", class="required field")
 
         div#testimony-container.control-group
             label(for="testimony", id="enter-testimony") Enter your testimony below
@@ -26,18 +26,18 @@
                 li.icon-list
                 li.icon-numbered-list
 
-            div#testimonybox(name="testimony", cols="40", rows="10", contenteditable="true", class="required")
+            div#testimonybox(name="testimony", cols="40", rows="10", contenteditable="true", class="required field")
 
         div#title-container.control-group
             label(for="title") Enter a title for your testimony
-            input#title(name="title", type="textbox", class="required")
+            input#title(name="title", type="textbox", class="required field")
 
         div#tags-container.control-group
             label(for="tags") Enter some tags to categorize your testimony
             small.hint Separate by comma or hit 'Enter' after each
             input#tags(name="tags", type="hidden")
 
-            div#tagbox
+            div#tagbox(class="field")
                 ul
                     li#tag-single-container
                         input#tag-single(name="tag-single", type="textbox", autocomplete="off")

@@ -142,16 +142,17 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
      }
 
 
+
+     /**
+      * gets NodeList from class passed in
+      * 
+      * @name _getFormFields
+      * @returns {object} - returns NodeList object 
+      * @method 
+      * @author Ryan Regalado 
+      */
      function _getFormFields() {
-         var results = [];
-
-         for(item in formIds) {
-             if (formIds.hasOwnProperty(item)) {
-                results.push(document.querySelector('#' + formIds[item]));
-             }
-         }
-
-         return results;
+         return document.querySelectorAll('.field')
      }
 
      /**
@@ -170,8 +171,11 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
          var e = e || window.event; // IE doesn't pass in the event object
          e.preventDefault();
 
-         var aFields = _getFormFields();
-         console.log('here are the form fields', aFields);
+         aFields = Array.prototype.slice.call(_getFormFields());
+
+         aFields.forEach(function(item) {
+            MYT.utils.addClass(item, 'hide');   
+         });
      }
 
 
