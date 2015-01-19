@@ -71,4 +71,4 @@ io.sockets.on('connection', function (socket) {
 
 
 server.listen(port);
-console.log("Express server listening");
+console.log("Express server listening on port: ", port);
