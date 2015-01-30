@@ -65,7 +65,7 @@ $ make stopapp
 
 **Homepage colored**
 
-![Home colored](https://github.com/d48/mytestimony/raw/master/design/comps/home-100.gif)
+![Home colored](https://github.com/d48/mytestimony/raw/master/design/comps/home-100.png)
 
 
 ## Diagrams
