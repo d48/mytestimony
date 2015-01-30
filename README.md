@@ -63,6 +63,11 @@ $ make stopapp
 ![Create](https://github.com/d48/mytestimony/raw/master/design/wireframes/home-wf-share.png)
 
 
+**Homepage colored**
+
+![Home colored](https://github.com/d48/mytestimony/raw/master/design/comps/home-100.gif)
+
+
 ## Diagrams
 
 **Create Testimony flow**
