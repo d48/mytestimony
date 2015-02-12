@@ -63,9 +63,13 @@ $ make stopapp
 ![Create](https://github.com/d48/mytestimony/raw/master/design/wireframes/home-wf-share.png)
 
 
-**Homepage colored**
+**Colored**
 
-![Home colored](https://github.com/d48/mytestimony/raw/master/design/comps/home-100.png)
+![Home](https://github.com/d48/mytestimony/raw/master/design/comps/home-200.png)
+
+![Detail](https://github.com/d48/mytestimony/raw/master/design/comps/detail-200.png)
+
+![Share](https://github.com/d48/mytestimony/raw/master/design/comps/share-100.png)
 
 
 ## Diagrams
