@@ -71,7 +71,9 @@ $ make stopapp
 
 ![Share](https://github.com/d48/mytestimony/raw/master/design/comps/detail-with-share-200.png)
 
-![Form](https://github.com/d48/mytestimony/raw/master/design/comps/share-100.png)
+![Form](https://github.com/d48/mytestimony/raw/master/design/comps/form-100.png)
+
+![Form filled](https://github.com/d48/mytestimony/raw/master/design/comps/form-100-filled.png)
 
 
 ## Diagrams
