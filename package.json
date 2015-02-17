@@ -8,7 +8,7 @@
     "dot": "1.0.0",
     "express": "3.0.1",
     "forever": "~0.10.11",
-    "hashids": "^1.0.1",
+    "hashids": "1.0.1",
     "jade": "0.27.6",
     "mocha": "1.8.1",
     "mongodb": "1.2.0",
