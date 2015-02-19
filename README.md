@@ -80,6 +80,10 @@ $ make stopapp
 
 **Create Testimony flow**
 
+*For launch with no user accounts*
+![create testimony flow](https://github.com/d48/mytestimony/raw/master/design/diagrams/MyTestimony-publish-flow-v1.png)
+
+*Post launch with user accounts*
 ![create testimony flow](https://github.com/d48/mytestimony/raw/master/design/diagrams/create-testimony-flowchart.png)
 
 
