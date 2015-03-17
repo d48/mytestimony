@@ -8,16 +8,21 @@
 
 body
   background-color: $backgroundColor
+  color: $baseColor
   overflow-x: hidden
-  padding: $gutterHalf $gutter
+  padding: 0 $gutter
   font: $font
 a
   color: #00B7FF
 
 h1
-  float: left
-  font-size: 2.25em
   font-weight: normal
+
+#link-home
+  color: $baseColor
+  font-size: 20px
+  text-decoration: none
+    
 
 h2
   display: inline-block
@@ -25,8 +30,10 @@ h2
   font-weight: normal
 
 h3 
-  font-size: 1.7em
+  font-size: 16px
   font-weight: normal
+  text-transform: uppercase
+
 
 h4 
   font-size: 1.5em
@@ -131,20 +138,24 @@ p
 
 
 #subTitle-prefix
-    float: left
-    margin-right: $gutterHalf
+  color: $lightColor
+  float: left
+  margin-right: $gutterHalf
 
 #subTitle
     float: left
 
     
 #tagSelector
-    float: right
+    float: left 
     padding-top: $gutterHalf
 
 #tagSelector--tagCategory
+    border: none
     margin-right: $gutterSmall
     margin-top: $gutterSmall * 0.5
+    outline: none
+    text-transform: uppercase
 
 #read
     display: inline
@@ -152,3 +163,4 @@ p
 /* Buttons */
 #start 
     float: right
+
