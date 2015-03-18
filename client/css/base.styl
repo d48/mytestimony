@@ -10,7 +10,8 @@ body
   background-color: $backgroundColor
   color: $baseColor
   overflow-x: hidden
-  padding: 0 $gutter
+  margin: 0
+  padding: 0 
   font: $font
 a
   color: #00B7FF
@@ -51,6 +52,23 @@ p
 .tagline
   margin-left: 10px
   padding-top: 6px
+
+#header
+  background: url(../img/header-bg.jpg) repeat-x 0 0
+  border-bottom: 1px solid $mainBorderColor
+  height: 52px
+  margin: 0
+  padding: 0 $gutterHalf
+
+  h1
+    height: 32px
+    margin: 0
+    padding: 0
+ 
+    a 
+      vertical-align: top
+      margin-top: 10px
+      position: absolute
 
 #testimonies
   list-style-type: none
@@ -110,7 +128,6 @@ p
 
 /* Subnav */
 #subnav
-  border-top: 1px solid $mainBorderColor
   margin-top: $gutterHalf
   padding-top: $gutterHalf
 
