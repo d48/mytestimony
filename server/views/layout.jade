@@ -4,6 +4,8 @@ html
     title= title
     link(rel='stylesheet', href='/css/style.css')
     link(rel='stylesheet', href='/css/icons.css')
+    link(rel='stylesheet', href='/css/fonts.css')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:400,300')
 
   body(class= page) 
     block testimony-form
@@ -11,7 +13,9 @@ html
     #header.row
         div.left
             h1 
-                a(href="/", id="link-home") MYTESTIMONY
+                a(href="/", id="link-home") MY
+                a(href="/", id="link-home-2") TESTIMONY 
+                span.icon-chat
         div.right
             a(id="start") SHARE YOURS
 
