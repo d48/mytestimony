@@ -246,6 +246,7 @@ MYT.modules.header = MYT.modules.header || (function() {
         d.getElementById('close').addEventListener('click', closeForm, false);
         d.getElementById('testimony-form--background').addEventListener('click', closeForm, false);
         d.getElementById('start').addEventListener('click', showForm, false);
+        d.querySelector('.icon-share').addEventListener('click', showForm, false);
         d.getElementById('preview-button').addEventListener('click', previewTestimony, false);
         d.getElementById('submit-button').addEventListener('click', submitTestimony, false);
     }
