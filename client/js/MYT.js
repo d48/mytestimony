@@ -100,6 +100,7 @@ var MYT = MYT || {};  // defines MYT namespace
     }
 
 
+    MYT.modules.header.init();
     MYT.modules.sidebar.init();
   }
 
