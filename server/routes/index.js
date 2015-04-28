@@ -35,6 +35,15 @@ var getTags = function(webRoot, cb) {
 
 
 module.exports = {
+
+  about: function(req,res) {
+	res.render('about', {
+		title: 'MyTestimony.com'
+		, page: 'about'
+	});
+  }
+
+
   /**
    * Home page that gets testimony data from database
    * 
@@ -45,7 +54,7 @@ module.exports = {
    * @method 
    * @author Ryan Regalado 
    */
-  index: function(req,res) {
+  , index: function(req,res) {
     var host   = req.headers.host
     , webRoot  = 'http://' + host
     , url      = webRoot + urls['testimonies']
