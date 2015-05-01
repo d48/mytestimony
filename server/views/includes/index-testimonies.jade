@@ -1,3 +1,8 @@
 h4.subhead= testimony.title
+
 div.description!= testimony.testimony
-button(type="button", class="view-testimony btn btn-default btn-medium", id= testimony._id) View
+
+a(class="view-testimony", href=/testimonies/+testimony._id ) Read More 
+    span(class="icon-arrow-right")
+
+div.divider

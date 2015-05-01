@@ -1,3 +1,11 @@
+.home
+    .view-testimony
+        display: block
+        margin: $gutterDouble 0
+
+        .icon-arrow-right
+            margin-left: $gutterHalf
+
 .author
   font-weight: bold
   margin-top: -20px
@@ -73,3 +81,50 @@
       display: inline-block
       margin-right: 5px
       padding: 2px 5px
+
+
+#testimonies
+  list-style-type: none
+  padding: 0
+  margin: 0
+
+  .description 
+    ol, ul 
+      margin: $gutterHalf $gutter 
+
+    li 
+      list-style-type: disc
+
+  .new
+    float: left
+    line-height: 1px
+    margin-left: 5px
+    margin-top: 22px
+    font-size: 4.0em
+
+  > li 
+    margin: $gutterDouble 0 0 0
+    overflow: hidden
+
+
+    .subhead
+      color: $baseColor
+      float: left
+      font-size: 40px
+      margin: 0 0 $gutter 0
+
+    .description 
+      clear: both
+      padding: 0
+      color: rgba(#000, 0.8)
+
+    .divider
+        border-bottom: 1px solid $mainBorderColor
+        margin: 0 auto 
+        width: 185px
+
+
+    button 
+      float: right
+
+

@@ -96,7 +96,7 @@ var MYT = MYT || {};  // defines MYT namespace
 
     // Set up click handlers
     if (elMain) {
-        elMain.addEventListener('click', testimoniesClick, false);
+        // elMain.addEventListener('click', testimoniesClick, false);
     }
 
 
