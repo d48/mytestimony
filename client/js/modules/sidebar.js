@@ -61,7 +61,11 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
      * @author Ryan Regalado 
      */
     function _createListeners() {
-        d.getElementById('tagSelector--tagCategory').addEventListener('change', _selectTag, false);
+        var el = d.getElementById('tagSelector--tagCategory');
+
+        if (el) {
+            el.addEventListener('change', _selectTag, false);
+        }
     }
 
 
