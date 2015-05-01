@@ -36,6 +36,16 @@ var getTags = function(webRoot, cb) {
 
 module.exports = {
 
+  /**
+   * About route
+   * 
+   * @name about
+   * @param {Object} req - Reqeust object
+   * @param {Object} res - Response object
+   * @returns void - Render template
+   * @method 
+   * @author Ryan Regalado 
+   */
   about: function(req,res) {
 	res.render('about', {
 		title: 'MyTestimony.com'
@@ -68,7 +78,10 @@ module.exports = {
       request.get(options, function(error, response, body) {
         if (!error && response.statusCode === 200) {
           res.render('index', {
-            title: 'MyTestimony.com', page: 'home', testimonies: body
+            title: 'MyTestimony.com'
+            , page: 'home'
+            , testimonies: body
+            , blam: 'boomster'
           });
         }
       });

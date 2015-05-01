@@ -1,6 +1,6 @@
-h4.subhead= testimony.title
+a(class="subhead", href=/testimonies/+testimony._id)= testimony.title
 
-div.description!= testimony.testimony
+div.description !{truncateWords(testimony.testimony, 32)} ...
 
 a(class="view-testimony", href=/testimonies/+testimony._id ) Read More 
     span(class="icon-arrow-right")

@@ -21,6 +21,19 @@ function compile(str, path) {
     .use(nib());
 }
 
+function replaceTags(xStr){
+    var regExp = /<\/?[^>]+>/gi;
+    return xStr.replace(regExp,"");
+}
+
+
+function truncateWords (html, numWords) {
+    var htmlStripped = replaceTags(html);
+    return htmlStripped.split(/\s/).slice(0, numWords).join(" ");
+}
+
+app.locals.truncateWords = truncateWords;
+
 // Configuration
 app.configure(function(){
   app.set('views', __dirname + '/server/views');
@@ -30,9 +43,13 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(stylus.middleware({ src: __dirname + '/client', compile: compile }));
+
   app.use(app.router);
   app.use(express.static(__dirname + '/client'));
 });
+
+
+
 
 app.configure('development', function(){
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
