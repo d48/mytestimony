@@ -228,23 +228,6 @@ MYT.modules.header = MYT.modules.header || (function() {
          _utils.addClass(document.body, strModalShow);
      }
 
-     /**
-      * Show about page
-      * 
-      * @name showAbout
-      * @param {object} e - Event object
-      * @returns void - show about page
-      * @method 
-      * @memberof MYT.modules.header
-      * @author Ryan Regalado 
-      */
-     function showAbout(e) {
-         var e = e || window.event;
-         e.preventDefault();
-         document.location.href = '/about';
-     }
-     
-
 
 
     /**
@@ -263,7 +246,6 @@ MYT.modules.header = MYT.modules.header || (function() {
         d.getElementById('testimony-form--background').addEventListener('click', closeForm, false);
         d.getElementById('start').addEventListener('click', showForm, false);
         d.querySelector('.icon-share').addEventListener('click', showForm, false);
-        d.querySelector('.icon-question').addEventListener('click', showAbout, false);
         d.getElementById('preview-button').addEventListener('click', previewTestimony, false);
         d.getElementById('submit-button').addEventListener('click', submitTestimony, false);
     }
