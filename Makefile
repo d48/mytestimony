@@ -8,7 +8,7 @@ startapp:
 startappdev: 
 	bin/start-app-dev.sh 
 
-stopapp:
+stop:
 	bin/stop-app.sh
 
 .PHONY: test
