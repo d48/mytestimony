@@ -11,6 +11,7 @@ var express     = require('express')
     , routesapi = require('./server/routes/api')
     , stylus    = require('stylus')
     , nib       = require('nib')
+    , helpers  = require('./server/js/utils/helpers')
     , port      = 4000
     ;
 
@@ -21,18 +22,8 @@ function compile(str, path) {
     .use(nib());
 }
 
-function replaceTags(xStr){
-    var regExp = /<\/?[^>]+>/gi;
-    return xStr.replace(regExp,"");
-}
 
-
-function truncateWords (html, numWords) {
-    var htmlStripped = replaceTags(html);
-    return htmlStripped.split(/\s/).slice(0, numWords).join(" ");
-}
-
-app.locals.truncateWords = truncateWords;
+app.locals.truncateWords = helpers.truncateWords;
 
 // Configuration
 app.configure(function(){
