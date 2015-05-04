@@ -3,11 +3,8 @@ extends layout
 block testimony-form
     include includes/testimony-form.jade
 
-block subnav
-    include includes/subnav.jade
-
 block main 
-    a(href="/", id="return") Return
+    a(href="javascript:history.back()", id="return") Return
 
     div#heading
         div.title
@@ -39,7 +36,3 @@ block main
             p Is this post inappropriate?
             ul
                 li Flag it
-
-block sidebar
-    include includes/sidebar.jade
-
