@@ -30,22 +30,21 @@ MYT.plugins = MYT.plugins || {};
             ;
 
         switch( target.className ) {
-          case 'icon-bold':
+          case 'icon-format-bold':
             cmd = 'bold';
             break;
-          case 'icon-italic':
+          case 'icon-format-italic':
             cmd = 'italic';            
             break;
-          case 'icon-underline':
+          case 'icon-format-underline':
             cmd = 'underline';            
             break;
-          case 'icon-list':
+          case 'icon-format-list-bulleted':
             cmd = 'insertUnorderedList';
             break;
-          case 'icon-numbered-list':
+          case 'icon-format-list-numbered':
             cmd = 'insertOrderedList';
             break;
-
 
           default:
             break;
