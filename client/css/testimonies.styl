@@ -95,16 +95,25 @@
     li 
       list-style-type: disc
 
+  .latest
+    position: relative
+
   .new
-    float: left
-    line-height: 1px
-    margin-left: 5px
-    margin-top: 22px
-    font-size: 4.0em
+    right: $gutterDouble + 20
+    top: 38px
+    color: $newColor
+    font-size: $smallMedium
+    font-weight: 400
+    position: relative
+    width: $gutterDouble
+
+    .icon-dot
+      font-size: $mediumLarge 
+      position: absolute
+      top: -1px
 
   > li 
     margin: $gutterBig 0 0 0
-    overflow: hidden
 
 
     .subhead

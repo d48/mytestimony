@@ -69,11 +69,7 @@ module.exports = {
     , tag      = req.params.tag
     , webRoot  = 'http://' + host
     , url      = (typeof tag !== 'undefined') ? webRoot + urls['tags'] + tag : webRoot + urls['testimonies']
-    // , url      = webRoot + urls['testimonies']
-    // , url      = webRoot + urls['tags'] + 'accident'
     , options  = {url: url, json: true};
-
-    console.log('this is tag', tag);
 
     // get tags
     getTags(webRoot, function(tags) {
