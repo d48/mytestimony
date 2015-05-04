@@ -3,4 +3,7 @@ div#tagSelector
     select#tagSelector--tagCategory.dropdown
         option(value='Latest Testimonies') Latest
         each tag in tags
-            option(value=tag)= tag
+            if pageTag === tag
+                option(value=tag, selected)= tag
+            else
+                option(value=tag)= tag

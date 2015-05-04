@@ -52,6 +52,9 @@ app.configure('production', function(){
 
 // Routes
 app.get('/', routes.index);
+app.get('/index', routes.index);
+app.get('/index/:tag', routes.index);
+
 app.get('/about', routes.about);
 app.get('/contact', routes.contact);
 app.get('/testimonies/:id', routes.testimonies);

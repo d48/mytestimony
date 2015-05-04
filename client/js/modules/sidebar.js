@@ -36,15 +36,18 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
              , tag = event.target.value
              , _isLatest = function() { return tag.toLowerCase()  === 'latest testimonies'; }
              , reqUrl = _isLatest() || tag === '' || typeof tag === 'undefined'
-                ? reqUrl = reqBaseUrl + 'testimonies'
-                : reqUrl = reqBaseUrl + 'tags/' + tag
+                ? reqUrl = '/'
+                : reqUrl = '/index/' + tag
          ;
 
-         request.get(reqUrl)
-             .success(function(data) {
-                 document.querySelector(tagCategoryId).value = (tag === '') ? 'Latest Testimonies' : tag;
-                 jade.render(document.querySelector('#main'), 'testimonies-block', {testimonies: data});
-             });
+
+         d.location.href = reqUrl;
+
+         // request.get(reqUrl)
+         //     .success(function(data) {
+         //         document.querySelector(tagCategoryId).value = (tag === '') ? 'Latest Testimonies' : tag;
+         //         jade.render(document.querySelector('#main'), 'testimonies-block', {testimonies: data});
+         //     });
      }
 
 

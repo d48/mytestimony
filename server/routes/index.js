@@ -66,13 +66,20 @@ module.exports = {
    */
   , index: function(req,res) {
     var host   = req.headers.host
+    , tag      = req.params.tag
     , webRoot  = 'http://' + host
-    , url      = webRoot + urls['testimonies']
+    , url      = (typeof tag !== 'undefined') ? webRoot + urls['tags'] + tag : webRoot + urls['testimonies']
+    // , url      = webRoot + urls['testimonies']
+    // , url      = webRoot + urls['tags'] + 'accident'
     , options  = {url: url, json: true};
+
+    console.log('this is tag', tag);
 
     // get tags
     getTags(webRoot, function(tags) {
+      // makes it available for template to use
       res.locals.tags = tags;
+      res.locals.pageTag = tag;
 
       // ajax request to get testimonies
       request.get(options, function(error, response, body) {
@@ -81,7 +88,6 @@ module.exports = {
             title: 'MyTestimony.com'
             , page: 'home'
             , testimonies: body
-            , blam: 'boomster'
           });
         }
       });
