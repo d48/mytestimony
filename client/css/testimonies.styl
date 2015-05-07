@@ -17,13 +17,10 @@
   margin-bottom: $gutter
 
 #testimony-footer
-  border-top: 1px solid $mainBorderColor
+  text-align: center;
 
-.tags
-  border-right: 1px solid $mainBorderColor
-  float: left
-  padding-top: $gutterHalf
-  width: 50%
+  .tags
+    margin: $gutterBig 0
 
   li 
     background-color: #f8f8f8
@@ -39,9 +36,6 @@
       color: #777
       cursor: pointer
 
-  .tags-list
-    .label
-      margin-right: $gutterSmall
 
 .flag
   float: left
@@ -55,16 +49,17 @@
     padding: 2px 5px
 
 #heading
-  float: left
   width: 100%
 
   .title
-    float: left;
     min-width: 200px
-    width: 50%
+    text-align: center
 
     h3
-      color: #1dd2af
+      color: $baseColor
+      font-size: $extraLarge
+      font-weight: bold
+      text-transform: none
 
   .share
     float: right 
@@ -129,10 +124,6 @@
       padding: 0
       color: rgba(#000, 0.8)
 
-    .divider
-        border-bottom: 1px solid $mainBorderColor
-        margin: 0 auto 
-        width: 185px
 
 
     button 

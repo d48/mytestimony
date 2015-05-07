@@ -9,30 +9,31 @@ block main
     div#heading
         div.title
             h3.content= testimony.title
-            p.author Posted by: #{testimony.name}
 
-        div.share
-            h4 Share your testimony using a tool below
-            ul
-                li Email
-                li Facebook
-                li Twitter
-                li SMS Mobile Text
+    div.divider
 
     div#testimony-detail
         p!= testimony.testimony
 
+
+    div.divider
+
     div#testimony-footer
 
-        div.tags
-            h4 Tags
-            p This testimony has been tagged with these keywords
-            div.tags-list 
-                each tag in testimonyTags
-                    span(class="label label-success")= tag
+        p.author Posted by: #{testimony.name}
 
-        div.flag
-            h4 Flag
-            p Is this post inappropriate?
-            ul
-                li Flag it
+
+        div.tags
+            if (testimonyTags && testimonyTags.length > 0)
+                div.divider
+
+                h4 Tags
+
+                div.tags-list 
+                    each tag, index in testimonyTags
+                        if index === 0
+                            span(class="label label-success")=tag
+                        else
+                            , 
+                            span(class="label label-success")=tag
+

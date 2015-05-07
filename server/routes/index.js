@@ -119,6 +119,10 @@ module.exports = {
             var testimonyTags = body.tags;
             testimonyTags = testimonyTags.sort(appHelper.compare);
 
+            if (testimonyTags.length === 1 && testimonyTags[0] === '') {
+                testimonyTags = undefined;
+            }
+
             res.render('testimonies', {
               title: 'MyTestimony.com - Testimony'
               , page: 'testimony'
