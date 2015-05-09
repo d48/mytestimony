@@ -6,12 +6,29 @@
         .icon-arrow-right
             margin-left: $gutterHalf
 
+.testimony
+    .icon-arrow-left
+        font-size: $medium
+        margin-right: $gutterHalf
+
 .author
-  font-weight: bold
-  margin-top: -20px
+  color: $lightColor
+  font-size: $smallMedium
+  font-weight: 300
+  text-transform: uppercase
+
+  > div
+    display: inline-block
+    margin-right: $gutterHalf
+
+  .name
+    color: $tertiaryColor 
 
 #return
-  text-decoration: underline
+  text-decoration: none
+
+  &:hover
+    text-decoration: underline
 
 #testimony-detail
   margin-bottom: $gutter
@@ -20,7 +37,25 @@
   text-align: center;
 
   .tags
+    color: $lightColor
+    font-size: $smallMedium
     margin: $gutterBig 0
+
+    .tags-list
+        color: $tertiaryColor
+
+        .label
+            font-size: $medium 
+            text-decoration: underline
+
+    .colon
+        margin: 0 $gutterHalf
+
+    .title
+        text-transform: uppercase
+
+    > div
+        display: inline-block
 
   li 
     background-color: #f8f8f8
@@ -59,6 +94,7 @@
       color: $baseColor
       font-size: $extraLarge
       font-weight: bold
+      margin-top: $gutterBig
       text-transform: none
 
   .share
