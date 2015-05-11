@@ -38,8 +38,8 @@ block main
                 div.tags-list 
                     each tag, index in testimonyTags
                         if index === 0
-                            span(class="label label-success")=tag
+                            a(class="label label-success", href="/index/#{tag}")=tag
                         else
                             , 
-                            span(class="label label-success")=tag
+                            a(class="label label-success", href="/index/#{tag}")=tag
 

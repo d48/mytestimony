@@ -44,9 +44,14 @@
     .tags-list
         color: $tertiaryColor
 
+        > a:first-child
+            margin-left: 0 !important
+
         .label
             font-size: $medium 
+            margin-left: $gutterSmall
             text-decoration: underline
+            text-transform: none
 
     .colon
         margin: 0 $gutterHalf
@@ -145,6 +150,9 @@
 
   > li 
     margin: $gutterBig 0 0 0
+
+    &:last-child .divider
+        display: none
 
 
     .subhead
