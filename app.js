@@ -57,8 +57,10 @@ app.get('/index/:tag', routes.index);
 
 app.get('/about', routes.about);
 app.get('/contact', routes.contact);
+app.get('/share', routes.share);
 app.get('/testimonies/:id', routes.testimonies);
 app.post('/testimonies', routes.testimoniesAdd);
+
 
 // API routes
 // @todo have client use instead of application.

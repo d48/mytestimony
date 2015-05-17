@@ -242,12 +242,12 @@ MYT.modules.header = MYT.modules.header || (function() {
      * @author Ryan Regalado 
      */
     function _createListeners() {
-        d.getElementById('close').addEventListener('click', closeForm, false);
-        d.getElementById('testimony-form--background').addEventListener('click', closeForm, false);
-        d.getElementById('start').addEventListener('click', showForm, false);
-        d.querySelector('.icon-share').addEventListener('click', showForm, false);
-        d.getElementById('preview-button').addEventListener('click', previewTestimony, false);
-        d.getElementById('submit-button').addEventListener('click', submitTestimony, false);
+        var elSubmit = d.querySelector('#submit-button');
+
+        if (elSubmit) {
+            elSubmit.addEventListener('click', submitTestimony, false);
+        }
+        
     }
 
 
@@ -263,9 +263,6 @@ MYT.modules.header = MYT.modules.header || (function() {
     function init() {
         _createListeners(); 
 
-        // kick off editor and tag box
-        MYT.plugins.editor.init();
-        MYT.plugins.tags.init();
     }
 
 

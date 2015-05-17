@@ -134,3 +134,5 @@ MYT.plugins = MYT.plugins || {};
 
     return MYT.plugins.editor;
 })();
+
+

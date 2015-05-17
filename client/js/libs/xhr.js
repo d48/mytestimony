@@ -103,4 +103,4 @@
     myt.request = exports;
 
     return myt;
-})(MYT);
+})(typeof MYT !== 'undefined' ? MYT : {});

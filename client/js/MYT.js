@@ -73,6 +73,7 @@ var MYT = MYT || {};  // defines MYT namespace
       , testimonies    = d.getElementById(testimoniesId)
       , viewTesButtons = d.getElementsByClassName(viewTesClass)
       , viewLen        = viewTesButtons.length
+      , elBody         = document.querySelector('body')
       , i              = 0
       ;
 
@@ -94,14 +95,13 @@ var MYT = MYT || {};  // defines MYT namespace
     this.attributes.titleId              = options.titleId              || '';
     this.attributes.emailId              = 'email'
 
-    // Set up click handlers
-    if (elMain) {
-        // elMain.addEventListener('click', testimoniesClick, false);
-    }
-
-
     MYT.modules.header.init();
     MYT.modules.sidebar.init();
+
+    if (elBody.className.indexOf('share') > -1) {
+        MYT.plugins.editor.init();
+        MYT.plugins.tags.init();
+    }
   }
 
   // API

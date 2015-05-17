@@ -7,8 +7,17 @@ html
     link(rel='stylesheet', href='/css/fonts.css')
     link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:700,400,300')
 
+    script(src="/js/libs/doT.js")
+    script(src="/js/libs/xhr.js")
+
+    script(src="/js/MYT.js")
+    script(src="/js/MYT.utils.js")
+    script(src="/js/modules/header.js")
+    script(src="/js/modules/sidebar.js")
+    script(src="/js/MYT.plugins.tags.js")
+    script(src="/js/MYT.plugins.editor.js")
+
   body(class= page) 
-    block testimony-form
 
     #header.row
         div.left
@@ -19,8 +28,8 @@ html
         div.right
             a(href="/about", class="icon-question")
             span.divider
-            a.icon-share
-            a(id="start") SHARE YOURS
+            a(href="/share", class="icon-share")
+            a(href="/share", id="start") SHARE YOURS
 
     #wrapper
 

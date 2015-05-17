@@ -90,6 +90,26 @@ module.exports = {
     });
   }
 
+  /**
+   * Share route
+   * 
+   * @name share
+   * @param {Object} req - Reqeust object
+   * @param {Object} res - Response object
+   * @returns void - Render template
+   * @method 
+   * @author Ryan Regalado 
+   */
+  , share: function(req,res) {
+	res.render('share', {
+		title: 'MyTestimony.com'
+		, page: 'home'
+	});
+  }
+
+
+
+
     /**
      * Gets all testimonies and renders to page
      *
