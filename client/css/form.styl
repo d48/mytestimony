@@ -1,6 +1,4 @@
 #testimony-form
-  width: 700px
-  padding: 0 40px 40px 40px
 
   &:after
     content: ""
@@ -11,6 +9,9 @@
     height: 0
 
   input, textarea
+    font-size: $large
+    margin-bottom: $gutterDouble
+    placeholder({ color: red  })
     width: 100%
 
   #testimonybox
@@ -41,7 +42,11 @@
       color: red
 
     label
-      font-size: $large
+      color: $tertiaryColor
+      font-family: $fontFamily
+      font-size: $medium
+      font-weight: 300
+      text-transform: uppercase
 
   .hint
     display: block
@@ -143,3 +148,16 @@
     top: 0
     left: 0
     z-index: 1
+
+button 
+    border: none;
+    border-radius: $gutter
+    color: $backgroundColor
+    font-family: $fontFamily
+    font-size: $smallMedium
+    padding: 13px $gutterDouble
+    text-transform: uppercase
+    outline: none
+
+.btn-primary 
+    background-color: $btnPrimaryColor
