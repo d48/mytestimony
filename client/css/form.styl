@@ -19,6 +19,10 @@
     border-bottom: 1px solid black
     box-shadow(0 4px 2px -2px yellow)
 
+  #name:empty:before
+    content: attr(data-placeholder)
+    placeholder()
+
   #testimonybox
     input()
     clear: both
@@ -34,7 +38,7 @@
 
   #testimonybox:empty:before
     content: attr(data-placeholder)
-    color: $placholderColor
+    placeholder()
 
   .btn-group
     float: right
@@ -164,3 +168,17 @@
 
 .btn-primary 
     background-color: $btnPrimaryColor
+
+/* Placeholders */
+
+::-webkit-input-placeholder 
+   placeholder()
+
+:-moz-placeholder 
+   placeholder()
+
+::-moz-placeholder
+   placeholder()
+
+:-ms-input-placeholder
+   placeholder()
