@@ -103,7 +103,7 @@ module.exports = {
   , share: function(req,res) {
 	res.render('share', {
 		title: 'MyTestimony.com'
-		, page: 'home'
+		, page: 'share'
 	});
   }
 
