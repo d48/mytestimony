@@ -8,7 +8,7 @@ block main
         form( method="post", action="/testimonies", name="form-testimony", id="form-testimony" )
             div#name-container.control-group
                 label(for="name") Name
-                input#name(name="name", type="textbox", class="field", placeholder='If blank, it will show from "Anonymous"')
+                input#name(name="name", type="textbox", class="field", placeholder='If blank, it will show from "Anonymous"', autofocus)
 
             div#email-container.control-group
                 label(for="email") E-mail address *
