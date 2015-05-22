@@ -11,8 +11,13 @@
   input, textarea
     font-size: $large
     margin-bottom: $gutterDouble
-    placeholder({ color: red  })
     width: 100%
+
+  input[type=text]:focus, textarea:focus, #testimonybox:focus
+    border: none
+    outline: none
+    border-bottom: 1px solid black
+    box-shadow(0 4px 2px -2px yellow)
 
   #testimonybox
     input()
@@ -111,7 +116,8 @@
         cursor: pointer
         display: inline
         float: right
-        margin-left: 5px
+        font-size: $medium
+        margin-left: 10px
 
         &:hover
           color: $defaultFontColor

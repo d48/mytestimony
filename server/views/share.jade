@@ -8,15 +8,15 @@ block main
         form( method="post", action="/testimonies", name="form-testimony", id="form-testimony" )
             div#name-container.control-group
                 label(for="name") Name
-                input#name(name="name", type="textbox", class="field", placeholder='If blank, it will show from "Anonymous"', autofocus)
+                input#name(name="name", type="text", class="field", placeholder='If blank, it will show from "Anonymous"', autofocus)
 
             div#email-container.control-group
                 label(for="email") E-mail address *
-                input#email(name="email", type="textbox", class="required field", placeholder="Provide so you can edit this testimony after it's published")
+                input#email(name="email", type="text", class="required field", placeholder="Provide so you can edit this testimony after it's published")
 
             div#title-container.control-group
                 label(for="title") Title *
-                input#title(name="title", type="textbox", class="required field", placeholder="First thing people see when listed on the website")
+                input#title(name="title", type="text", class="required field", placeholder="First thing people see when listed on the website")
 
             div#testimony-container.control-group
                 label(for="testimony", id="enter-testimony") Your Testimony *
@@ -42,7 +42,7 @@ block main
                 div#tagbox(class="field")
                     ul
                         li#tag-single-container
-                            input#tag-single(name="tag-single", type="textbox", autocomplete="off")
+                            input#tag-single(name="tag-single", type="text", autocomplete="off")
 
             div
                 button#submit-button(class="btn btn-default btn-large btn-primary") Publish
