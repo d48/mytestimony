@@ -32,6 +32,10 @@
     &.hide
       display: none
 
+  #testimonybox:empty:before
+    content: attr(data-placeholder)
+    color: $placholderColor
+
   .btn-group
     float: right
 

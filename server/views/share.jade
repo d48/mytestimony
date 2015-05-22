@@ -8,22 +8,22 @@ block main
         form( method="post", action="/testimonies", name="form-testimony", id="form-testimony" )
             div#name-container.control-group
                 label(for="name") Name
-                input#name(name="name", type="text", class="field", placeholder='If blank, it will show from "Anonymous"', autofocus)
+                input#name(name="name", type="text", class="field", placeholder='If blank, it will show from "Anonymous"', data-placeholder='If blank, it will show from "Anonymous"', autofocus)
 
             div#email-container.control-group
                 label(for="email") E-mail address *
-                input#email(name="email", type="text", class="required field", placeholder="Provide so you can edit this testimony after it's published")
+                input#email(name="email", type="text", class="required field", placeholder="Provide so you can edit this testimony after it's published", data-placeholder="Provide so you can edit this testimony after it's published")
 
             div#title-container.control-group
                 label(for="title") Title *
-                input#title(name="title", type="text", class="required field", placeholder="First thing people see when listed on the website")
+                input#title(name="title", type="text", class="required field", placeholder="First thing people see when listed on the website", data-placeholder="First thing people see when listed on the website")
 
             div#testimony-container.control-group
                 label(for="testimony", id="enter-testimony") Your Testimony *
                 div#words Word count: 
                     span#word-count 0
 
-                div#testimonybox(name="testimony", cols="40", rows="10", contenteditable="true", class="required field", placeholder="Share your story")
+                div#testimonybox(name="testimony", cols="40", rows="10", contenteditable="true", class="required field", placeholder="Share your story", data-placeholder="Share your story")
 
                 ul#editor
                     li.icon-format-bold
