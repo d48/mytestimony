@@ -104,12 +104,11 @@ module.exports = {
      * @author Ryan Regalado 
      */
   , findOne: function(collName, id, cb) {
-    var obID = new ObjectID(id);
 
     this.getCollection(collName, function(err, collection) {
       if (err) cb(err);
       else {
-         collection.findOne({_id: obID}, function(err, results) {
+         collection.findOne({shortId: id}, function(err, results) {
            if (err) cb(err);
            else cb(null, results);
          });

@@ -1,8 +1,8 @@
-a(class="subhead", href=/testimonies/+testimony._id)= testimony.title
+a(class="subhead", href=/testimonies/+testimony.shortId)= testimony.title
 
 div.description !{truncateWords(testimony.testimony, 32)}
 
-a(class="view-testimony", href=/testimonies/+testimony._id ) Read More 
+a(class="view-testimony", href=/testimonies/+testimony.shortId ) Read More 
     span(class="icon-arrow-right")
 
 div.divider
