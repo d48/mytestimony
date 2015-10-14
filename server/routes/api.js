@@ -1,8 +1,5 @@
 var tm = require('./../models/testimony.js')
-
-function createTagsArray(string) {
-    return string.replace(/\s+/g,'').split(',');
-}
+var bleach = require('bleach');
 
 module.exports = {
   testimonies: function(req, res) {
@@ -13,7 +10,6 @@ module.exports = {
   }
 
   , testimoniesAdd: function(req, res) {
-     var name = req.body.name ? req.body.name : 'Anonymous';
      console.log('req via api', req.body);
 
      // @todo `publish` key will be set false initially once email smtp and edit hash algorithm set up
@@ -22,15 +18,45 @@ module.exports = {
         , name: name
         , publish: true
         , testimony: req.body.testimony
-        , tags: createTagsArray(req.body.tags)
         , title: req.body.title
       };
 
-     // console.log('this is obj', obj);
+     var whiteList = [
+         'b'
+         , 'i'
+         , 'u'
+         , 'ul'
+         , 'ol'
+         , 'li'
+         , 'div'
+     ];
 
-     tm.insert('testimonies', obj, function(error, response) {
-        res.json(response);
-      }); 
+     var opts = {
+         mode: 'white'
+         , list: whiteList
+     };
+
+
+     var email = bleach.sanitize(req.body.email);
+     var nameClean = bleach.sanitize(req.body.name);
+     var html = bleach.sanitize(req.body.testimony, opts);
+     var title = bleach.sanitize(req.body.title);
+
+     console.log('this is sanitized',  {
+       email: email, 
+       nameClean: nameClean ? nameClean : 'Anonymous', 
+       html: html, 
+       title: title
+     });
+
+     // run through sanitizer, if anything thing required returns falsy,
+     // kick out error
+
+     // @todo add error handling for xhr requests
+
+     // tm.insert('testimonies', obj, function(error, response) {
+     //    res.json(response);
+     //  }); 
   }
 
   , testimoniesId: function(req, res) {

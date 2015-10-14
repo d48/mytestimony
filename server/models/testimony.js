@@ -127,8 +127,9 @@ module.exports = {
      */
   , insert: function(collName, obj, cb) {
     this.getCollection(collName, function(err, collection) {
-      if (err) cb(err);
-      else {
+      if (err) {
+        cb(err);
+      } else {
          var objID = new ObjectID();
          obj._id = objID;
          obj.date = new Date();
