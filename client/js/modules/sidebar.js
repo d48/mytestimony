@@ -90,4 +90,4 @@ MYT.modules.sidebar = MYT.modules.sidebar || (function() {
         init: init
     }
 
-})();
+});

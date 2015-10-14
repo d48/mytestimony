@@ -20,8 +20,6 @@ block main
 
             div#testimony-container.control-group
                 label(for="testimony", id="enter-testimony") Your Testimony *
-                div#words Word count: 
-                    span#word-count 0
 
                 div#testimonybox(name="testimony", cols="40", rows="10", contenteditable="true", class="required field", placeholder="Share your story", data-placeholder="Share your story")
 
@@ -32,29 +30,9 @@ block main
                     li.icon-format-list-bulleted
                     li.icon-format-list-numbered
 
-
-
-            div#tags-container.control-group
-                label(for="tags") Tags
-                small.hint Separate by comma or hit 'Enter' after each
-                input#tags(name="tags", type="hidden")
-
-                div#tagbox(class="field")
-                    ul
-                        li#tag-single-container
-                            input#tag-single(name="tag-single", type="text", autocomplete="off")
-
             div
                 button#submit-button(class="btn btn-default btn-large btn-primary") Publish
 
             input#testimonyHidden(type="hidden", name="testimonyHidden")
 
-        script( id="tags-template", type="text/doT-template" )
-            {{~it.tags:value:index}}
-            span.x x
-            p {{=value}}
-            {{~}}
-
-
-        script
 

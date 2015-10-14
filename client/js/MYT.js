@@ -96,11 +96,9 @@ var MYT = MYT || {};  // defines MYT namespace
     this.attributes.emailId              = 'email'
 
     MYT.modules.header.init();
-    MYT.modules.sidebar.init();
 
     if (elBody.className.indexOf('share') > -1) {
         MYT.plugins.editor.init();
-        MYT.plugins.tags.init();
     }
   }
 
