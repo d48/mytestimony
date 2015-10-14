@@ -32,26 +32,11 @@
             label(for="title") Enter a title for your testimony
             input#title(name="title", type="textbox", class="required field")
 
-        div#tags-container.control-group
-            label(for="tags") Enter some tags to categorize your testimony
-            small.hint Separate by comma or hit 'Enter' after each
-            input#tags(name="tags", type="hidden")
-
-            div#tagbox(class="field")
-                ul
-                    li#tag-single-container
-                        input#tag-single(name="tag-single", type="textbox", autocomplete="off")
-
         div
             button#preview-button(class="btn btn-default btn-large") Preview
             button#submit-button(class="btn btn-default btn-large") Publish
 
         input#testimonyHidden(type="hidden", name="testimonyHidden")
 
-    script( id="tags-template", type="text/doT-template" )
-        {{~it.tags:value:index}}
-        span.x x
-        p {{=value}}
-        {{~}}
 
 #testimony-form--background

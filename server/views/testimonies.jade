@@ -25,21 +25,3 @@ block main
           div.posted Posted by 
           div.colon :  
           div.name #{testimony.name}
-
-
-        if (testimonyTags && testimonyTags.length > 0)
-            div.divider
-
-            div.tags
-                div.title Tags
-
-                div.colon :
-
-                div.tags-list 
-                    each tag, index in testimonyTags
-                        if index === 0
-                            a(class="label label-success", href="/index/#{tag}")=tag
-                        else
-                            , 
-                            a(class="label label-success", href="/index/#{tag}")=tag
-
