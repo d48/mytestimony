@@ -11,7 +11,7 @@ var express     = require('express')
     , stylus    = require('stylus')
     , nib       = require('nib')
     , helpers  = require('./server/js/utils/helpers')
-    , port      = 4000
+    , port      = process.env.PORT || 4000
     ;
 
 function compile(str, path) {
@@ -69,8 +69,6 @@ app.get('/api/v1/testimonies/:id', routesapi.testimoniesId);
 app.get('/api/v1/tags', routesapi.tags);
 app.get('/api/v1/tags/:tag', routesapi.testimoniesFromTag);
 app.post('/api/v1/testimonies', routesapi.testimoniesAdd);
-
-
 
 
 server.listen(port);
