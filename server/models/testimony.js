@@ -61,6 +61,11 @@ module.exports = {
        console.log('trying to connect to uriString', uriString);
 
        mongo.MongoClient.connect(uriString, function(err, db) {
+         console.log('this is db', db);
+         db = db;
+
+         console.log('this is err', err);
+
          if (!err) {
            db.collection(collName, function(err, results) {
             if (err) cb(err);
