@@ -67,7 +67,7 @@ module.exports = {
          } else {
            cb(err);
          }
-       }  
+       });  
      } else {
         // 'testimonies' is the name of the collection from the database
         db.collection(collName, function(err, results) {
