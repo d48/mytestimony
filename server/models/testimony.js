@@ -17,9 +17,11 @@
   , hostMongoLab
   , server   
   , db      
+  , bIsMongoLabs = false;
   ;
 
   if (typeof uriString !== 'undefined') {
+    bIsMongoLabs = true;
     obj = mongoUri.parse(uriString); 
     hostMongoLab = obj.hosts[0];
     host = obj.scheme 
@@ -32,15 +34,6 @@
     DB_NAME = obj.database;
 
 
-    console.log('trying to connect to: ' + uriString);
-    mongo.MongoClient.connect(uriString, function(err, db) {
-      if(!err) { 
-          console.log("Connected to "+ DB_NAME + " database"); 
-          db = db;
-      } else {
-        console.log("Error connecting to " + DB_NAME + " database");
-      }
-    });
 
   } else {
     server = new Server('localhost', 27017, dbOpts);
@@ -64,11 +57,24 @@ module.exports = {
    * @todo: abstract into db methods so can reuse
    */
   getCollection: function(collName, cb) {
-    // 'testimonies' is the name of the collection from the database
-    db.collection(collName, function(err, results) {
-      if (err) cb(err);
-      else cb(null, results);
-    });
+     if (!db && bIsMongoLabs) {
+       mongo.MongoClient.connect(uriString, function(err, db) {
+         if (!err) {
+           db.collection(collName, function(err, results) {
+            if (err) cb(err);
+            else cb(null, results);
+          });
+         } else {
+           cb(err);
+         }
+       }  
+     } else {
+        // 'testimonies' is the name of the collection from the database
+        db.collection(collName, function(err, results) {
+          if (err) cb(err);
+          else cb(null, results);
+        });
+     }
   }
 
    /**
