@@ -154,8 +154,6 @@ module.exports = {
       , formKeys = {} // object to pass post data 
       ;
 
-    console.log('req body on add', req.body);
-
     formKeys = {
       form:{
           email: req.body.email

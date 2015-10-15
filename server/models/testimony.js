@@ -41,7 +41,6 @@
 
     db.open(function(err, db) {
         if(!err) { 
-          console.log("Connected to "+ DB_NAME + " database"); 
           db = db;
         }
     });
@@ -54,17 +53,11 @@ module.exports = {
    * @todo: abstract into db methods so can reuse
    */
   getCollection: function(collName, cb) {
-     console.log('this is db', db);
-     console.log('this is bIsMongoLabs', bIsMongoLabs);
 
      if (!db && bIsMongoLabs) {
-       console.log('trying to connect to uriString', uriString);
 
        mongo.MongoClient.connect(uriString, function(err, db) {
-         console.log('this is db', db);
          db = db;
-
-         console.log('this is err', err);
 
          if (!err) {
            db.collection(collName, function(err, results) {
@@ -182,8 +175,6 @@ module.exports = {
   , insert: function(collName, obj, cb) {
     this.getCollection(collName, function(err, collection) {
       if (err) {
-        console.log('error on insert: ', err);
-
         cb(err);
       } else {
          var objID = new ObjectID();

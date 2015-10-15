@@ -10,8 +10,6 @@ module.exports = {
   }
 
   , testimoniesAdd: function(req, res) {
-     console.log('req via api', req.body);
-
 
      var whiteList = [
          'b'
@@ -46,9 +44,6 @@ module.exports = {
        publish: false,
        title: title
       };
-
-
-      console.log('this is sanitized',  obj);
 
 
      // run through sanitizer, if anything thing required returns falsy,
