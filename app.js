@@ -11,8 +11,8 @@ var express     = require('express')
     , routesapi = require('./server/routes/api')
     , stylus    = require('stylus')
     , nib       = require('nib')
-    , helpers  = require('./server/js/utils/helpers')
-    , port      = 4000
+    , helpers   = require('./server/js/utils/helpers')
+    , port      = process.env.PORT || 4000
     ;
 
 function compile(str, path) {

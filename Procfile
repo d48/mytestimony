@@ -1,1 +1,1 @@
-web: npm run-script start-production
+web: node app.js
