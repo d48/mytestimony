@@ -24,7 +24,7 @@ var Helpers = {
      */
     , replaceTags: function(xStr){
         var regExp = /<\/?[^>]+>/gi;
-        return xStr.replace(regExp,"");
+        return xStr.replace(regExp," ");
     }
 
     /**
@@ -39,8 +39,11 @@ var Helpers = {
      * @author Ryan Regalado 
      */
     , truncateWords: function(html, numWords) {
-        var htmlStripped = Helpers.replaceTags(html);
-        return htmlStripped.split(/\s/).slice(0, numWords).join(" ") + "...";
+        var htmlStripped = Helpers.replaceTags(html)
+          , arrWords = htmlStripped.split(/\s/).slice(0, numWords)
+          ;
+
+        return arrWords.join(" ") + "...";
     }
 };
 
