@@ -6,13 +6,12 @@
 var express     = require('express')
     , app       = express()
     , server    = require('http').createServer(app)
-    , io        = require('socket.io').listen(server)
     , routes    = require('./server/routes')
     , routesapi = require('./server/routes/api')
     , stylus    = require('stylus')
     , nib       = require('nib')
-    , helpers   = require('./server/js/utils/helpers')
-    , port      = process.env.PORT || 4000
+    , helpers  = require('./server/js/utils/helpers')
+    , port      = 4000
     ;
 
 function compile(str, path) {
@@ -71,15 +70,6 @@ app.get('/api/v1/tags', routesapi.tags);
 app.get('/api/v1/tags/:tag', routesapi.testimoniesFromTag);
 app.post('/api/v1/testimonies', routesapi.testimoniesAdd);
 
-
-/* sockets */
-io.sockets.on('connection', function (socket) {
-  socket.emit('connect', { hello: 'world' });
-
-  socket.on('connected', function (data) {
-    console.log('client says: ' + data.status);
-  });
-});
 
 
 

@@ -2,10 +2,3 @@ block footer
     //- @todo plan how to pull in libs into application with dependency loading, eg require.js
     script(src="/socket.io/socket.io.js")
     script(src="/js/app.js")
-
-    script
-        var socket = io.connect('http://54.186.24.182/');
-        socket.on('connect', function(data) {
-            console.log('connected client', data);
-            socket.emit('connected', { status: 'connected homie' });
-        });
