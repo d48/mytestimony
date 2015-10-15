@@ -28,19 +28,30 @@
       + '@' + hostMongoLab.host
       + ':' + hostMongoLab.port
       ;
-    server = new Server(host, hostMongoLab.port, dbOpts);
+    // server = new Server(host, hostMongoLab.port, dbOpts);
     DB_NAME = obj.database;
+    // db = new Db(DB_NAME, server, {safe: true});
+    // @todo connect via mongo.mongoClient
+    mongo.mongoClient.connect(uriString, function(err, db) {
+      if(!err) { 
+          console.log("Connected to "+ DB_NAME + " database"); 
+          db = db;
+      }
+    });
+
   } else {
     server = new Server('localhost', 27017, dbOpts);
+    db = new Db(DB_NAME, server, {safe: true});
+
+    db.open(function(err, db) {
+        if(!err) { 
+          console.log("Connected to "+ DB_NAME + " database"); 
+          db = db;
+        }
+    });
   }
 
-  db = new Db(DB_NAME, server, {safe: true});
-
-
 // open up connection
-db.open(function(err, db) {
-    if(!err) { console.log("Connected to "+ DB_NAME + " database"); }
-});
 
 
 module.exports = {
