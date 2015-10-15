@@ -13,6 +13,10 @@
   margin: 0
   padding: 0 $gutterHalf
 
+  a 
+    font-weight: normal 
+    text-transform: none
+
   .divider
     border-right: 1px solid $mainBorderColor
     float: right
@@ -59,15 +63,17 @@
 
   #link-home
     color: $secondaryColor
-    font-size: 20px
-    font-weight: 400
+    font-family: $fontDisplay
+    font-size: $large
+    margin-top: -9px
     text-decoration: none
      
   #link-home-2
-    color: $secondaryColor
-    font-size: 20px
-    font-weight: 300
-    margin-left: 3px
+    color: $baseColor
+    font-family: $fontLogo
+    font-size: $large
+    margin-top: -9px
+    margin-left: 1px
     margin-right: $gutterSmall
     text-decoration: none
 
@@ -92,3 +98,12 @@
     margin-bottom: $gutterDouble
 
 
+.about
+  h1
+    font-family: $fontDisplay
+ 
+  ul
+    margin-bottom: $gutter
+
+  li 
+    margin: $gutterHalf 0
