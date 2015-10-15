@@ -26,15 +26,17 @@
       + '://' + obj.username 
       + ':' + obj.password 
       + '@' + hostMongoLab.host
-      + ':' + hostMongoLab.port
+      // + ':' + hostMongoLab.port
       ;
     server = new Server(host, hostMongoLab.port, dbOpts);
     DB_NAME = obj.database;
+
   } else {
     server = new Server('localhost', 27017, dbOpts);
   }
 
   db = new Db(DB_NAME, server, {safe: true});
+
 
 // open up connection
 db.open(function(err, db) {
