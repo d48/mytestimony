@@ -66,16 +66,9 @@ module.exports = {
    */
   , index: function(req,res) {
     var host   = req.headers.host
-    , tag      = req.params.tag
     , webRoot  = 'http://' + host
-    , url      = (typeof tag !== 'undefined') ? webRoot + urls['tags'] + tag : webRoot + urls['testimonies']
+    , url      = webRoot + urls['testimonies']
     , options  = {url: url, json: true};
-
-    // get tags
-    getTags(webRoot, function(tags) {
-      // makes it available for template to use
-      res.locals.tags = tags;
-      res.locals.pageTag = tag;
 
       // ajax request to get testimonies
       request.get(options, function(error, response, body) {
@@ -87,7 +80,6 @@ module.exports = {
           });
         }
       });
-    });
   }
 
   /**
@@ -128,31 +120,18 @@ module.exports = {
       , options = {url: url, json: true}
       ;
 
-      // get tags
-      getTags(webRoot, function(tags) {
-        res.locals.tags = tags;
-
         // on success, get testimony
         // @todo Have each partial requests it's own data? Would have to do client side
         request.get(options, function(error, response, body) {
           if (!error && response.statusCode === 200) {
-            var testimonyTags = body.tags;
-            testimonyTags = testimonyTags.sort(appHelper.compare);
-
-            if (testimonyTags.length === 1 && testimonyTags[0] === '') {
-                testimonyTags = undefined;
-            }
 
             res.render('testimonies', {
               title: 'MyTestimony.com - Testimony'
               , page: 'testimony'
               , testimony: body
-              , testimonyTags: testimonyTags
             });
           }
         });
-      });
-
   }
 
     /**
@@ -179,7 +158,6 @@ module.exports = {
       form:{
           email: req.body.email
         , name: req.body.name
-        , tags: req.body.tags
         , testimony: req.body.testimonyHidden
         , title: req.body.title
       }
