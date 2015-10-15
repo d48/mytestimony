@@ -1,5 +1,6 @@
 // Connect to db
   var mongo   = require('mongodb')
+  , mongoUri  = require('mongodb-uri')
   , uriString = process.env.MONGOLAB_URI
   , DB_NAME   = 'mytestimony'
   , Server    = mongo.Server
@@ -8,21 +9,22 @@
   , ObjectID  = mongo.ObjectID
   , shortId   = require('short-mongo-id')
   , strCheck  = 'mongolab.com:'
+  , dbOpts    = {
+    auto_reconnect : true
+  }
+  , obj
+  , host
   , server   
   , db      
-  , uriStringIndex
-  , uriTempo
-  , uriPort
   ;
 
   if (typeof uriString !== 'undefined') {
-    uriStringIndex = uriString.indexOf(strCheck);
-    uriTemp = uriString.substring(uriStringIndex + strCheck.length);
-    uriPort = uriTemp.split('/')[0]; 
-
-    server   = new Server(uriString.substring(0, uriStringIndex + (strCheck.length - 1 )), Number(uriPort), {auto_reconnect: true});
+    obj = mongoUri.parse(uriString); 
+    host = obj.scheme + '://' + obj.username + ':' + obj.password + '@' + obj.hosts.host;
+    server = new Server(host, obj.hosts.port, dbOpts);
+    DB_NAME = obj.database;
   } else {
-    server   = new Server('localhost', 27017, {auto_reconnect: true})
+    server = new Server('localhost', 27017, dbOpts);
   }
 
   db = new Db(DB_NAME, server, {safe: true});
