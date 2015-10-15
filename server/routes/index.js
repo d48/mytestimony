@@ -78,7 +78,7 @@ module.exports = {
             , page: 'home'
             , testimonies: body || []
           });
-        } 
+        } else { 
           console.error('There was en error', error); 
         }
       });
