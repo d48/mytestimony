@@ -20,7 +20,7 @@
     uriTemp = uriString.substring(uriStringIndex + strCheck.length);
     uriPort = uriTemp.split('/')[0]; 
 
-    server   = new Server(uriString.substring(0, uriStringIndex + (strCheck.length - 1 )), uriPort, {auto_reconnect: true});
+    server   = new Server(uriString.substring(0, uriStringIndex + (strCheck.length - 1 )), Number(uriPort), {auto_reconnect: true});
   } else {
     server   = new Server('localhost', 27017, {auto_reconnect: true})
   }
