@@ -182,6 +182,8 @@ module.exports = {
   , insert: function(collName, obj, cb) {
     this.getCollection(collName, function(err, collection) {
       if (err) {
+        console.log('error on insert: ', err);
+
         cb(err);
       } else {
          var objID = new ObjectID();

@@ -78,6 +78,8 @@ module.exports = {
             , page: 'home'
             , testimonies: body || []
           });
+        } 
+          console.error('There was en error', error); 
         }
       });
   }
