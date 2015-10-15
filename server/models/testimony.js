@@ -32,7 +32,7 @@
     DB_NAME = obj.database;
     // db = new Db(DB_NAME, server, {safe: true});
     // @todo connect via mongo.mongoClient
-    mongo.mongoClient.connect(uriString, function(err, db) {
+    mongo.MongoClient.connect(uriString, function(err, db) {
       if(!err) { 
           console.log("Connected to "+ DB_NAME + " database"); 
           db = db;
