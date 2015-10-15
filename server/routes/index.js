@@ -76,7 +76,7 @@ module.exports = {
           res.render('index', {
             title: 'MyTestimony.com'
             , page: 'home'
-            , testimonies: body
+            , testimonies: body || []
           });
         }
       });
