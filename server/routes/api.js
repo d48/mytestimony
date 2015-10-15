@@ -59,6 +59,7 @@ module.exports = {
      tm.insert('testimonies', obj, function(error, response) {
         res.json(response);
      }); 
+
   }
 
   , testimoniesId: function(req, res) {
