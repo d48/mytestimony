@@ -25,6 +25,7 @@
   "engine": "0.12.0",
   "scripts": {
     "start": "./bin/start-app-dev.sh",
+    "start-production": "./bin/start-app.sh",
     "stop": "./bin/stop-app.sh",
     "test": "mocha -R spec test/*.js",
     "build": "stylus ./client/css ./client/css"
