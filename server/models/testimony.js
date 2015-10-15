@@ -28,14 +28,17 @@
       + '@' + hostMongoLab.host
       + ':' + hostMongoLab.port
       ;
-    // server = new Server(host, hostMongoLab.port, dbOpts);
+
     DB_NAME = obj.database;
-    // db = new Db(DB_NAME, server, {safe: true});
-    // @todo connect via mongo.mongoClient
+
+
+    console.log('trying to connect to: ' + uriString);
     mongo.MongoClient.connect(uriString, function(err, db) {
       if(!err) { 
           console.log("Connected to "+ DB_NAME + " database"); 
           db = db;
+      } else {
+        console.log("Error connecting to " + DB_NAME + " database");
       }
     });
 
