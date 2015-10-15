@@ -14,14 +14,21 @@
   }
   , obj
   , host
+  , hostMongoLab
   , server   
   , db      
   ;
 
   if (typeof uriString !== 'undefined') {
     obj = mongoUri.parse(uriString); 
-    host = obj.scheme + '://' + obj.username + ':' + obj.password + '@' + obj.hosts.host;
-    server = new Server(host, obj.hosts.port, dbOpts);
+    hostMongoLab = obj.hosts[0];
+    host = obj.scheme 
+      + '://' + obj.username 
+      + ':' + obj.password 
+      + '@' + hostMongoLab.host
+      + ':' + hostMongoLab.port
+      ;
+    server = new Server(host, hostMongoLab.port, dbOpts);
     DB_NAME = obj.database;
   } else {
     server = new Server('localhost', 27017, dbOpts);
