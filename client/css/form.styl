@@ -3,6 +3,9 @@
     font-family: $fontDisplay
 
 #testimony-form
+  #submit-button 
+    display: block 
+    margin: 0 auto
 
   &:after
     content: ""
@@ -43,9 +46,6 @@
   #testimonybox:empty:before
     content: attr(data-placeholder)
     placeholder()
-
-  .btn-group
-    float: right
 
   .control-group
     margin-bottom: $gutter

@@ -16,7 +16,7 @@ block main
 
             div#title-container.control-group
                 label(for="title") Title *
-                input#title(name="title", type="text", class="required field", placeholder="First thing people see when listed on the website", data-placeholder="First thing people see when listed on the website")
+                input#title(name="title", type="text", class="required field", placeholder="Enter a title for your testimony", data-placeholder="Enter a title for your testimony")
 
             div#testimony-container.control-group
                 label(for="testimony", id="enter-testimony") Your Testimony *
@@ -30,8 +30,7 @@ block main
                     li.icon-format-list-bulleted
                     li.icon-format-list-numbered
 
-            div
-                button#submit-button(class="btn btn-default btn-large btn-primary") Publish
+            button#submit-button(class="btn btn-default btn-large btn-primary") Publish
 
             input#testimonyHidden(type="hidden", name="testimonyHidden")
 
