@@ -6,3 +6,4 @@ data/db/mongod.lock
 .DS_Store
 .idea/
 npm-debug.log
+.vagrant

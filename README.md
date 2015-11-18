@@ -4,9 +4,9 @@
  __    __     __  __     ______   ______     ______     ______   __     __    __     ______     __   __     __  __    
 /\ "-./  \   /\ \_\ \   /\__  _\ /\  ___\   /\  ___\   /\__  _\ /\ \   /\ "-./  \   /\  __ \   /\ "-.\ \   /\ \_\ \   
 \ \ \-./\ \  \ \____ \  \/_/\ \/ \ \  __\   \ \___  \  \/_/\ \/ \ \ \  \ \ \-./\ \  \ \ \/\ \  \ \ \-.  \  \ \____ \  
- \ \_\ \ \_\  \/\_____\    \ \_\  \ \_____\  \/\_____\    \ \_\  \ \_\  \ \_\ \ \_\  \ \_____\  \ \_\\"\_\  \/\_____\ 
-  \/_/  \/_/   \/_____/     \/_/   \/_____/   \/_____/     \/_/   \/_/   \/_/  \/_/   \/_____/   \/_/ \/_/   \/_____/ 
-                                                                                                                      
+ \ \_\ \ \_\  \/\_____\    \ \_\  \ \_____\  \/\_____\    \ \_\  \ \_\  \ \_\ \ \_\  \ \_____\  \ \_\\"\_\  \/\_____\
+  \/_/  \/_/   \/_____/     \/_/   \/_____/   \/_____/     \/_/   \/_/   \/_/  \/_/   \/_____/   \/_/ \/_/   \/_____/
+
 ```
 
 # Overview
@@ -21,6 +21,21 @@ This is a website to help people share about their tesimony of what God has done
 [View temporary working website on Heroku](http://mytestimony.herokuapp.com)
 
 
+## Run the app locally with Vagrant
+
+* Requirements
+  * Virtualbox - [https://www.virtualbox.org/]
+  * Vagrant - [https://docs.vagrantup.com/v2/installation/index.html]
+
+Once Virtualbox and Vagrant are installed you just need to clone this repo and run vagrant up. Vagrant will take care of installing the necessary dependencies and loading the app.
+
+```
+$ git clone https://github.com/d48/mytestimony.git
+$ cd mytestimony
+$ vagrant up
+```
+Now you should see the app at `http://localhost:4000`
+
 ## Technology
 
 * [Overview](https://github.com/d48/mytestimony/wiki/Technology)
@@ -29,8 +44,8 @@ This is a website to help people share about their tesimony of what God has done
 ## How to configure/install and run locally
 
 * Requirements
-  * Node.js version 0.8.14 - [http://blog.nodejs.org/2012/10/25/node-v0.8.14/](Download and install)
-  * MongoDB - [http://docs.mongodb.org/manual/installation/](Download and install)
+  * Node.js
+  * MongoDB
 
 Once the above is installed, clone this repo and run `npm install` to donwload and install node library dependencies
 
@@ -39,7 +54,7 @@ $ git clone git@github.com:d48/mytestimony.git && cd mytestimony
 $ npm install
 ```
 
-**To start app**, run the following and open web browser at `http://localhost:3000`
+**To start app**, run the following and open web browser at `http://localhost:4000`
 
 ```
 $ make startapp
@@ -48,7 +63,7 @@ $ make startapp
 **To stop app**
 
 ```
-$ make stopapp 
+$ make stopapp
 ```
 
 
@@ -103,7 +118,7 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
   * or ability to upload their own testimonial video
 * ability to post up their own audio testimony
 * ~~Overview of who, what, where, how~~
-* Wireframes for main application for creating and list of tesimony view 
+* Wireframes for main application for creating and list of tesimony view
      * ~~Create page~~
 	   * ~~Design testimony detail page~~
      * ~~List of random testimonials~~
@@ -132,7 +147,7 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
         * vid of browsing through with loaders, modals, and content fades: http://screencast.com/t/VyrULmZL9m2u
     * streamline editor, look at http://www.medium.com
         * vid of browsing and using editor to create a post: http://www.screencast.com/t/wKkNX88hQGwl
-* Authentication 
+* Authentication
     * Set up passwordless authentication that hooks into email: http://blog.design48.net/2014/04/15/passwordless-authentication/
 * Creating Testimony
     * idea from Jacin about Zemanta for auto-tagging and suggestions
@@ -146,12 +161,12 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
 * Poster and visitor engagement
     * have poster inspired by comments, likes, shares
     * may not have comments so as to control spam and having to control
-    
-	
+
+
 
 ## Todo
 - Start rolling out mocha tests
-  * hook in zombie.js or phantom.js to mock in DOM 
+  * hook in zombie.js or phantom.js to mock in DOM
 - Integrate `jsdoc3` lib and throw in `doc` directory. To build on every post-commit or set up watch on changes to .js file
   * Start looking into grunt for build/deploy scripts
 - Look into postmark.js and wrapper for api https://github.com/voodootikigod/postmark.js
@@ -167,12 +182,12 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
   * ux design to have button open up div with options
 - CI
   * look into http://ci.testling.com/
-  * connect to ci and continuous deployment environment 
+  * connect to ci and continuous deployment environment
 - Security
   * https://speakerdeck.com/ckarande/top-overlooked-security-threats-to-node-dot-js-web-applications
   * CSRF for forms here: http://scottksmith.com/blog/2014/09/04/simple-steps-to-secure-your-express-node-application
   * look into node lib for common security issues to apply for express middleware: https://github.com/evilpacket/helmet
-- Modules 
+- Modules
   * ~~browserify~~ nope, adds to much overhead
   * requirejs
   * ~~breaking up js into modules for client~~ in progress
@@ -181,7 +196,7 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
   * this will be enabled once smtp server setup to send out email to confirm for user if they want to publish testimony
   * use of hashid: https://github.com/ivanakimov/hashids.node.js/issues/1
 - Tags
-  * bug: on testimony form, adding tag for `6:38` doesn't take once press enter key. 
+  * bug: on testimony form, adding tag for `6:38` doesn't take once press enter key.
 - DB
   * manage db solution apart from github
 - Text share feature
@@ -195,4 +210,3 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
   * http://rowanmanning.com/posts/node-cluster-and-express/
 - Design
   * create mood board: http://lai.github.io/rendevo.html
-    
