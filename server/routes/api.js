@@ -1,5 +1,10 @@
 var tm = require('./../models/testimony.js')
 var bleach = require('bleach');
+var emailer = require('./../js/utils/emailer.js')
+
+function handleError(msg) {
+  console.log('Error: ' + msg);
+}
 
 module.exports = {
   testimonies: function(req, res) {
@@ -52,7 +57,28 @@ module.exports = {
      // @todo add error handling for xhr requests
 
      tm.insert('testimonies', obj, function(error, response) {
-        res.json(response);
+       if (error) {
+         handleError(error);
+       }
+       // send email 
+       var opts = {
+
+       };
+
+       emailer.sendMail(null, function(err, info) {
+         if (err) {
+           // should update client if error
+           handleError(err);            
+         }
+
+         console.log('sendMail success: ' + info);
+       });
+
+       // update client
+       // @todo if error in sending email, should trigger update in client
+       // to notify of an issue. Need to flag admin as well (this should be 
+       // handled via some general logging system)
+       res.json(response);
      }); 
 
   }
