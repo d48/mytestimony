@@ -13,10 +13,12 @@ var nodemailer = require('nodemailer')
 ;
 
 
+console.log('transportString', transportString);
+
 var transporter = nodemailer.createTransport(transportString);
 
 // default mail options
-var mailOptions = {
+var mailOptionsDefault = {
   from    : emailFrom,
   to      : emailTo,
   subject : emailSubject,
@@ -30,15 +32,14 @@ var templates = {
 
 // send email
 function sendMail(opts, cb) {
-  var mailOpts = {};
+  var mailOpts = mailOptionsDefault;
 
   cb = cb || function() {};
 
   // do proper over-riding of mailOptions
-  if (opts) {
-  } else {
-    mailOpts = mailOptions;
-  }
+  if (opts && opts.emailTo) {
+    mailOpts.to = opts.emailTo;
+  } 
 
   transporter.sendMail(mailOpts, function sendEmailFn (err, info) {
     if (err) {
@@ -55,7 +56,7 @@ var exports = {
   sendMail: sendMail
 };
 
-modules.exports = exports;
+module.exports = exports;
 
 
 

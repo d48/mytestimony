@@ -61,11 +61,11 @@ module.exports = {
          handleError(error);
        }
        // send email 
-       var opts = {
-
+       var emailOpts = {
+          emailTo: email
        };
 
-       emailer.sendMail(null, function(err, info) {
+       emailer.sendMail(emailOpts, function(err, info) {
          if (err) {
            // should update client if error
            handleError(err);            
