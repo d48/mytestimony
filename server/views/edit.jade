@@ -1,0 +1,38 @@
+extends layout
+
+block main 
+    h1 Edit your testimony
+
+    div.divider
+
+    div#testimony-form
+
+        form( method="post", action="/edit", name="form-testimony", id="form-testimony" )
+            div#name-container.control-group
+                label(for="name") Name
+                input#name(name="name", type="text", class="field", placeholder='If blank, it will show from "Anonymous"', data-placeholder='If blank, it will show from "Anonymous"', autofocus, value=testimony.name)
+
+            div#email-container.control-group
+                label(for="email") E-mail address *
+                input#email(name="email", type="text", class="required field", placeholder="Provide so you can edit this testimony after it's published", data-placeholder="Provide so you can edit this testimony after it's published", value=testimony.email)
+
+            div#title-container.control-group
+                label(for="title") Title *
+                input#title(name="title", type="text", class="required field", placeholder="Enter a title for your testimony", data-placeholder="Enter a title for your testimony", value=testimony.title)
+
+            div#testimony-container.control-group
+                label(for="testimony", id="enter-testimony") Your Testimony *
+
+                div#testimonybox(name="testimony", cols="40", rows="10", contenteditable="true", class="required field", placeholder="Share your story", data-placeholder="Share your story")
+                    !=testimony.testimony
+
+                ul#editor
+                    li.icon-format-bold
+                    li.icon-format-italic
+                    li.icon-format-underline
+                    li.icon-format-list-bulleted
+                    li.icon-format-list-numbered
+
+            button#submit-button(class="btn btn-default btn-large btn-primary") Update
+
+            input#testimonyHidden(type="hidden", name="testimonyHidden")

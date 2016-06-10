@@ -144,18 +144,18 @@ module.exports = {
      * 
      * @name findOne
      * @param {String} collName - 
-     * @param {String} id - BSON ObjectID
+     * @param {Object} obj - parameter to search by, e.g., { shortId: CWKiUkJ }
      * @param {Function} cb - callback used for error or response process 
      * @returns {Function} - callback 
      * @method 
      * @author Ryan Regalado 
      */
-  , findOne: function(collName, id, cb) {
+  , findOne: function(collName, obj, cb) {
 
     this.getCollection(collName, function(err, collection) {
       if (err) cb(err);
       else {
-         collection.findOne({shortId: id}, function(err, results) {
+         collection.findOne(obj, function(err, results) {
            if (err) cb(err);
            else cb(null, results);
          });
@@ -181,6 +181,7 @@ module.exports = {
          obj._id = objID;
          obj.date = new Date();
          obj.shortId = shortId(objID.valueOf());
+         obj.editId = obj.shortId + obj.date.getTime();
 
          collection.insert(obj, function(err, results) {
            if (err) cb(err);

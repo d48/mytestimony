@@ -57,6 +57,7 @@ app.get('/index/:tag', routes.index);
 app.get('/about', routes.about);
 app.get('/contact', routes.contact);
 app.get('/share', routes.share);
+app.get('/testimonies/edit/:id', routes.testimoniesEdit);
 app.get('/testimonies/:id', routes.testimonies);
 app.post('/testimonies', routes.testimoniesAdd);
 
@@ -66,6 +67,7 @@ app.post('/testimonies', routes.testimoniesAdd);
 //       But add auth
 app.get('/api/v1/testimonies', routesapi.testimonies);
 app.get('/api/v1/testimonies/:id', routesapi.testimoniesId);
+app.get('/api/v1/testimonies/edit/:id', routesapi.testimoniesEdit);
 app.get('/api/v1/tags', routesapi.tags);
 app.get('/api/v1/tags/:tag', routesapi.testimoniesFromTag);
 app.post('/api/v1/testimonies', routesapi.testimoniesAdd);

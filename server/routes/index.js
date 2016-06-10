@@ -54,6 +54,8 @@ module.exports = {
   }
 
 
+
+
   /**
    * Home page that gets testimony data from database
    * 
@@ -95,10 +97,10 @@ module.exports = {
    * @author Ryan Regalado 
    */
   , share: function(req,res) {
-	res.render('share', {
-		title: 'MyTestimony.com'
-		, page: 'share'
-	});
+    res.render('share', {
+      title: 'MyTestimony.com'
+      , page: 'share'
+    });
   }
 
 
@@ -169,4 +171,41 @@ module.exports = {
       }      
     });
   }
+
+    /**
+     * Retrieves a testimony based on editId
+     * 
+     * @name testimoniesEdit
+     * @param {Object} req - Reqeust object
+     * @param {Object} res - Response object
+     * @returns void - Render template
+     * @returns void - 
+     * @method 
+     * @author Ryan Regalado 
+     */
+  , testimoniesEdit: function(req,res) {
+    var host   = req.headers.host
+    , id = req.params.id
+    , webRoot  = 'http://' + host
+    , url      = webRoot + urls['testimonies'] + 'edit/' + id
+    , options  = {url: url, json: true};
+
+      // ajax request to get testimonies
+      request.get(options, function(error, response, body) {
+        if (!error && response.statusCode === 200) {
+          res.render('edit', {
+            title: 'MyTestimony.com'
+            , page: 'edit'
+            , testimony: body
+          });
+        } else { 
+          console.error('There was en error', error); 
+        }
+      });
+
+
+  }
+
+
+
 }; 

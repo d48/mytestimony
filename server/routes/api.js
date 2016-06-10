@@ -83,10 +83,23 @@ module.exports = {
 
   }
 
+  , testimoniesEdit: function(req, res) {
+    // get one testimony
+    tm.findOne('testimonies', { editId: req.params.id }, function(error, testimony) {
+      if (error) {
+        console.log('error retreiving edit', error);
+      } else {
+        console.log('testimony', testimony);
+      }
+      res.json(testimony);
+    });
+  }
+
+
+
   , testimoniesId: function(req, res) {
-    var id = req.params.id;
-    // get all testimonies
-    tm.findOne('testimonies', id, function(error, testimony) {
+    // get one testimony
+    tm.findOne('testimonies', { shortId: req.params.id }, function(error, testimony) {
       res.json(testimony);
     });
   }
