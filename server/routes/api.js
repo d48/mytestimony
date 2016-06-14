@@ -14,18 +14,17 @@ module.exports = {
     });
   }
 
+  , sendEmail: function() {
+
+  }
+
+  , sanitizeList: function() {
+
+  }
+
   , testimoniesAdd: function(req, res) {
-
-     var whiteList = [
-         'b'
-         , 'i'
-         , 'u'
-         , 'ul'
-         , 'ol'
-         , 'li'
-         , 'div'
-     ];
-
+     var body = req.body;
+     var whiteList = ['b', 'i', 'u', 'ul', 'ol', 'li', 'div'];
      var opts = {
          mode: 'white'
          , list: whiteList
