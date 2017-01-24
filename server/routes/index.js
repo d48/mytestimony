@@ -129,6 +129,8 @@ module.exports = {
         request.get(options, function(error, response, body) {
           if (!error && response.statusCode === 200) {
 
+              console.log('DEBUG: body', body);
+
             res.render('testimonies', {
               title: 'MyTestimony.com - Testimony'
               , page: 'testimony'
@@ -207,5 +209,14 @@ module.exports = {
   }
 
 
+  , testimoniesEditPost: function(req,res) {
+    var host   = req.headers.host
+    , id = req.params.id
+    , webRoot  = 'http://' + host
+    , url      = webRoot + urls['testimonies'] + 'edit/' + id
+    , options  = {url: url, json: true};
 
+
+
+    }
 }; 

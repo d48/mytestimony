@@ -7,7 +7,7 @@ block main
 
     div#testimony-form
 
-        form( method="post", action="/edit", name="form-testimony", id="form-testimony" )
+        form( method="post", action="/testimonies/edit", name="form-testimony", id="form-testimony" )
             div#name-container.control-group
                 label(for="name") Name
                 input#name(name="name", type="text", class="field", placeholder='If blank, it will show from "Anonymous"', data-placeholder='If blank, it will show from "Anonymous"', autofocus, value=testimony.name)

@@ -103,17 +103,15 @@ module.exports = {
      * @method 
      * @author Ryan Regalado 
      */
-  , find: function(collName, tag, cb) {
+  , find: function(collName, condition, cb) {
       this.getCollection(collName, function(err, collection) {
-          if (err) cb(err);
-          else {
-              // set as array in case want to filter based on multiple
-              var condition = {
-                  tags: {
-                      $all: [tag]
-                  }
-              }
-              ;
+          if (err) {
+            cb(err);
+          } else {
+              var orderby = { date: 1 };
+              // condition['$orderby'] = orderby;
+
+              console.log('condition', condition);
 
               collection.find(condition).toArray(function(err, results) {
                   if (err) cb(err);

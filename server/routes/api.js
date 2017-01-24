@@ -8,8 +8,8 @@ function handleError(msg) {
 
 module.exports = {
   testimonies: function(req, res) {
-    // get all testimonies
-    tm.findAll('testimonies', function(error, testimonies) {
+    // get all testimonies where publish is true
+    tm.find('testimonies', { publish: true }, function(error, testimonies) {
       res.json(testimonies);
     });
   }
@@ -64,6 +64,7 @@ module.exports = {
           emailTo: email
        };
 
+       // send to admin to approve
        emailer.sendMail(emailOpts, function(err, info) {
          if (err) {
            // should update client if error
@@ -94,8 +95,6 @@ module.exports = {
     });
   }
 
-
-
   , testimoniesId: function(req, res) {
     // get one testimony
     tm.findOne('testimonies', { shortId: req.params.id }, function(error, testimony) {
@@ -111,7 +110,15 @@ module.exports = {
   }
 
   , testimoniesFromTag: function(req, res) {
-      tm.find('testimonies', req.params.tag, function(error, testimonies) {
+      // set as array in case want to filter based on multiple
+      var condition = {
+          tags: {
+              $all: [req.params.tag]
+          }
+      };
+ 
+
+      tm.find('testimonies', condition, function(error, testimonies) {
           res.json(testimonies);
       });
   }
