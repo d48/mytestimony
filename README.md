@@ -9,6 +9,12 @@
 
 ```
 
+# Action
+* 1/24/2017 - left off on `edit/email` branch, added `/testimonies/edit` route and need to setup posting of updates to save to database. Set up where only publishing testmonies with publish set to `true`
+* Need to setup auto-emails to admin with unique publish link that updates flag in database
+* This will trigger email to user that created the testimony along with link to update
+* This then will trigger another email to admin to approve any updates
+
 # Overview
 
 This is a website to help people share about their tesimony of what God has done in their life. This is specifically for people that follow Jesus Christ and would like others to know of how Jesus has changed their lives. Online tools will be provided to:
