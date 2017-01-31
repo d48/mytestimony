@@ -160,7 +160,9 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
     * user/testimony linking with approval process
 * Poster and visitor engagement
     * have poster inspired by comments, likes, shares
-    * may not have comments so as to control spam and having to control
+    * may not have comments so as to control spam and having to control   
+* FAQ / About
+    * Will link to this once live: https://d48.gitbooks.io/mytestimony/content/
 
 
 
