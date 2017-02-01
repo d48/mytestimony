@@ -1,9 +1,29 @@
 var tm = require('./../models/testimony.js')
 var bleach = require('bleach');
 var emailer = require('./../js/utils/emailer.js')
+var host = process.env.NODE_ENV !== 'production' ? 'localhost:4000' : 'mytestimony.herokuapp.com'
+
+console.log('environment', process.env.NODE_ENV);
 
 function handleError(msg) {
   console.log('Error: ' + msg);
+}
+
+
+function _prepareHTMLText(testimony) {
+  var message = ''
+    , br = '<br />'
+  ;
+
+  message += br;
+  message += 'Email: ' + testimony.email + br;
+  message += 'Testimony: ' + testimony.testimony + br;
+  message += 'Name: ' + testimony.name + br;
+  message += 'Title: ' + testimony.title + br;
+  message += 'Date: ' + testimony.date.toString() + br;
+  message += 'Okay to publish? http://' + host + '/testimonies/publish/' + testimony._id + br;
+
+  return message;
 }
 
 module.exports = {
@@ -21,6 +41,7 @@ module.exports = {
   , sanitizeList: function() {
 
   }
+  
 
   , testimoniesAdd: function(req, res) {
      var body = req.body;
@@ -58,11 +79,16 @@ module.exports = {
      tm.insert('testimonies', obj, function(error, response) {
        if (error) {
          handleError(error);
+         return;
        }
        // send email 
        var emailOpts = {
-          emailTo: email
+         subject: 'MyTestimony App - admin approval needed, new testimony',
+         to: email,
+         html: 'A new testimony has been posted, please review and publish if approved.'
        };
+
+       emailOpts.html += _prepareHTMLText(response.ops[0]);
 
        // send to admin to approve
        emailer.sendMail(emailOpts, function(err, info) {

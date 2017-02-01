@@ -1,4 +1,5 @@
 var nodemailer = require('nodemailer')
+  , extend = require('extend')
   // connection
   , user = process.env.NODEMAILER_USER || ''
   , pass = process.env.NODEMAILER_PASS || ''
@@ -11,9 +12,6 @@ var nodemailer = require('nodemailer')
   , emailText = 'Hello from MyTestimony App'
   , emailHtml = '<b>Hello from MyTestimony App</b>'
 ;
-
-
-console.log('transportString', transportString);
 
 var transporter = nodemailer.createTransport(transportString);
 
@@ -32,13 +30,13 @@ var templates = {
 
 // send email
 function sendMail(opts, cb) {
-  var mailOpts = mailOptionsDefault;
+  var mailOpts;
 
   cb = cb || function() {};
 
   // do proper over-riding of mailOptions
-  if (opts && opts.emailTo) {
-    mailOpts.to = opts.emailTo;
+  if (opts) {
+    mailOpts = extend({}, mailOptionsDefault, opts);
   } 
 
   transporter.sendMail(mailOpts, function sendEmailFn (err, info) {

@@ -10,8 +10,10 @@
 ```
 
 # Action
-* 1/24/2017 - left off on `edit/email` branch, added `/testimonies/edit` route and need to setup posting of updates to save to database. Set up where only publishing testmonies with publish set to `true`
-* Need to setup auto-emails to admin with unique publish link that updates flag in database
+* 1/31/2017 - left off on `edit/email` branch
+* styled email template to admin that included testimony detail and publish link
+* Used export NODE_ENV=development to customize publish link 
+* link up `/publish` route with id to update publish flag in database
 * This will trigger email to user that created the testimony along with link to update
 * This then will trigger another email to admin to approve any updates
 
