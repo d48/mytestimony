@@ -212,3 +212,5 @@ View architecture and details here: https://docs.google.com/document/d/1DmooeXBQ
   * http://rowanmanning.com/posts/node-cluster-and-express/
 - Design
   * create mood board: http://lai.github.io/rendevo.html
+- Animation
+  * Use this lib for fade ins: https://daneden.github.io/animate.css/
