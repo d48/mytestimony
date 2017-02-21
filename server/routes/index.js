@@ -208,13 +208,33 @@ module.exports = {
 
   }
 
-
   , testimoniesEditPost: function(req,res) {
     var host   = req.headers.host
     , id = req.params.id
     , webRoot  = 'http://' + host
     , url      = webRoot + urls['testimonies'] + 'edit/' + id
-    , options  = {url: url, json: true};
+    , formKeys = {} // object to pass post data 
+    ;
 
-    }
+    formKeys = {
+      form:{
+          email: req.body.email
+        , name: req.body.name
+        , testimony: req.body.testimonyHidden
+        , title: req.body.title
+        , id: req.body.idHidden
+      }
+    };
+
+    request.post(url, formKeys, function(error, response, body) {
+        if (error) {
+            console.log('error in posting edit', error);
+            return;
+        }
+
+        if (!error && response.statusCode === 200) {
+            res.redirect('/');
+        }      
+    });
+  }
 }; 

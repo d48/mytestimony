@@ -188,6 +188,20 @@ module.exports = {
       }
     });
   }
+  , findOneAndUpdate: function (collName, query, obj, cb) {
+     this.getCollection(collName, function(err, collection) {
+      if (err) {
+        cb(err);
+      } else {
+         collection.findOneAndUpdate(query, obj, { returnOriginal: false }, function(err, results) {
+             console.log('results from update', results);
+           if (err) cb(err);
+           else cb(null, results);
+         });
+      }
+    });
+     
+  }
 
 
 };

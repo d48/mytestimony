@@ -2,6 +2,7 @@ var tm = require('./../models/testimony.js')
 var bleach = require('bleach');
 var emailer = require('./../js/utils/emailer.js')
 var host = process.env.NODE_ENV !== 'production' ? 'localhost:4000' : 'mytestimony.herokuapp.com'
+var emailAdmin = 'ryanreg48@gmail.com';
 
 console.log('environment', process.env.NODE_ENV);
 
@@ -79,13 +80,13 @@ module.exports = {
        // send email 
        var emailOpts = {
          subject: 'MyTestimony App - admin approval needed, new testimony',
-         to: obj.email,
+         to: emailAdmin,
          html: 'A new testimony has been posted, please review and publish if approved.'
        };
 
        emailOpts.html += _prepareHTMLText(response.ops[0]);
 
-       // send to admin to approve
+       // sending to admin to approve
        emailer.sendMail(emailOpts, function(err, info) {
          if (err) {
            // should update client if error
@@ -115,6 +116,53 @@ module.exports = {
       res.json(testimony);
     });
   }
+
+  , testimoniesEditPost: function(req, res) {
+     var obj = _sanitizeForm(req.body)
+         , id = req.body.id
+        , update = {
+         $set : obj
+     };
+
+     // run through sanitizer, if anything thing required returns falsy,
+     // kick out error
+
+     // @todo add error handling for xhr requests
+
+     tm.findOneAndUpdate('testimonies', { editId: id }, update, function(error, response) {
+       if (error) {
+         console.log('error in updating testimonies', error);
+         handleError(error);
+         return;
+       }
+       // send email 
+       var emailOpts = {
+         subject: 'MyTestimony App - admin approval needed, updated testimony',
+         to: emailAdmin,
+         html: 'An updated testimony has been posted, please review and publish if approved.'
+       };
+
+       emailOpts.html += _prepareHTMLText(response.value);
+
+       // sending to admin to approve
+       emailer.sendMail(emailOpts, function(err, info) {
+         if (err) {
+           // should update client if error
+           handleError(err);            
+         }
+
+         console.log('sendMail success: ' + info);
+       });
+
+       // update client
+       // @todo if error in sending email, should trigger update in client
+       // to notify of an issue. Need to flag admin as well (this should be 
+       // handled via some general logging system)
+       res.json(response);
+     }); 
+  }
+
+
 
   , testimoniesId: function(req, res) {
     // get one testimony

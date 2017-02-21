@@ -60,7 +60,7 @@ app.get('/share', routes.share);
 app.get('/testimonies/:id', routes.testimonies);
 app.get('/testimonies/edit/:id', routes.testimoniesEdit);
 app.post('/testimonies', routes.testimoniesAdd);
-app.post('/testimonies/edit/:id', routes.testimoniesEditPost);
+app.post('/testimonies/edit', routes.testimoniesEditPost);
 
 
 // API routes
@@ -72,6 +72,7 @@ app.get('/api/v1/testimonies/edit/:id', routesapi.testimoniesEdit);
 app.get('/api/v1/tags', routesapi.tags);
 app.get('/api/v1/tags/:tag', routesapi.testimoniesFromTag);
 app.post('/api/v1/testimonies', routesapi.testimoniesAdd);
+app.post('/api/v1/testimonies/edit/:id', routesapi.testimoniesEditPost);
 
 
 server.listen(port);
