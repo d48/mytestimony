@@ -216,7 +216,5 @@ module.exports = {
     , url      = webRoot + urls['testimonies'] + 'edit/' + id
     , options  = {url: url, json: true};
 
-
-
     }
 }; 

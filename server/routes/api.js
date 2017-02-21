@@ -26,6 +26,35 @@ function _prepareHTMLText(testimony) {
   return message;
 }
 
+function _sanitizeForm(body) {
+    var whiteList = ['b', 'i', 'u', 'ul', 'ol', 'li', 'div'];
+    var opts = {
+        mode: 'white'
+            , list: whiteList
+    };
+
+
+    var email = bleach.sanitize(body.email);
+    var nameClean = bleach.sanitize(body.name);
+    var html = bleach.sanitize(body.testimony, opts);
+    var title = bleach.sanitize(body.title);
+    var testimony = bleach.sanitize(body.testimony);
+
+
+
+    // @todo `publish` key will be set false initially once email smtp and edit hash algorithm set up. 
+    // @todo Opt-in from email will set flag to true, only `publish: true` documents will be viewable
+    var obj = {
+        email: email, 
+        testimony: html, 
+        name: nameClean ? nameClean : 'Anonymous', 
+        publish: false,
+        title: title
+    };
+
+    return obj;
+}
+
 module.exports = {
   testimonies: function(req, res) {
     // get all testimonies where publish is true
@@ -34,42 +63,8 @@ module.exports = {
     });
   }
 
-  , sendEmail: function() {
-
-  }
-
-  , sanitizeList: function() {
-
-  }
-  
-
   , testimoniesAdd: function(req, res) {
-     var body = req.body;
-     var whiteList = ['b', 'i', 'u', 'ul', 'ol', 'li', 'div'];
-     var opts = {
-         mode: 'white'
-         , list: whiteList
-     };
-
-
-     var email = bleach.sanitize(req.body.email);
-     var nameClean = bleach.sanitize(req.body.name);
-     var html = bleach.sanitize(req.body.testimony, opts);
-     var title = bleach.sanitize(req.body.title);
-     var testimony = bleach.sanitize(req.body.testimony);
-
-
-
-     // @todo `publish` key will be set false initially once email smtp and edit hash algorithm set up. 
-     // @todo Opt-in from email will set flag to true, only `publish: true` documents will be viewable
-     var obj = {
-       email: email, 
-       testimony: html, 
-       name: nameClean ? nameClean : 'Anonymous', 
-       publish: false,
-       title: title
-      };
-
+     var obj = _sanitizeForm(req.body);
 
      // run through sanitizer, if anything thing required returns falsy,
      // kick out error
@@ -84,7 +79,7 @@ module.exports = {
        // send email 
        var emailOpts = {
          subject: 'MyTestimony App - admin approval needed, new testimony',
-         to: email,
+         to: obj.email,
          html: 'A new testimony has been posted, please review and publish if approved.'
        };
 
