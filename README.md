@@ -12,9 +12,7 @@
 # Action
 * 3/1/2017 - left off on `edit/email` branch
 * added configuration instructions for sever variables
-* link up `/publish` route with id to update publish flag in database
-* This then will trigger another email to admin to approve any updates
-* This will trigger email to user that created the testimony along with link to update
+* linked up `/publish` route with id to update publish flag in database, and also emails admin and user
 
 # Overview
 

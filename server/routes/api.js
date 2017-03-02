@@ -3,6 +3,8 @@ var bleach = require('bleach');
 var emailer = require('./../utils/emailer.js')
 var host = process.env.NODE_ENV !== 'production' ? 'localhost:4000' : 'mytestimony.herokuapp.com'
 var emailAdmin = process.env.MYTESTIMONYAPP_ADMIN_EMAIL;
+var mongoObjectID = require('mongodb').ObjectID;
+
 
 console.log('environment', process.env.NODE_ENV);
 
@@ -22,7 +24,18 @@ function _prepareHTMLText(testimony) {
   message += 'Name: ' + testimony.name + br;
   message += 'Title: ' + testimony.title + br;
   message += 'Date: ' + testimony.date.toString() + br;
-  message += 'Okay to publish? http://' + host + '/testimonies/publish/' + testimony._id + br;
+  message += 'Okay to publish? http://' + host + '/api/v1/testimonies/publish/' + testimony._id + br;
+
+  return message;
+}
+
+function _prepareHTMLTextToUser(testimony) {
+  var message = ''
+    , br = '<br />'
+  ;
+
+  message += br;
+  message += 'You published testimony can be viewed at this link: http://' + host + '/testimonies/' + testimony.shortId + br;
 
   return message;
 }
@@ -191,4 +204,63 @@ module.exports = {
           res.json(testimonies);
       });
   }
+
+  , testimoniesPublish: function(req, res) {
+      var id = req.params.id
+        , obj = {
+          publish: true     
+        }
+        , update = {
+          $set : obj
+        }
+        ;
+
+
+     // run through sanitizer, if anything thing required returns falsy,
+     // kick out error
+
+     // @todo add error handling for xhr requests
+
+     tm.findOneAndUpdate('testimonies', { _id: new mongoObjectID(id) }, update, function(error, response) {
+       if (error) {
+         console.log('error in updating testimonies', error);
+         handleError(error);
+         return;
+       }
+       // send email to user that testimony has been published
+       var emailOpts = {
+         subject: 'MyTestimony App - your testimony has been published',
+         // to user
+         to: response.value.email,
+         html: 'Your testimony has been approved. Please review at the link below.'
+       };
+
+       emailOpts.html += _prepareHTMLTextToUser(response.value);
+
+       // sending to admin to approve
+       emailer.sendMail(emailOpts, function(err, info) {
+         if (err) {
+           // should update client if error
+           handleError(err);            
+         }
+
+         console.log('sendMail success: ' + info);
+       });
+
+       // update client
+       // @todo if error in sending email, should trigger update in client
+       // to notify of an issue. Need to flag admin as well (this should be 
+       // handled via some general logging system)
+        res.render('publish', {
+          title: 'MyTestimony.com'
+          , page: 'publish'
+          , message: 'Testimony sucessfully published with id: ' + id
+        });
+
+
+     }); 
+  }
+
+
+
 }
