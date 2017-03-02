@@ -2,7 +2,7 @@ var tm = require('./../models/testimony.js')
 var bleach = require('bleach');
 var emailer = require('./../utils/emailer.js')
 var host = process.env.NODE_ENV !== 'production' ? 'localhost:4000' : 'mytestimony.herokuapp.com'
-var emailAdmin = 'ryanreg48@gmail.com';
+var emailAdmin = process.env.MYTESTIMONYAPP_ADMIN_EMAIL;
 
 console.log('environment', process.env.NODE_ENV);
 

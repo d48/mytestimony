@@ -10,8 +10,8 @@
 ```
 
 # Action
-* 2/20/2017 - left off on `edit/email` branch
-* added /edit route that successfully updates and email admin of update
+* 3/1/2017 - left off on `edit/email` branch
+* added configuration instructions for sever variables
 * link up `/publish` route with id to update publish flag in database
 * This then will trigger another email to admin to approve any updates
 * This will trigger email to user that created the testimony along with link to update
@@ -42,6 +42,15 @@ $ cd mytestimony
 $ vagrant up
 ```
 Now you should see the app at `http://localhost:4000`
+
+
+## Server Configuration
+
+These must be set in order for emails to send out and for testimonies to be approved before getting published.
+
+* NODEMAILER_USER - gmail user to send from
+* NODEMAIILER_PASS - gmail pass of user to send from
+* MYTESTIMONYAPP_ADMIN_EMAIL - where emails go to for admin approvals
 
 ## Technology
 
