@@ -12,6 +12,7 @@
 # Action
 * 3/1/2017 - left off on `edit/email` branch
 * added configuration instructions for sever variables
+* Sorted testimonies by newest
 * linked up `/publish` route with id to update publish flag in database, and also emails admin and user
 
 # Overview
