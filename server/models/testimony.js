@@ -108,12 +108,7 @@ module.exports = {
           if (err) {
             cb(err);
           } else {
-              var orderby = { date: 1 };
-              // condition['$orderby'] = orderby;
-
-              console.log('condition', condition);
-
-              collection.find(condition).toArray(function(err, results) {
+              collection.find(condition).sort({ date: -1 }).toArray(function(err, results) {
                   if (err) cb(err);
                   else cb(null, results);
               });
