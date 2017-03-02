@@ -10,7 +10,7 @@ var express     = require('express')
     , routesapi = require('./server/routes/api')
     , stylus    = require('stylus')
     , nib       = require('nib')
-    , helpers  = require('./server/js/utils/helpers')
+    , helpers  = require('./server/utils/helpers')
     , port      = process.env.PORT || 4000
     ;
 
