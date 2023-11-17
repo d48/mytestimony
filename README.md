@@ -20,6 +20,8 @@ This is a website to help people share about their tesimony of what God has done
 
 [View temporary working website on Heroku](http://mytestimony.herokuapp.com)
 
+Note: preview environment unavailable. Review images below. 
+
 
 ## Run the app locally with Vagrant
 
